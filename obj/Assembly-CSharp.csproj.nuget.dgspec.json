@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\test\\Assembly-CSharp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\Assembly-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\Assembly-CSharp.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,14 +26,14 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProjectEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProjectEditor.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj",
         "projectName": "AstarPathfindingProject",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -110,14 +110,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProjectEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProjectEditor.csproj",
         "projectName": "AstarPathfindingProjectEditor",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProjectEditor.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -132,11 +132,11 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj"
               },
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj"
               }
             }
           }
@@ -165,14 +165,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj",
         "projectName": "PackageToolsEditor",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -187,8 +187,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj"
               }
             }
           }
