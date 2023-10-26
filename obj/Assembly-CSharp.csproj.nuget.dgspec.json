@@ -1,3 +1,221 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87d8fc1e5eacb1ccac246e1b6078decbfe6619608dc94d512188bd11113f7d1c
-size 7971
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              },
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj"
+              },
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj",
+        "projectName": "AstarPathfindingProject",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj",
+        "projectName": "AstarPathfindingProjectEditor",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              },
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj",
+        "projectName": "PackageToolsEditor",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

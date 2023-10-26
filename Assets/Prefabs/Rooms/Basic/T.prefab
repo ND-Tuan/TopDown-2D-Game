@@ -1582,7 +1582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126153245242362529}
   - component: {fileID: 3887470859874338069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_111 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6044,7 +6044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6272971979456618742}
   - component: {fileID: 2190561990916793645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dungeon_Tileset 1_14 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

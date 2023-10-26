@@ -64,4 +64,18 @@ public class Player : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D other){
+        
+        if(other.CompareTag("EnemyBullet")) {
+            
+            CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
+            Invoke(nameof(Nomal), 0.1f);
+        }
+        
+    }
+
+    void Nomal(){
+       CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.white;
+    }
+
 }

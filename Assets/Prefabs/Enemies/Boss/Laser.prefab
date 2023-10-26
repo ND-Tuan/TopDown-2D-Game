@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2113827036602991892}
   - component: {fileID: 2409467240905680025}
   - component: {fileID: 2587963251453134225}
-  m_Layer: 0
+  - component: {fileID: 2873760952857371794}
+  m_Layer: 7
   m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4554254920819456860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.40001, y: 15.099999, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 100
   m_Sprite: {fileID: -745730805, guid: aab7f41a4b8f660498a94ced1b7c5318, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &2587963251453134225
 Animator:
   serializedVersion: 5
@@ -106,3 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2873760952857371794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4554254920819456860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd930585e5f52e4086c98044c55b923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifeTime: 2

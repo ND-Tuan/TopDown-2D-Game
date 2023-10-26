@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\PackageToolsEditor.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\AstarPathfindingProject.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\AstarPathfindingProject.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj",
         "projectName": "AstarPathfindingProject",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\AstarPathfindingProject.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -52,14 +52,14 @@
         }
       }
     },
-    "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\PackageToolsEditor.csproj": {
+    "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\PackageToolsEditor.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj",
         "projectName": "PackageToolsEditor",
-        "projectPath": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\PackageToolsEditor.csproj",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\test\\PackageToolsEditor.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -74,8 +74,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\AstarPathfindingProject.csproj": {
-                "projectPath": "C:\\Users\\DELL\\Desktop\\2D-TopDown-Game-test-\\AstarPathfindingProject.csproj"
+              "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Desktop\\test\\AstarPathfindingProject.csproj"
               }
             }
           }

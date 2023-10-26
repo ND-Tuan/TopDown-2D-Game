@@ -1,3 +1,129 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d5a33680bf3755f4058dd70353b7a22231a119d210c7b1ad91e54fd7d748fcfe
-size 4214
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "AstarPathfindingProject/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/AstarPathfindingProject.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AstarPathfindingProject.dll": {}
+        }
+      },
+      "AstarPathfindingProjectEditor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "AstarPathfindingProject": "1.0.0",
+          "PackageToolsEditor": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AstarPathfindingProjectEditor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AstarPathfindingProjectEditor.dll": {}
+        }
+      },
+      "PackageToolsEditor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "AstarPathfindingProject": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PackageToolsEditor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PackageToolsEditor.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AstarPathfindingProject/1.0.0": {
+      "type": "project",
+      "path": "AstarPathfindingProject.csproj",
+      "msbuildProject": "AstarPathfindingProject.csproj"
+    },
+    "AstarPathfindingProjectEditor/1.0.0": {
+      "type": "project",
+      "path": "AstarPathfindingProjectEditor.csproj",
+      "msbuildProject": "AstarPathfindingProjectEditor.csproj"
+    },
+    "PackageToolsEditor/1.0.0": {
+      "type": "project",
+      "path": "PackageToolsEditor.csproj",
+      "msbuildProject": "PackageToolsEditor.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "AstarPathfindingProject >= 1.0.0",
+      "AstarPathfindingProjectEditor >= 1.0.0",
+      "PackageToolsEditor >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+      "projectName": "Assembly-CSharp",
+      "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProject.csproj"
+            },
+            "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\AstarPathfindingProjectEditor.csproj"
+            },
+            "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\PackageToolsEditor.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

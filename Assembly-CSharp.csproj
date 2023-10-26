@@ -57,17 +57,25 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Random_Map\RoomTemplates.cs" />
     <Compile Include="Assets\Scripts\Random_Map\SpawnRoom.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\ArmBloom.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Dash.cs" />
     <Compile Include="Assets\Scripts\Random_Map\CloseRoom.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Random_Map\AddColumn.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Random_Map\Destroy.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\EnemyControll.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Rotation.cs" />
     <Compile Include="Assets\Scripts\Random_Map\CheckEnemies.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\CheckAwaken.cs" />
     <Compile Include="Assets\Scripts\Random_Map\FixRoom.cs" />
-    <Compile Include="Assets\Scripts\Behaviour\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemBossAttack1.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemBehaviour.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Bullet.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Magic_Staff.cs" />
     <Compile Include="Assets\Scripts\Behaviour\LifeTimeDestroyer.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Player.cs" />
+    <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemArm.cs" />
     <Compile Include="Assets\Scripts\Random_Map\README.cs" />
     <Compile Include="Assets\Scripts\Random_Map\AddRoom.cs" />
   </ItemGroup>

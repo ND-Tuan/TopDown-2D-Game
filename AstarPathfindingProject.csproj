@@ -100,8 +100,8 @@
     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\GridLookup.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarParallel.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\HierarchicalGraph.cs" />
-    <Compile Include="Assets\AstarPathfindingProject\Generators\QuadtreeGraph.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AnimationLink.cs" />
+    <Compile Include="Assets\AstarPathfindingProject\Generators\QuadtreeGraph.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\PathHandler.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\TinyJson.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs" />

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-     public Animator animator;
-     public Rigidbody2D rb;
+    public Animator animator;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
 

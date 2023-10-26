@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2946524816070432479}
   - component: {fileID: 7285146233044489616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5652,7 +5652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1834749579604504986}
   - component: {fileID: 3058354692051785200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dungeon_Tileset 1_15 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16765,7 +16765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5323595472301596425}
   - component: {fileID: 794625556972676532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dungeon_Tileset 1_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16849,7 +16849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7112500042406377150}
   - component: {fileID: 3276447961099871372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

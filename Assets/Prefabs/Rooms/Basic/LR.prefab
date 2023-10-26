@@ -2025,7 +2025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7015200445788837881}
   - component: {fileID: 7825190006546963356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4761,7 +4761,7 @@ Transform:
   m_GameObject: {fileID: 2055178038835190373}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.320656, y: -88.728714, z: -0.05523649}
+  m_LocalPosition: {x: -34.320656, y: -88.728714, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5663,7 +5663,7 @@ Transform:
   m_GameObject: {fileID: 2349332543701356359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.679344, y: -88.72873, z: -0.05523649}
+  m_LocalPosition: {x: 75.679344, y: -88.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6197,7 +6197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692236787463718500}
   - component: {fileID: 2365519940857317807}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_69 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6991,7 +6991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2376540958821785253}
   - component: {fileID: 3697159078196748407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dungeon_Tileset 1_14 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7972,7 +7972,7 @@ Transform:
   m_GameObject: {fileID: 3622381270001424773}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.68061, y: -188.72858, z: -0.05523649}
+  m_LocalPosition: {x: 65.68061, y: -188.72858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9844,7 +9844,7 @@ Transform:
   m_GameObject: {fileID: 4212733380276484400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.32065, y: -198.72856, z: -0.05523649}
+  m_LocalPosition: {x: -34.32065, y: -198.72856, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16194,7 +16194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4279034911968186689}
   - component: {fileID: 3362969712961770266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

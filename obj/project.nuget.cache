@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c445f7e55b62d0dd19004da02c96e5321493bfe0bb91b3f7b1c4b82da522b282
-size 286
+{
+  "version": 2,
+  "dgSpecHash": "Nq/ZoOnf4zdjlfLQ2beF+LboC9qzTpAVYU441ZYyK9ypiA5jqK0GXHst7XvcUfmpQgqurWDgpCA27IGRnYxVbA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DELL\\Desktop\\TopDown-2D-GameG\\Assembly-CSharp.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+}

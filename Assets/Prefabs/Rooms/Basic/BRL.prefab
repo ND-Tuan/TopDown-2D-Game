@@ -3797,7 +3797,7 @@ Transform:
   m_GameObject: {fileID: 1504923930305754897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.17856, y: -88.72873, z: -0.05523649}
+  m_LocalPosition: {x: 75.17856, y: -88.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4347,7 +4347,7 @@ Transform:
   m_GameObject: {fileID: 1647286565165493287}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.82144, y: -88.72873, z: -0.05523649}
+  m_LocalPosition: {x: -34.82144, y: -88.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6466,7 +6466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092893288074378103}
   - component: {fileID: 2559599932295547345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_69 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9782,7 +9782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578549717006078223}
   - component: {fileID: 8304931393896753003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13624,7 +13624,7 @@ Transform:
   m_GameObject: {fileID: 5486505715080545917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 65.17857, y: -188.72873, z: -0.05523649}
+  m_LocalPosition: {x: 65.17857, y: -188.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15404,7 +15404,7 @@ Transform:
   m_GameObject: {fileID: 6021146341340381699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -34.821426, y: -198.72873, z: -0.05523649}
+  m_LocalPosition: {x: -34.821426, y: -198.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17082,7 +17082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880516069853683793}
   - component: {fileID: 8578413561640249445}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dungeon_Tileset 1_14 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17166,7 +17166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9075763848782696920}
   - component: {fileID: 8117057374631008511}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18120,7 +18120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487271305566448778}
   - component: {fileID: 8112623525506492926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_69 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20152,7 +20152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228756898996518518}
   - component: {fileID: 1220038891403552574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: demonstration_122 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22590,7 +22590,7 @@ Transform:
   m_GameObject: {fileID: 8435379529071784277}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.821442, y: -149.72873, z: -0.05523649}
+  m_LocalPosition: {x: -14.821442, y: -149.72873, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
