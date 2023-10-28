@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class EnterHall : MonoBehaviour
 {
-    
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
-            gameObject.GetComponent<SpriteRenderer>().material.color = Color.white;
+            gameObject.GetComponent<SpriteRenderer>().material.color = Color.red;
         }
     }
 
     void OnTriggerExit2D(Collider2D other){
         if(other.CompareTag("Player")){
-            gameObject.GetComponent<SpriteRenderer>().material.color =  new Color(57, 51, 74, 255); 
+            gameObject.GetComponent<SpriteRenderer>().material.color =  Color.green; 
         }
     }
 }

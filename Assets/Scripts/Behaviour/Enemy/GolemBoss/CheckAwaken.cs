@@ -19,6 +19,8 @@ public class CheckAwaken : MonoBehaviour
     void Start(){
         enemyControll = InterFace.GetComponent<EnemyControll>();
         roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+
+        roomTemplates.countEnemy--;
         
         enemyControll.HealthBar.transform.localScale = new Vector3(0, 0, 0);
         enemyControll.Immune = true;
@@ -28,10 +30,10 @@ public class CheckAwaken : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player") && !Awaken){
             roomTemplates.isSpawnWall = true;
+            roomTemplates.countEnemy++;
             animator = InterFace.GetComponent<Animator>();
             animator.SetBool("Awaken", true);
             Invoke(nameof(GetReady), 1.5f);
-           
         }
     }
 

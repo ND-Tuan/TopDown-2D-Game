@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,17 @@ public class FixHallWay : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Checker")){
            fixRoom = other.GetComponent<FixRoom>();
-           if(fixRoom.NotNeedFix == false) Destroy(gameObject);
+           Invoke(nameof(SelfDes), 0.3f);
         }
         
     }
+
+
+
+    void SelfDes(){
+        if(fixRoom.NotNeedFix == false) 
+            Destroy(gameObject);
+       
+    }
+
 }

@@ -36,6 +36,13 @@ public class RoomTemplates : MonoBehaviour {
 	void Update(){
 		rd =  Random.Range(0,2);
 		RemoveWall();
+
+		if(waitTime <= 0 && spawnedBoss == false){
+			Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
+			spawnedBoss = true;
+		} else {
+			waitTime -= Time.deltaTime;
+		}
 	}
 
 	
@@ -46,7 +53,7 @@ public class RoomTemplates : MonoBehaviour {
 	void RemoveWall(){
 		if(isSpawnWall && countEnemy == 0){
 			isSpawnWall = false;
-			waitTime =0;
+			
             Instantiate(Clear, Cam.transform, worldPositionStays:false);
 			foreach(GameObject col in Column){
 				Destroy(col);
