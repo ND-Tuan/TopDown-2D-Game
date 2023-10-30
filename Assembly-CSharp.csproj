@@ -68,16 +68,17 @@
     <Compile Include="Assets\Scripts\Behaviour\Enemy\EnemyControll.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Rotation.cs" />
     <Compile Include="Assets\Scripts\Random_Map\CheckEnemies.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Magic_Staff.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\CheckAwaken.cs" />
     <Compile Include="Assets\Scripts\Random_Map\FixRoom.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemBossAttack1.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemBehaviour.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Behaviour\Magic_Staff.cs" />
     <Compile Include="Assets\Scripts\Behaviour\LifeTimeDestroyer.cs" />
     <Compile Include="Assets\Scripts\MiniMap\FixHallWay.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Player.cs" />
     <Compile Include="Assets\Scripts\Behaviour\Enemy\GolemBoss\GolemArm.cs" />
+    <Compile Include="Assets\Scripts\Weapons\WeaponHolder.cs" />
     <Compile Include="Assets\Scripts\Random_Map\README.cs" />
     <Compile Include="Assets\Scripts\Random_Map\AddRoom.cs" />
   </ItemGroup>
