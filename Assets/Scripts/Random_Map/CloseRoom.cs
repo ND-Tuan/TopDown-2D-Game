@@ -63,8 +63,11 @@ public class CloseRoom : MonoBehaviour
     foreach (GameObject pos in spawners){
       Instantiate(Enemy, pos.transform.position, Quaternion.identity);
     }
-    roomTemplates.isSpawnWall = true;
-    Destroy(check);
-  
+    Invoke(nameof(SpawnWall),0.2f);
+  }
+
+  void SpawnWall(){
+      roomTemplates.isSpawnWall = true;
+      Destroy(check);
   }
 }

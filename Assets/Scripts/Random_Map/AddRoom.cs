@@ -13,5 +13,9 @@ public class AddRoom : MonoBehaviour {
 		templates.rooms.Add(this.gameObject);
 
 		Instantiate(Spawner,transform.position, Quaternion.identity);
+
+		// int Rand =  Random.Range(0, 5);
+		// if(Rand == 0 || Rand == 1 || Rand ==2)
+		// 	Instantiate(templates.Interior[Rand],transform.position, Quaternion.identity);
 	}
 }
