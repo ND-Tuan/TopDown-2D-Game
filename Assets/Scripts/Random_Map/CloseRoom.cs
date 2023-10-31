@@ -11,18 +11,13 @@ public class CloseRoom : MonoBehaviour
   public GameObject[] closePos;
   public Transform spawnerPoint;
   public GameObject[] spawners;
-
   public GameObject check;
   public GameObject warning;
   public GameObject apear;
   public RoomTemplates roomTemplates;
-
   private int x, y ;
-
   public int MonsterNum;
-
   private bool isSpawn = false;
-
   void Start(){
 		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();	
   }

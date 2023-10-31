@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -14,37 +15,55 @@ public class Player : MonoBehaviour
     public float DashTime;
     private bool once;
     public float DashCD = 1f;
-    public static float DashCDTmp;
-    public GameObject DashAnimation;
-    public Transform DashPos;
+    public  float DashCDTmp;
     public SpriteRenderer  CharacterSR;
+    public int PlayerMaxHP;
+    private int PlayerCurHP;
+    public Slider HpBar;
+    public Image DashIcon;
+    public Text text;
+    public bool immune = false;
+    
 
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        PlayerCurHP = PlayerMaxHP;
+        
     }
 
 
     void Update(){
-       
+        
+        //Di chuyển
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         transform.position += moveSpeed * Time.deltaTime * moveInput; 
 
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
+        //Hiển thị máu
+        HpBar.value = PlayerCurHP;
+        text.text = PlayerCurHP + "/" + PlayerMaxHP;
+
+        //lướt
         if (moveInput.x != 0)
             if (moveInput.x < 0)
                 CharacterSR.transform.localScale = new Vector3(-1, 1, 0);
             else
                 CharacterSR.transform.localScale = new Vector3(1, 1, 0); 
+        if(DashCDTmp >0){
+            DashCDTmp -= Time.deltaTime;
+        } else {
+             DashCDTmp=0;
+        }
 
-        DashCDTmp -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space) && dashTime <= 0 && DashCDTmp<0)
+        if (Input.GetKeyDown(KeyCode.Space) && dashTime <= 0 && DashCDTmp==0)
         {
             DashCDTmp = DashCD;
-            animator.SetBool("Dash", false);
+            animator.SetBool("Roll", true);
+            immune = true;
 
             moveSpeed += dashBoost;
             dashTime = DashTime;
@@ -53,7 +72,9 @@ public class Player : MonoBehaviour
 
         if (dashTime <= 0 && once)
         {
-            animator.SetBool("Dash", false);
+            animator.SetBool("Roll", false);
+            immune = false;
+
             moveSpeed -= dashBoost;
             once = false;
         }
@@ -62,13 +83,21 @@ public class Player : MonoBehaviour
             dashTime -= Time.deltaTime;
         }  
 
+        //CD skill lướt
+        DashIcon.fillAmount = 1-DashCDTmp/DashCD;
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other){
         
-        if(other.CompareTag("EnemyBullet")) {
+        if(other.CompareTag("EnemyBullet") && immune== false) {
             
+            PlayerCurHP--;
+            immune = true;
+
             CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
+           
             Invoke(nameof(Nomal), 0.1f);
         }
         
@@ -76,6 +105,7 @@ public class Player : MonoBehaviour
 
     void Nomal(){
        CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.white;
+       immune = false;
     }
 
 }

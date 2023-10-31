@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f2f2d77e75f5ae4e81b46010a6b8ba5
+guid: 19b5e13b53d102b459ab335d3ce2c1d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mana_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 322
+        width: 1382
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd3ae3f3a3e2334ebf4cfaf812f7df6
+      internalID: 1040089283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mana_1
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 65
+        width: 996
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4676afa12af0743a04ddc940af93d8
+      internalID: -1691496023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +174,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mana_0: 1040089283
+      Mana_1: -1691496023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
