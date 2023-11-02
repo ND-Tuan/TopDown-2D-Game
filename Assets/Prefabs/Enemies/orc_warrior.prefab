@@ -337,9 +337,12 @@ MonoBehaviour:
   EnemyCurShield: 0
   Immune: 0
   NotBoss: 1
+  isSummonObject: 0
   HealthBar: {fileID: 1668653669387953168}
   Health: {fileID: 8706504135314867526}
   Shield: {fileID: 0}
+  DmgPopup: {fileID: 5948436537560328241, guid: 69ba8659b623960439d436fa2e254ddb,
+    type: 3}
   Death: {fileID: 3600803312479096435, guid: 3f00e02cc7f96f44ca6be211843edc5c, type: 3}
   Main: {fileID: 0}
   EnemySub: []

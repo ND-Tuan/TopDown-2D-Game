@@ -94,6 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1271866978640349812}
   - component: {fileID: 1873350457567090055}
+  - component: {fileID: 7510664918352503636}
+  - component: {fileID: 6358519214247698333}
+  - component: {fileID: 4966705609571097033}
   m_Layer: 7
   m_Name: GolemArmShoot
   m_TagString: Enemy
@@ -132,6 +135,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 20
+--- !u!114 &7510664918352503636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876966598996606143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e4be353f596094aae09eecea92dc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyMaxHp: 5
+  EnemyCurHp: 0
+  EnemyMaxShield: 0
+  EnemyCurShield: 0
+  Immune: 0
+  NotBoss: 1
+  isSummonObject: 1
+  HealthBar: {fileID: 9140927409778473974}
+  Health: {fileID: 2320309172877062458}
+  Shield: {fileID: 0}
+  DmgPopup: {fileID: 5948436537560328241, guid: 69ba8659b623960439d436fa2e254ddb,
+    type: 3}
+  Death: {fileID: 0}
+  Main: {fileID: 4876966598996606143}
+  EnemySub: []
+  roomTemplates: {fileID: 0}
+  InterFace: {fileID: 579136522214762401}
+--- !u!50 &6358519214247698333
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876966598996606143}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &4966705609571097033
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876966598996606143}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.1582813, y: -0.5448961}
+  m_Size: {x: 9.417532, y: 9.417534}
+  m_Direction: 0
 --- !u!1 &8596353430224760180
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,12 +237,10 @@ GameObject:
   - component: {fileID: 1828534115740061861}
   - component: {fileID: 579136522214762401}
   - component: {fileID: 5549650048985573516}
-  - component: {fileID: 1529030915349388465}
-  - component: {fileID: 4490896018118765460}
   - component: {fileID: 8658756170639385057}
   m_Layer: 7
   m_Name: arm
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,68 +333,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &1529030915349388465
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596353430224760180}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 6.554756, y: -0.20364046}
-  serializedVersion: 2
-  m_Radius: 2.934888
---- !u!50 &4490896018118765460
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596353430224760180}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &8658756170639385057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,9 +347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Attack: {fileID: 8264691775563351662, guid: 64a5d3464435ed14d9541877d8a64bb6, type: 3}
   firePos: {fileID: 8862962645322903192}
-  EnemyMaxHp: 5
-  HealthBar: {fileID: 9140927409778473974}
-  Health: {fileID: 2320309172877062458}
   Main: {fileID: 4876966598996606143}
 --- !u!1 &8862962645322903192
 GameObject:
@@ -333,7 +360,7 @@ GameObject:
   - component: {fileID: 5570938243817498126}
   - component: {fileID: 4930698106378482945}
   - component: {fileID: 2513096640213461499}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,19 +16,21 @@ public class GolemBehaviour : MonoBehaviour
     public EnemyControll enemyControll;
     private float Tmp;
     private bool CastShield= false;
+    private bool TurnShield= false;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
-        enemyControll = GetComponentInChildren<EnemyControll>();
+        
         Tmp = enemyAI.moveSpeed;
     }
 
     void Update(){
-        if(enemyControll.EnemyCurHp == enemyControll.EnemyMaxHp/2 ){
+        if(enemyControll.EnemyCurHp <= enemyControll.EnemyMaxHp/2 && !TurnShield){
             enemyAI.moveSpeed = 0;
             CastShield= true;
+            TurnShield=true;
             enemyControll.EnemyCurHp--;
             enemyControll.Immune = true;
             animator.SetBool("Shield", true);

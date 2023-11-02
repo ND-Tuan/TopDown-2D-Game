@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4201863451189393576}
   - component: {fileID: 3710564650221416878}
   - component: {fileID: 4648372004346936456}
-  - component: {fileID: 4289017444557626101}
   - component: {fileID: 5303756250400522936}
   m_Layer: 7
   m_Name: InterFace
@@ -111,32 +110,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4289017444557626101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 720360921972389713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e4be353f596094aae09eecea92dc6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyMaxHp: 50
-  EnemyCurHp: 0
-  EnemyMaxShield: 20
-  EnemyCurShield: 0
-  Immune: 0
-  NotBoss: 0
-  HealthBar: {fileID: 8857830630718021684}
-  Health: {fileID: 4364639314026187097}
-  Shield: {fileID: 5959114600046191196}
-  Death: {fileID: 707871668063329619, guid: 28fbc9d99446b394ab628dbfcb5783ad, type: 3}
-  Main: {fileID: 4120797787442529989}
-  EnemySub: []
-  roomTemplates: {fileID: 0}
-  InterFace: {fileID: 3710564650221416878}
 --- !u!58 &5303756250400522936
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -266,8 +239,9 @@ MonoBehaviour:
   seeker: {fileID: 0}
   InterFace: {fileID: 720360921972389713}
   animator: {fileID: 0}
-  enemyControll: {fileID: 0}
+  enemyControll: {fileID: 6161809708429758204}
   behaviour: {fileID: 0}
+  roomTemplates: {fileID: 0}
 --- !u!1 &2272384969751263454
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +287,7 @@ GameObject:
   - component: {fileID: 7960995014545243716}
   - component: {fileID: 8397565324398963373}
   - component: {fileID: 7357863184426365390}
+  - component: {fileID: 6161809708429758204}
   m_Layer: 7
   m_Name: Golem Boss
   m_TagString: Enemy
@@ -468,7 +443,36 @@ MonoBehaviour:
   GolemArm: {fileID: 867322144631589674, guid: 6aab500646cd8f54bb8b7f19dc7ed4d2, type: 3}
   GolemArmForce: 50
   enemyAI: {fileID: 7960995014545243716}
-  enemyControll: {fileID: 0}
+  enemyControll: {fileID: 6161809708429758204}
+--- !u!114 &6161809708429758204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4120797787442529989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e4be353f596094aae09eecea92dc6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyMaxHp: 50
+  EnemyCurHp: 0
+  EnemyMaxShield: 20
+  EnemyCurShield: 0
+  Immune: 0
+  NotBoss: 0
+  isSummonObject: 0
+  HealthBar: {fileID: 8857830630718021684}
+  Health: {fileID: 4364639314026187097}
+  Shield: {fileID: 5959114600046191196}
+  DmgPopup: {fileID: 5948436537560328241, guid: 69ba8659b623960439d436fa2e254ddb,
+    type: 3}
+  Death: {fileID: 707871668063329619, guid: 28fbc9d99446b394ab628dbfcb5783ad, type: 3}
+  Main: {fileID: 4120797787442529989}
+  EnemySub: []
+  roomTemplates: {fileID: 0}
+  InterFace: {fileID: 3710564650221416878}
 --- !u!1 &4364639314026187097
 GameObject:
   m_ObjectHideFlags: 0

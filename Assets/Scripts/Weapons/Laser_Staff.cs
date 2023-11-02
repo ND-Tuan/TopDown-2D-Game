@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magic_Staff : MonoBehaviour
+public class Laser_Staff : MonoBehaviour
 {
-    public GameObject fireBall;
-    public GameObject muzzle;
+    
+    public GameObject laser;
     public Transform firePos;
     public float TimeBtwFire = 0.2f;
-    public float BulletForce;
     private float timeBtwFire;
-    public WeaponHolder weaponHolder;
     public int ManaCost;
+    public WeaponHolder weaponHolder;
 
 
     void Start(){
@@ -19,23 +18,25 @@ public class Magic_Staff : MonoBehaviour
         weaponHolder.ShowManaCost(ManaCost);
     }
 
+    // Update is called once per frame
     void Update()
     {
         timeBtwFire -= Time.deltaTime;
         if(Input.GetMouseButton(0) && timeBtwFire <0){
 
             Fire();
-             weaponHolder.SubtractMana(ManaCost);
+            weaponHolder.SubtractMana(ManaCost);
         }
     }
 
-     void Fire(){
+    void Fire(){
         timeBtwFire = TimeBtwFire;
 
-        GameObject BulletTmp = Instantiate(fireBall, firePos.transform.position, gameObject.transform.rotation);
-        Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
-        
+        GameObject BulletTmp = Instantiate(laser, firePos.transform, worldPositionStays:false);
 
+        BulletTmp.GetComponent<LaserControll>().IsEnemyBullet = false;
+        BulletTmp.GetComponent<LaserControll>().ManaCost = ManaCost;
+        BulletTmp.transform.localScale = new Vector3(0.7f, 0.7f, 0);
+        
     }
 }

@@ -17,7 +17,7 @@ public class CheckAwaken : MonoBehaviour
     public RoomTemplates roomTemplates;
     
     void Start(){
-        enemyControll = InterFace.GetComponent<EnemyControll>();
+       
         roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
 
         roomTemplates.countEnemy--;
@@ -47,6 +47,7 @@ public class CheckAwaken : MonoBehaviour
         enemyControll.Immune = false;
         Awaken = true;
         behaviour.Active();
+        Destroy(gameObject);
         
     }
 }

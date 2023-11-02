@@ -10,6 +10,9 @@ public class LaserControll : MonoBehaviour
     public int Damage;
     public float DelayDmgTime;
     private float DelayDmgTimeCal;
+    public int ManaCost;
+    public WeaponHolder weaponHolder;
+
 
 
     // Start is called before the first frame update
@@ -18,8 +21,6 @@ public class LaserControll : MonoBehaviour
     {
         Invoke(nameof(GiveDmg), 0.75f);
     }
-
-    // Update is called once per frame
     
     void OnTriggerEnter2D(Collider2D other){
         
@@ -28,8 +29,9 @@ public class LaserControll : MonoBehaviour
                 other.GetComponent<Player>().TakeDmg();
             }
         } else {
-            if(other.CompareTag("Enemy") && IsGiveDmg){
+            if(other.CompareTag("Enemy") && IsGiveDmg==true){
                 other.GetComponent<EnemyControll>().TakeDmg(Damage);
+                DelayDmgTimeCal = DelayDmgTime;
                 
             }
         }
@@ -49,7 +51,7 @@ public class LaserControll : MonoBehaviour
         } else {
 
             if(other.CompareTag("Enemy") && IsGiveDmg && DelayDmgTimeCal <=0){
-                 other.GetComponent<EnemyControll>().TakeDmg(Damage);
+                other.GetComponent<EnemyControll>().TakeDmg(Damage);
                 DelayDmgTimeCal = DelayDmgTime;
             }
         }

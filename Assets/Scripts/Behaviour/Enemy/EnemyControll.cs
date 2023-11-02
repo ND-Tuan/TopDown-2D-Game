@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.UI;
 
 public class EnemyControll : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class EnemyControll : MonoBehaviour
     public int EnemyCurShield;
     public bool Immune = false;
     public bool NotBoss ;
+    public bool isSummonObject = false;
     public GameObject HealthBar;
     public GameObject Health;
     public GameObject Shield;
+    public GameObject DmgPopup;
     public GameObject Death;
     public GameObject Main;
     public GameObject[] EnemySub;
@@ -40,7 +43,9 @@ public class EnemyControll : MonoBehaviour
 
         if( EnemyCurHp <=0) {
             if(Death !=null) Instantiate(Death, transform.position, Death.transform.rotation);
-            roomTemplates.countEnemy --;
+
+            if(!isSummonObject) roomTemplates.countEnemy --;
+
             HealthBar.transform.localScale = new Vector3(0, 0, 0);
             Destroy(gameObject);
             Destroy(Main);
@@ -51,23 +56,30 @@ public class EnemyControll : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         
         if(other.CompareTag("bullet") && (NotBoss || !Immune)) {
-
-            if(EnemyCurShield <=0) {
-                EnemyCurHp --;
-            } else {
-                EnemyCurShield--;
-            }
             
-            InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
-            Invoke(nameof(Nomal), 0.1f);
+            TakeDmg(1);
         }
+    }
+
+    public void TakeDmg(int Dmg){
+
+        if(EnemyCurShield <=0) {
+            EnemyCurHp -= Dmg;
+        } else {
+            EnemyCurShield -= Dmg;
+        }
+
+        GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays:false);
+        instance.GetComponent<TextMesh>().text = Dmg.ToString();
+        instance.transform.position += new Vector3(Random.Range(-3, 3), 3, 0);
+
+        InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
+        Invoke(nameof(Nomal), 0.1f);
     }
 
     void Nomal(){
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.white;
     }
 
-    public void TakeDmg(int Dmg){
-        EnemyCurHp -= Dmg;
-    }
+    
 }
