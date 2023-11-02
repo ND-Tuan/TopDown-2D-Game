@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
                 CharacterSR.transform.localScale = new Vector3(-1, 1, 0);
             else
                 CharacterSR.transform.localScale = new Vector3(1, 1, 0); 
+
         if(DashCDTmp >0){
             DashCDTmp -= Time.deltaTime;
         } else {
@@ -106,6 +107,10 @@ public class Player : MonoBehaviour
     void Nomal(){
        CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.white;
        immune = false;
+    }
+
+    public void TakeDmg(){
+        PlayerCurHP--;
     }
 
 }

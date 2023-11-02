@@ -27,6 +27,25 @@ public class EnemyControll : MonoBehaviour
         EnemyCurHp = EnemyMaxHp;
         
     }
+
+    void Update(){
+        double ShieldAmount;
+        if(EnemyMaxShield !=0) {
+            ShieldAmount = EnemyCurShield *(1.2/EnemyMaxShield);
+            Shield.transform.localScale = new Vector3((float)ShieldAmount, (float)1.6, 0);
+        }
+
+        double HealAmount = EnemyCurHp *(1.2/EnemyMaxHp);    
+        Health.transform.localScale = new Vector3((float)HealAmount, (float)1.6, 0);
+
+        if( EnemyCurHp <=0) {
+            if(Death !=null) Instantiate(Death, transform.position, Death.transform.rotation);
+            roomTemplates.countEnemy --;
+            HealthBar.transform.localScale = new Vector3(0, 0, 0);
+            Destroy(gameObject);
+            Destroy(Main);
+        }
+    }
     
 
     void OnTriggerEnter2D(Collider2D other){
@@ -38,29 +57,17 @@ public class EnemyControll : MonoBehaviour
             } else {
                 EnemyCurShield--;
             }
-                    
-            double ShieldAmount;
-            if(EnemyMaxShield !=0) {
-                ShieldAmount = EnemyCurShield *(1.2/EnemyMaxShield);
-                Shield.transform.localScale = new Vector3((float)ShieldAmount, (float)1.6, 0);
-            }
-
-            double HealAmount = EnemyCurHp *(1.2/EnemyMaxHp);    
-            Health.transform.localScale = new Vector3((float)HealAmount, (float)1.6, 0);
             
             InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
             Invoke(nameof(Nomal), 0.1f);
-        }
-        if( EnemyCurHp ==0) {
-            if(Death !=null) Instantiate(Death, transform.position, Death.transform.rotation);
-            roomTemplates.countEnemy --;
-            HealthBar.transform.localScale = new Vector3(0, 0, 0);
-            Destroy(gameObject);
-            Destroy(Main);
         }
     }
 
     void Nomal(){
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.white;
+    }
+
+    public void TakeDmg(int Dmg){
+        EnemyCurHp -= Dmg;
     }
 }

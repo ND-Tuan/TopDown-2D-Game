@@ -44,15 +44,15 @@ public class GolemBehaviour : MonoBehaviour
 
     void StartAttack(){
         if(!CastShield){
-            int Rand = Random.Range(0,4);
-            if(Rand == 0 || Rand ==1){
+            int Rand = Random.Range(0,3);
+            if(Rand == 0 ){
                 animator.SetBool("Attack1", true);
                 Invoke(nameof(ActiveAttack1), 0.75f);
-            } else if (Rand == 2 ){
+            } else if (Rand == 1 ){
                 animator.SetBool("Attack2", true);
                 enemyAI.moveSpeed = 0;
                 Invoke(nameof(ActiveAttack2), 0.5f);
-            } else if(Rand == 3){
+            } else if(Rand == 2){
                 animator.SetBool("Attack3", true);
                 Invoke(nameof(ActiveAttack3), 1f);
                 enemyAI.moveSpeed = 0;

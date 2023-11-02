@@ -43,11 +43,14 @@ public class Magic_Staff : MonoBehaviour
      void Fire(){
         timeBtwFire = TimeBtwFire;
 
+        // GameObject BulletTmp = Instantiate(fireBall, firePos.transform.position, gameObject.transform.rotation);
+        // Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
+        // rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
 
-        GameObject BulletTmp = Instantiate(fireBall, firePos.position, gameObject.transform.rotation);
+        GameObject BulletTmp = Instantiate(fireBall, firePos.transform, worldPositionStays:false);
+        //BulletTmp.GetComponent<LaserControll>().IsEnemyBullet = false;
         
-        Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
+        
 
     }
 }

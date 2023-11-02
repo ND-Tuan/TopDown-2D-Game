@@ -157,7 +157,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c93e7c89fea60d340a5d7332c844bb04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027401152399296905}
   - component: {fileID: -4221083588168419006}
-  - component: {fileID: -1231223956746178589}
+  - component: {fileID: 376774689408897186}
   - component: {fileID: 2873167791494339696}
   - component: {fileID: 8636111649334577855}
   - component: {fileID: 8940638557867758505}
@@ -261,10 +261,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.2706585}
+  m_Offset: {x: 0.6665286, y: -1.5121944}
   serializedVersion: 2
-  m_Radius: 5.1226215
---- !u!50 &-1231223956746178589
+  m_Radius: 3.7435963
+--- !u!50 &376774689408897186
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -332,11 +332,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyMaxHp: 5
+  EnemyCurHp: 0
+  EnemyMaxShield: 0
+  EnemyCurShield: 0
   Immune: 0
   NotBoss: 1
   HealthBar: {fileID: 1668653669387953168}
   Health: {fileID: 8706504135314867526}
+  Shield: {fileID: 0}
   Death: {fileID: 3600803312479096435, guid: 3f00e02cc7f96f44ca6be211843edc5c, type: 3}
+  Main: {fileID: 0}
+  EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 5068101878564543344}
 --- !u!114 &8940638557867758505

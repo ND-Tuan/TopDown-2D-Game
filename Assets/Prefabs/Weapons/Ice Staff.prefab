@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143971337457878781}
   - component: {fileID: 4732431420602621819}
-  - component: {fileID: 4222745854700051835}
+  - component: {fileID: 4501988702944363668}
   m_Layer: 8
   m_Name: Ice Staff
   m_TagString: Player
@@ -26,14 +26,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472946465962278222}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.3484161, w: 0.93734}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8881445181239884992}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &4732431420602621819
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &4222745854700051835
+--- !u!114 &4501988702944363668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c467bbab3fa1449bbb7bd5610a7014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireBall: {fileID: 477512198463270652, guid: f8e9282272aabe14f969d709b2e2ee58, type: 3}
+  fireBall: {fileID: 4554254920819456860, guid: 53b47f74a77cab84eab920ba84abd086,
+    type: 3}
   muzzle: {fileID: 0}
   firePos: {fileID: 8881445181239884992}
   TimeBtwFire: 0.3
@@ -128,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 8135366124223588419}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000000014968167, y: 6.855975e-10, z: -0.0000001490116, w: 1}
-  m_LocalPosition: {x: 7.972411, y: 0.056353584, z: 0}
+  m_LocalPosition: {x: 9.999999, y: -0.0000011026859, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
