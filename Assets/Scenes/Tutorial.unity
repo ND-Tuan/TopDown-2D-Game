@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -764.49695, y: 448.65}
+  m_AnchoredPosition: {x: -764.497, y: 448.65}
   m_SizeDelta: {x: -1513.75, y: -897.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223870331
@@ -401,14 +401,14 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenX: 0.49947935
+  m_ScreenY: 0.4824075
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
+  m_SoftZoneWidth: 2
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0
@@ -1238,7 +1238,7 @@ MonoBehaviour:
   WeaponPos: {fileID: 600619408}
   ArmPos: {fileID: 1987586350}
   KameHa: {fileID: 1242228834768777554, guid: 59d4278ee0670d345825719badcd9261, type: 3}
-  SkillDuration: 5
+  SkillDuration: 10
   SkillCD: 3
   ChargeTime: 3
   Energy: 0
@@ -2037,7 +2037,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 60
+  orthographic size: 45
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2062,7 +2062,7 @@ Transform:
   m_GameObject: {fileID: 1332222419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.08330345, y: -1.5833241, z: -10}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2607,7 +2607,7 @@ GameObject:
   - component: {fileID: 1712801940}
   - component: {fileID: 1712801941}
   m_Layer: 5
-  m_Name: Change Weqpon Icon
+  m_Name: Change Weapon Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   m_Follow: {fileID: 813336500}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 60
+    OrthographicSize: 45
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -2907,7 +2907,7 @@ Transform:
   m_GameObject: {fileID: 1817457230}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.08330345, y: -1.5833241, z: -10}
   m_LocalScale: {x: 1.5, y: 1.5, z: 2.0872}
   m_ConstrainProportionsScale: 0
   m_Children:
