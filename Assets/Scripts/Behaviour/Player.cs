@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -25,15 +26,24 @@ public class Player : MonoBehaviour
     public Text text;
     public bool immune = false;
     public GameObject WeaponPos;
+    public GameObject ArmPos;
+    public GameObject KameHa;
     public float SkillDuration;
     public float SkillCD;
+    public float ChargeTime;
+    public float Energy=0;
     private GameObject pos2;
-    
+    public Image UltiIconCD;
+    public Image UltiIconEnergy;
+    private float SkillCDTmp =0;
+    public bool InUltiTime = false;
+    private GameObject TmpKameHa;
 
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        WeaponPos =GameObject.FindGameObjectWithTag("WeaponPos");
         
         PlayerCurHP = PlayerMaxHP;
         
@@ -60,14 +70,22 @@ public class Player : MonoBehaviour
 
          if (moveInput.x != 0)
             if (moveInput.x < 0){
-                CharacterSR.transform.localScale = new Vector3(-1, 1, 0);
+
+                if(!InUltiTime){
+                    CharacterSR.transform.localScale = new Vector3(-1, 1, 0); 
+                } 
                 WeaponPos.transform.localScale = new Vector3(-1, 1, 0);
+                
 
                 if(pos2 != null) pos2.transform.position = WeaponPos.transform.position + new Vector3((float)-4.5, 0, 0);
             }
             else{
-                CharacterSR.transform.localScale = new Vector3(1, 1, 0); 
+
+                if(!InUltiTime) {
+                    CharacterSR.transform.localScale = new Vector3(1, 1, 0);
+                } 
                 WeaponPos.transform.localScale = new Vector3(1, 1, 0);
+                
 
                 if(pos2 != null) pos2.transform.position = WeaponPos.transform.position + new Vector3((float)4.5, 0, 0);
             }
@@ -84,8 +102,10 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && dashTime <= 0 && DashCDTmp==0)
         {
+            WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             DashCDTmp = DashCD;
             animator.SetBool("Roll", true);
+            
             immune = true;
 
             moveSpeed += dashBoost;
@@ -95,7 +115,9 @@ public class Player : MonoBehaviour
 
         if (dashTime <= 0 && once)
         {
+            WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             animator.SetBool("Roll", false);
+            
             immune = false;
 
             moveSpeed -= dashBoost;
@@ -110,20 +132,47 @@ public class Player : MonoBehaviour
         DashIcon.fillAmount = 1-DashCDTmp/DashCD;
     }
 
-    async void Skill(){
-        if(Input.GetKeyDown(KeyCode.E)){
-            WeaponPos = GameObject.FindGameObjectWithTag("WeaponPos");
-            pos2 = Instantiate(WeaponPos.GetComponent<WeaponHolder>().CurWeapon, WeaponPos.gameObject.transform, worldPositionStays:false);
-            pos2.transform.position = WeaponPos.transform.position + new Vector3((float)4.5, 0, 0);
+    void Skill(){
 
-            float duration = SkillDuration;
-            while(duration>0) {
-                duration -= Time.deltaTime;
-                if(duration<=0) Destroy(pos2);
-                await Task.Delay(1);
-            }
+        if(!InUltiTime) {
+            
+
+            if(SkillCDTmp >0){
+                SkillCDTmp -= Time.deltaTime;
+            } else {
+                SkillCDTmp=0;
+            }   
         }
 
+        UltiIconCD.fillAmount = 1 - SkillCDTmp/SkillCD;
+        UltiIconEnergy.fillAmount = Energy;
+
+        if(Input.GetMouseButton(1) && SkillCDTmp==0){
+            
+            WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
+            animator.SetBool("Charge", true);
+
+            if(Energy <1){
+                if (ChargeTime<=0) ChargeTime=0.000001f;
+                Energy += Time.deltaTime/ChargeTime;
+            } else {
+                Energy = 1;
+            }
+
+        } else{
+            animator.SetBool("Charge", false);
+            
+            if(Energy==1){
+                animator.SetBool("Blash", true);
+                TmpKameHa = Instantiate(KameHa, ArmPos.gameObject.transform, worldPositionStays:false);
+                SkillCDTmp = SkillCD;
+                InUltiTime = true;
+            } else if(!InUltiTime) {
+                WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+            }
+            
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other){

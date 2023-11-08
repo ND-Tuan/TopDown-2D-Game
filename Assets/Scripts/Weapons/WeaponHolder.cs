@@ -18,6 +18,7 @@ public class WeaponHolder : MonoBehaviour
     private int Cost=0;
     public bool IsEnoughMana;
     public Text ManaCost;
+    private bool NoWeaponMoment = false;
 
 
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class WeaponHolder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F)){
+        if(Input.GetKeyDown(KeyCode.F) && !NoWeaponMoment){
             Destroy(CurWeapon);
             if(CurSlot==0){
                 CurWeapon =  Instantiate(Weapons[1], gameObject.transform, worldPositionStays:false);
@@ -75,6 +76,19 @@ public class WeaponHolder : MonoBehaviour
 
     public void AddMana(){
         if(CurMana<150) CurMana++;
+        
+    }
+
+    public void RemoveWeapon(){
+        Destroy(CurWeapon);
+        NoWeaponMoment  = true;
+    }
+
+    public void RestoreWeapon(){
+        if(NoWeaponMoment){
+            CurWeapon =  Instantiate(Weapons[CurSlot], gameObject.transform, worldPositionStays:false);
+            NoWeaponMoment = false;
+        }
         
     }
 }
