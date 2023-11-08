@@ -13,7 +13,7 @@ public class CloseRoom : MonoBehaviour
   public GameObject[] spawners;
   public GameObject check;
   public GameObject warning;
-  public GameObject apear;
+  public GameObject appear;
   public RoomTemplates roomTemplates;
   private int x, y ;
   public int MonsterNum;
@@ -50,7 +50,7 @@ public class CloseRoom : MonoBehaviour
     // hoạt ảnh
     foreach (GameObject pos in spawners){
       Instantiate(warning, pos.transform.position, Quaternion.identity);
-      Instantiate(apear, pos.transform.position, Quaternion.identity);
+      Instantiate(appear, pos.transform.position, Quaternion.identity);
     }
   }
 
@@ -58,7 +58,7 @@ public class CloseRoom : MonoBehaviour
     foreach (GameObject pos in spawners){
       Instantiate(Enemy, pos.transform.position, Quaternion.identity);
     }
-    Invoke(nameof(SpawnWall),0.2f);
+    Invoke(nameof(SpawnWall),0.01f);
   }
 
   void SpawnWall(){

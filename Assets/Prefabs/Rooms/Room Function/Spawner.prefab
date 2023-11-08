@@ -603,7 +603,7 @@ MonoBehaviour:
   - {fileID: 2411529979220939118}
   check: {fileID: 4526147970526363211}
   warning: {fileID: 566189627313614896, guid: 8e2d8513bbeb0ac4eac9460f72a8953c, type: 3}
-  apear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
+  appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
 --- !u!1 &3070902166187215422
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   - {fileID: 2411529979220939118}
   check: {fileID: 4526147970526363211}
   warning: {fileID: 566189627313614896, guid: 8e2d8513bbeb0ac4eac9460f72a8953c, type: 3}
-  apear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
+  appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
 --- !u!1 &5311997089028214351
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   - {fileID: 2411529979220939118}
   check: {fileID: 4526147970526363211}
   warning: {fileID: 566189627313614896, guid: 8e2d8513bbeb0ac4eac9460f72a8953c, type: 3}
-  apear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
+  appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
 --- !u!1 &6538152147727977464
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   - {fileID: 2411529979220939118}
   check: {fileID: 4526147970526363211}
   warning: {fileID: 566189627313614896, guid: 8e2d8513bbeb0ac4eac9460f72a8953c, type: 3}
-  apear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
+  appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
 --- !u!1 &8878694876546954735

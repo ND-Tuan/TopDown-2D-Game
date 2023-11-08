@@ -13,8 +13,6 @@ public class LaserControll : MonoBehaviour
     public int ManaCost;
     public WeaponHolder weaponHolder;
 
-
-
     // Start is called before the first frame update
 
     void Start()

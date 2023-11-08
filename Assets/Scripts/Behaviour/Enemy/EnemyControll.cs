@@ -19,9 +19,11 @@ public class EnemyControll : MonoBehaviour
     public GameObject DmgPopup;
     public GameObject Death;
     public GameObject Main;
+    public GameObject ManaOrb;
     public GameObject[] EnemySub;
     public RoomTemplates roomTemplates;
     public SpriteRenderer  InterFace;
+    private bool isDead =false;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,15 +43,24 @@ public class EnemyControll : MonoBehaviour
         double HealAmount = EnemyCurHp *(1.2/EnemyMaxHp);    
         Health.transform.localScale = new Vector3((float)HealAmount, (float)1.6, 0);
 
-        if( EnemyCurHp <=0) {
+        if( isDead) {
+
             if(Death !=null) Instantiate(Death, transform.position, Death.transform.rotation);
-
-            if(!isSummonObject) roomTemplates.countEnemy --;
-
             HealthBar.transform.localScale = new Vector3(0, 0, 0);
+
+            int rand = Random.Range(1,4);
+            if(!NotBoss) rand = 50;
+
+            for(int i=0; i<rand; i++){
+                GameObject Tmp = Instantiate(ManaOrb, gameObject.transform.position, Quaternion.identity);
+                Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
+            }
+           
+            if(!isSummonObject) roomTemplates.countEnemy --;
             Destroy(gameObject);
             Destroy(Main);
         }
+
     }
     
 
@@ -69,12 +80,19 @@ public class EnemyControll : MonoBehaviour
             EnemyCurShield -= Dmg;
         }
 
-        GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays:false);
+        GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
         instance.GetComponent<TextMesh>().text = Dmg.ToString();
         instance.transform.position += new Vector3(Random.Range(-3, 3), 3, 0);
 
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
         Invoke(nameof(Nomal), 0.1f);
+
+        if( EnemyCurHp <=0){
+            
+            isDead=true;
+           
+        } 
+        
     }
 
     void Nomal(){

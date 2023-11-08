@@ -456,9 +456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e4be353f596094aae09eecea92dc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHp: 50
+  EnemyMaxHp: 500
   EnemyCurHp: 0
-  EnemyMaxShield: 20
+  EnemyMaxShield: 100
   EnemyCurShield: 0
   Immune: 0
   NotBoss: 0
@@ -470,6 +470,7 @@ MonoBehaviour:
     type: 3}
   Death: {fileID: 707871668063329619, guid: 28fbc9d99446b394ab628dbfcb5783ad, type: 3}
   Main: {fileID: 4120797787442529989}
+  ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 3710564650221416878}

@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1873350457567090055}
   - component: {fileID: 7510664918352503636}
   - component: {fileID: 6358519214247698333}
-  - component: {fileID: 4966705609571097033}
+  - component: {fileID: 1077829268075067059}
   m_Layer: 7
   m_Name: GolemArmShoot
   m_TagString: Enemy
@@ -161,6 +161,7 @@ MonoBehaviour:
     type: 3}
   Death: {fileID: 0}
   Main: {fileID: 4876966598996606143}
+  ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 579136522214762401}
@@ -191,8 +192,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &4966705609571097033
-CapsuleCollider2D:
+--- !u!60 &1077829268075067059
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -223,9 +224,42 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.1582813, y: -0.5448961}
-  m_Size: {x: 9.417532, y: 9.417534}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3.84916, y: 0.99796057}
+      - {x: 3.0670362, y: 1.996073}
+      - {x: 3.06478, y: 3.2108145}
+      - {x: 0.8030846, y: 5.253122}
+      - {x: -0.19328725, y: 4.61258}
+      - {x: -1.330095, y: 6.003692}
+      - {x: -5.5932255, y: 7.4756904}
+      - {x: -7.005253, y: 6.317233}
+      - {x: -5.1270924, y: 4.7066884}
+      - {x: -5.5162697, y: 4.1838975}
+      - {x: -3.2312198, y: 2.5258424}
+      - {x: -3.7546406, y: 2.0255826}
+      - {x: -1.8644092, y: 0.31163916}
+      - {x: -2.2979076, y: -0.42898977}
+      - {x: 0.39027256, y: -2.8274503}
+      - {x: 1.377254, y: -2.5798783}
+      - {x: 1.0554292, y: -4.210146}
+      - {x: 3.058594, y: -3.658543}
+      - {x: 5.1684713, y: -5.189313}
+      - {x: 7.6816278, y: -5.0526543}
+      - {x: 7.470716, y: -2.2607114}
+      - {x: 5.7751884, y: -0.7122443}
+      - {x: 6.14476, y: 1.1957471}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8596353430224760180
 GameObject:
   m_ObjectHideFlags: 0

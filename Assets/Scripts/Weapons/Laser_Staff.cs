@@ -22,7 +22,7 @@ public class Laser_Staff : MonoBehaviour
     void Update()
     {
         timeBtwFire -= Time.deltaTime;
-        if(Input.GetMouseButton(0) && timeBtwFire <0){
+        if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana){
 
             Fire();
             weaponHolder.SubtractMana(ManaCost);

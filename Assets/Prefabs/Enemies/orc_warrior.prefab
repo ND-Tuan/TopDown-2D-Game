@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027401152399296905}
-  - component: {fileID: -4221083588168419006}
+  - component: {fileID: 4628099077713475281}
   - component: {fileID: 376774689408897186}
   - component: {fileID: 2873167791494339696}
   - component: {fileID: 8636111649334577855}
@@ -229,7 +229,7 @@ Transform:
   - {fileID: 6814521856982569337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &-4221083588168419006
+--- !u!58 &4628099077713475281
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,14 +241,14 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 767
   m_ForceReceiveLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -258,12 +258,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6665286, y: -1.5121944}
+  m_Offset: {x: 0.56469536, y: -1.2833967}
   serializedVersion: 2
-  m_Radius: 3.7435963
+  m_Radius: 3.3234744
 --- !u!50 &376774689408897186
 Rigidbody2D:
   serializedVersion: 4
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e4be353f596094aae09eecea92dc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyMaxHp: 5
+  EnemyMaxHp: 40
   EnemyCurHp: 0
   EnemyMaxShield: 0
   EnemyCurShield: 0
@@ -345,6 +345,7 @@ MonoBehaviour:
     type: 3}
   Death: {fileID: 3600803312479096435, guid: 3f00e02cc7f96f44ca6be211843edc5c, type: 3}
   Main: {fileID: 0}
+  ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 5068101878564543344}

@@ -63,5 +63,10 @@ public class RoomTemplates : MonoBehaviour {
         } 
 	}
 
+	void DeSpawnWall(){
+      isSpawnWall = true;
+      
+  }
+
 	
 }
