@@ -10,6 +10,7 @@ public class RoomTemplates : MonoBehaviour {
 	public GameObject[] rightRooms;
 	public GameObject[] closeRooms;
 	public GameObject[] Interior;
+	public GameObject Player;
 
 	public GameObject entryRoom;
 
@@ -32,6 +33,7 @@ public class RoomTemplates : MonoBehaviour {
 
 	void Start(){
 		Invoke(nameof(Scan), 1f);
+		
 	}
 
 	void Update(){
@@ -65,8 +67,10 @@ public class RoomTemplates : MonoBehaviour {
 
 	void DeSpawnWall(){
       isSpawnWall = true;
+	  
       
-  }
+  	}
+
 
 	
 }

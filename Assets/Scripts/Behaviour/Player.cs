@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
     private float SkillCDTmp =0;
     public bool InUltiTime = false;
     private GameObject TmpKameHa;
+    private bool appear = false;
 
 
     void Start()
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
         WeaponPos =GameObject.FindGameObjectWithTag("WeaponPos");
         
         PlayerCurHP = PlayerMaxHP;
+        Invoke(nameof(Appear), 0.5f);
         
     }
 
@@ -55,9 +58,13 @@ public class Player : MonoBehaviour
         HpBar.value = PlayerCurHP;
         text.text = PlayerCurHP + "/" + PlayerMaxHP;
 
-        Move();
-        Dash();
-        Skill();
+        if(PlayerCurHP <=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(appear){
+            Move();
+            Dash();
+            Skill();
+        }
+        
 
     }
 
@@ -68,28 +75,15 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
-         if (moveInput.x != 0)
-            if (moveInput.x < 0){
-
-                if(!InUltiTime){
-                    CharacterSR.transform.localScale = new Vector3(-1, 1, 0); 
-                } 
+         if (moveInput.x != 0 && !InUltiTime)
+            if (moveInput.x < 0){  
+                CharacterSR.transform.localScale = new Vector3(-1, 1, 0);
                 WeaponPos.transform.localScale = new Vector3(-1, 1, 0);
-                
-
-                if(pos2 != null) pos2.transform.position = WeaponPos.transform.position + new Vector3((float)-4.5, 0, 0);
             }
-            else{
-
-                if(!InUltiTime) {
-                    CharacterSR.transform.localScale = new Vector3(1, 1, 0);
-                } 
-                WeaponPos.transform.localScale = new Vector3(1, 1, 0);
-                
-
-                if(pos2 != null) pos2.transform.position = WeaponPos.transform.position + new Vector3((float)4.5, 0, 0);
-            }
-                
+            else{             
+                CharacterSR.transform.localScale = new Vector3(1, 1, 0);
+                WeaponPos.transform.localScale = new Vector3(1, 1, 0);  
+            }     
     }
 
     void Dash(){
@@ -115,7 +109,7 @@ public class Player : MonoBehaviour
 
         if (dashTime <= 0 && once)
         {
-            WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+            //WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             animator.SetBool("Roll", false);
             
             immune = false;
@@ -162,7 +156,7 @@ public class Player : MonoBehaviour
         } else{
             animator.SetBool("Charge", false);
             
-            if(Energy==1){
+            if(Energy==1 && !InUltiTime){
                 animator.SetBool("Blash", true);
                 TmpKameHa = Instantiate(KameHa, ArmPos.gameObject.transform, worldPositionStays:false);
                 SkillCDTmp = SkillCD;
@@ -170,9 +164,7 @@ public class Player : MonoBehaviour
             } else if(!InUltiTime) {
                 WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             }
-            
         }
-        
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -186,7 +178,6 @@ public class Player : MonoBehaviour
            
             Invoke(nameof(Nomal), 0.1f);
         }
-        
     }
 
     void Nomal(){
@@ -196,6 +187,11 @@ public class Player : MonoBehaviour
 
     public void TakeDmg(){
         PlayerCurHP--;
+    }
+
+    void Appear(){
+        animator.SetBool("Appear", true);
+        appear = true;
     }
      
 

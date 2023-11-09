@@ -24,9 +24,7 @@ public class WeaponHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       CurWeapon =  Instantiate(Weapons[0], gameObject.transform, worldPositionStays:false);
-       WeaponIcon.sprite =CurWeapon.GetComponent<SpriteRenderer>().sprite;
-       WeaponIcon.SetNativeSize();
+       Invoke(nameof(SpawnWeapon), 0.5f);
        CurMana = 150;
        
     }
@@ -90,5 +88,11 @@ public class WeaponHolder : MonoBehaviour
             NoWeaponMoment = false;
         }
         
+    }
+
+    void SpawnWeapon(){
+        CurWeapon =  Instantiate(Weapons[0], gameObject.transform, worldPositionStays:false);
+       WeaponIcon.sprite =CurWeapon.GetComponent<SpriteRenderer>().sprite;
+       WeaponIcon.SetNativeSize();
     }
 }

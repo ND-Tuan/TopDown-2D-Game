@@ -34,8 +34,7 @@ public class Laser_Staff : MonoBehaviour
 
         GameObject BulletTmp = Instantiate(laser, firePos.transform, worldPositionStays:false);
 
-        BulletTmp.GetComponent<LaserControll>().IsEnemyBullet = false;
-        BulletTmp.GetComponent<LaserControll>().ManaCost = ManaCost;
+        BulletTmp.GetComponent<LaserControll>().IsEnemyBullet = false;      
         BulletTmp.transform.localScale = new Vector3(0.7f, 0.7f, 0);
         
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4907133618148856276}
   - component: {fileID: 3506841708519395056}
   - component: {fileID: -2025608403616434630}
+  - component: {fileID: 4929765573919663835}
   m_Layer: 0
   m_Name: Kame Kame Ha
   m_TagString: Untagged
@@ -142,3 +143,20 @@ CapsuleCollider2D:
   m_Offset: {x: 78.660286, y: -0.39230525}
   m_Size: {x: 172.6819, y: 16.492632}
   m_Direction: 1
+--- !u!114 &4929765573919663835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7490931046550414493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ff302f54bb7804fa2944b42f31d86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsEnemyBullet: 0
+  IsGiveDmg: 0
+  CastTime: 0
+  Damage: 12
+  enemyControll: []

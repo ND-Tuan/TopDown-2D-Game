@@ -8,54 +8,75 @@ public class LaserControll : MonoBehaviour
     public bool IsGiveDmg = false;
     public float CastTime;
     public int Damage;
-    public float DelayDmgTime;
-    private float DelayDmgTimeCal;
-    public int ManaCost;
-    public WeaponHolder weaponHolder;
+    private float DelayDmgTime = 0.4f;
+    private float DelayDmgTimeCal=0;
+    private bool DmgToPlayer = false ;
+    private bool DmgToEnemy = false ;
+    private Player player;
+    public List<EnemyControll> enemyControll;
 
-    // Start is called before the first frame update
+    void Update(){
+        DelayDmgTimeCal -= Time.deltaTime;
+        CastTime -= Time.deltaTime;
 
-    void Start()
-    {
-        Invoke(nameof(GiveDmg), 0.75f);
+        if(CastTime<=0) IsGiveDmg = true;
+
+        if(DelayDmgTimeCal <=0 && IsGiveDmg){
+            if(DmgToPlayer){
+                player.TakeDmg();           
+            }
+            if(DmgToEnemy){
+                foreach(EnemyControll e in enemyControll){
+                    if(e!=null){
+                        e.TakeDmg(Damage);
+                    } 
+                }
+            }
+            DelayDmgTimeCal = DelayDmgTime;
+        }
     }
     
     void OnTriggerEnter2D(Collider2D other){
         
-        if(IsEnemyBullet ==true){
-            if(other.CompareTag("Player") && IsGiveDmg){
-                other.GetComponent<Player>().TakeDmg();
+        
+            if(IsEnemyBullet){
+
+                if(other.CompareTag("Player")  ){
+                    DmgToPlayer = true;
+                    player = other.GetComponent<Player>();
+                }
+            } else {
+                if(other.CompareTag("Enemy")  ){
+                    DmgToEnemy = true;
+                    EnemyControll TmpEnemyControll = other.GetComponent<EnemyControll>();
+                    if(TmpEnemyControll !=null){
+                        enemyControll.Remove(TmpEnemyControll);
+                        enemyControll.Add(TmpEnemyControll);   
+                    } 
+                }
             }
-        } else {
-            if(other.CompareTag("Enemy") && IsGiveDmg==true){
-                other.GetComponent<EnemyControll>().TakeDmg(Damage);
-                DelayDmgTimeCal = DelayDmgTime;
-                
-            }
-        }
+        
+        
     }
 
-    void OnTriggerStay2D(Collider2D other){
-
-        DelayDmgTimeCal -= Time.deltaTime;
+    void OnTriggerExit2D(Collider2D other){
 
         if(IsEnemyBullet){
-
-            if(other.CompareTag("Player" ) && IsGiveDmg && DelayDmgTimeCal <=0){
-                other.GetComponent<Player>().TakeDmg();
-                DelayDmgTimeCal = DelayDmgTime;
+            if(other.CompareTag("Player" )  ){
+                DmgToPlayer = false;
+                
             }
-
         } else {
-
-            if(other.CompareTag("Enemy") && IsGiveDmg && DelayDmgTimeCal <=0){
-                other.GetComponent<EnemyControll>().TakeDmg(Damage);
-                DelayDmgTimeCal = DelayDmgTime;
+            if(other.CompareTag("Enemy")  ){
+                DmgToEnemy = false;
+                EnemyControll TmpEnemyControll = other.GetComponent<EnemyControll>();
+                if(TmpEnemyControll !=null){
+                    enemyControll.Remove(TmpEnemyControll);
+                    DelayDmgTimeCal =0;
+                }
             }
         }
+        
     }
 
-    void GiveDmg(){
-        IsGiveDmg = true;
-    }
 }

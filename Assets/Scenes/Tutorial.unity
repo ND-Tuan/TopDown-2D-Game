@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -764.497, y: 448.65}
+  m_AnchoredPosition: {x: -764.4971, y: 448.65}
   m_SizeDelta: {x: -1513.75, y: -897.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223870331
@@ -1238,8 +1238,8 @@ MonoBehaviour:
   WeaponPos: {fileID: 600619408}
   ArmPos: {fileID: 1987586350}
   KameHa: {fileID: 1242228834768777554, guid: 59d4278ee0670d345825719badcd9261, type: 3}
-  SkillDuration: 10
-  SkillCD: 3
+  SkillDuration: 4
+  SkillCD: 5
   ChargeTime: 3
   Energy: 0
   UltiIconCD: {fileID: 19847607}
@@ -2521,6 +2521,7 @@ MonoBehaviour:
   - {fileID: 4094575812577625826, guid: 1f667739a14786f4dbf0b64d28fe9a46, type: 3}
   - {fileID: 3576657482591406825, guid: 6b6d6d35af0cb0240ac2502ba06b539e, type: 3}
   - {fileID: 9088384693000013017, guid: 39cc55ecfcaf77347935b455d3c0203c, type: 3}
+  Player: {fileID: 0}
   entryRoom: {fileID: 1384366362914734, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
   rooms: []
   Column: []
@@ -2878,7 +2879,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 813336500}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 45
