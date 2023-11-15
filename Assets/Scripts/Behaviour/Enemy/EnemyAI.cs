@@ -19,6 +19,10 @@ public class EnemyAI : MonoBehaviour
     Path path;
     Coroutine moveCoroutine;
     public float nextWayPointDistance;
+    public float proximityThreshold = 50f;
+    public Vector2 target;
+    public Vector3 playerPos;
+    public float distanceToPlayer;
 
     private void Start(){
         InvokeRepeating(nameof(CalculatePath), 0f, 0.5f);
@@ -30,7 +34,9 @@ public class EnemyAI : MonoBehaviour
     }
 
     void CalculatePath(){
-        Vector2 target = FindTarget();
+
+        target = FindTarget();
+
         if(seeker != null)
             if(seeker.IsDone() && (reachPlayer || update) )
                 seeker.StartPath(transform.position, target, OnPathCompleted);
@@ -79,15 +85,26 @@ public class EnemyAI : MonoBehaviour
     }
 
     Vector2 FindTarget(){
-        Vector3 playerPos = FindObjectOfType<Player>().transform.position;
 
-        if(roaming){
+        
+        playerPos = FindObjectOfType<Player>().transform.position;
+        
+        distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
-            return (Vector2)playerPos + (Random.Range(10f, 50f) *new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized);
-        } else {
+        if (distanceToPlayer <= proximityThreshold){
+            if(roaming){
 
-            return playerPos;
+                return (Vector2)playerPos + (Random.Range(10f, 50f) *new Vector2(Random.Range(-1, 1), Random.Range(-1, 1)).normalized);
+            } else {
+
+                return playerPos;
+            }
+        } else{
+            Vector3 RandPos = transform.position + new Vector3(Random.Range(-10,10),Random.Range(-10,10), 0);
+            return RandPos;
         }
+
+        
     }
 
 }

@@ -6,13 +6,13 @@ public class Magic_Staff : MonoBehaviour
 {
     public GameObject fireBall;
     public GameObject muzzle;
-    public Transform firePos;
+    public List<Transform> firePos;
     public float TimeBtwFire = 0.2f;
     public float BulletForce;
     private float timeBtwFire;
     public WeaponHolder weaponHolder;
     public int ManaCost;
-
+    public int Damage ;
 
     void Start(){
         weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
@@ -32,10 +32,11 @@ public class Magic_Staff : MonoBehaviour
      void Fire(){
         timeBtwFire = TimeBtwFire;
 
-        GameObject BulletTmp = Instantiate(fireBall, firePos.transform.position, gameObject.transform.rotation);
-        Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
-        
-
+        foreach(Transform p in firePos){
+            GameObject BulletTmp = Instantiate(fireBall, p.transform.position, gameObject.transform.rotation);
+            BulletTmp.GetComponent<BulletControll>().Dmg = Damage;
+            Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
+            rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
+        }
     }
 }

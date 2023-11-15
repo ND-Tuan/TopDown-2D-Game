@@ -101,10 +101,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireBall: {fileID: 477512198463270652, guid: f8e9282272aabe14f969d709b2e2ee58, type: 3}
   muzzle: {fileID: 0}
-  firePos: {fileID: 8881445181239884992}
+  firePos:
+  - {fileID: 8881445181239884992}
   TimeBtwFire: 0.3
   BulletForce: 80
+  weaponHolder: {fileID: 0}
   ManaCost: 1
+  Damage: 5
 --- !u!114 &2469606759634245976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -62,15 +62,6 @@ public class EnemyControll : MonoBehaviour
         }
 
     }
-    
-
-    void OnTriggerEnter2D(Collider2D other){
-        
-        if(other.CompareTag("bullet") && (NotBoss || !Immune)) {
-            
-            TakeDmg(1);
-        }
-    }
 
     public void TakeDmg(int Dmg){
 
