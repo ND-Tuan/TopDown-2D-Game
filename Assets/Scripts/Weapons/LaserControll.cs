@@ -43,7 +43,7 @@ public class LaserControll : MonoBehaviour
 
                 if(other.CompareTag("Player")  ){
                     DmgToPlayer = true;
-                    player = other.GetComponent<Player>();
+                    player = other.GetComponentInParent<Player>();
                 }
             } else {
                 if(other.CompareTag("Enemy")  ){

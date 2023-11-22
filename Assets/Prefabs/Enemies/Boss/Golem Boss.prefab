@@ -388,12 +388,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roaming: 1
-  moveSpeed: 20
+  moveSpeed: 30
   animator: {fileID: 0}
   InterFace: {fileID: 3710564650221416878}
   seeker: {fileID: 0}
   update: 0
   nextWayPointDistance: 0.2
+  proximityThreshold: 100
+  target: {x: 0, y: 0}
+  playerPos: {x: 0, y: 0, z: 0}
+  distanceToPlayer: 0
 --- !u!114 &8397565324398963373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,7 +549,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 374690313, guid: 4cfcfc5be31bcf544a2a227c2700debe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -629,7 +633,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 374690313, guid: 4cfcfc5be31bcf544a2a227c2700debe, type: 3}
   m_Color: {r: 0.5803922, g: 0.63529414, b: 0.7411765, a: 1}
@@ -846,7 +850,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 879634360, guid: cea9fe8de1d0aff4d9d5bcbe5b0a1746, type: 3}
   m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}

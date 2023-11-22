@@ -7,7 +7,7 @@ public class CloseRoom : MonoBehaviour
 {
 
   public GameObject Column;
-  public GameObject Enemy;
+  public GameObject[] Enemy;
   public GameObject[] closePos;
   public Transform spawnerPoint;
   public GameObject[] spawners;
@@ -32,6 +32,7 @@ public class CloseRoom : MonoBehaviour
           if(pos != null)
             Instantiate(Column, pos.transform.position, Quaternion.identity);
         }
+        AstarPath.active.Scan();
         
         TakeRandomLocate();
         Invoke(nameof(SpawnEnemies), 0.67f);
@@ -56,13 +57,15 @@ public class CloseRoom : MonoBehaviour
 
   void SpawnEnemies(){
     foreach (GameObject pos in spawners){
-      Instantiate(Enemy, pos.transform.position, Quaternion.identity);
+
+      Instantiate(Enemy[Random.Range(0, 2)], pos.transform.position, Quaternion.identity);
     }
     Invoke(nameof(SpawnWall),0.01f);
   }
 
   void SpawnWall(){
       roomTemplates.isSpawnWall = true;
+      roomTemplates.transform.position = spawners[0].transform.position;
       Destroy(check);
   }
 }

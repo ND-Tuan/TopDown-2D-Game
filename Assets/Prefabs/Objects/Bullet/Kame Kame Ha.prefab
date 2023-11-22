@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4907133618148856276}
   - component: {fileID: 3506841708519395056}
   - component: {fileID: -2025608403616434630}
-  - component: {fileID: 4929765573919663835}
+  - component: {fileID: 9009465772114485149}
   m_Layer: 0
   m_Name: Kame Kame Ha
   m_TagString: Untagged
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1352376073
-  m_SortingLayer: 1
+  m_SortingLayerID: -1704273253
+  m_SortingLayer: 3
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1067150521, guid: d276a62d8359f8d4bb52475034f5e8ae, type: 3}
+  m_Sprite: {fileID: 1155420709, guid: 0c681a6c3325bcb438cd3fb66537e75a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,10 +140,10 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 78.660286, y: -0.39230525}
-  m_Size: {x: 172.6819, y: 16.492632}
+  m_Offset: {x: 0.56555367, y: -0.39229596}
+  m_Size: {x: 16.492737, y: 16.492737}
   m_Direction: 1
---- !u!114 &4929765573919663835
+--- !u!114 &9009465772114485149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,11 +152,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7490931046550414493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ff302f54bb7804fa2944b42f31d86c, type: 3}
+  m_Script: {fileID: 11500000, guid: 46afb76732bfe7e4da90e1bfe59b3a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnemyBullet: 0
-  IsGiveDmg: 0
-  CastTime: 0
-  Damage: 12
-  enemyControll: []
+  Dmg: 12
+  DesByTrigger: 0

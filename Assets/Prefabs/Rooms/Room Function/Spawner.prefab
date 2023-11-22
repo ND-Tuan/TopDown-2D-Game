@@ -583,7 +583,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Column: {fileID: 964337580885657200, guid: 42ee0e5d0301db2479ae4d9cf5268ece, type: 3}
-  Enemy: {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
+  Enemy:
+  - {fileID: 1551058859785515640, guid: bddebaeffdffaae468242a761b661670, type: 3}
+  - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1144,7 +1146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Column: {fileID: 964337580885657200, guid: 42ee0e5d0301db2479ae4d9cf5268ece, type: 3}
-  Enemy: {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
+  Enemy:
+  - {fileID: 1551058859785515640, guid: bddebaeffdffaae468242a761b661670, type: 3}
+  - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1258,7 +1262,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Column: {fileID: 964337580885657200, guid: 42ee0e5d0301db2479ae4d9cf5268ece, type: 3}
-  Enemy: {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
+  Enemy:
+  - {fileID: 1551058859785515640, guid: bddebaeffdffaae468242a761b661670, type: 3}
+  - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1525,7 +1531,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Column: {fileID: 964337580885657200, guid: 42ee0e5d0301db2479ae4d9cf5268ece, type: 3}
-  Enemy: {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
+  Enemy:
+  - {fileID: 1551058859785515640, guid: bddebaeffdffaae468242a761b661670, type: 3}
+  - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}

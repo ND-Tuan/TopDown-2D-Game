@@ -17,6 +17,7 @@ public class RoomTemplates : MonoBehaviour {
 	public List<GameObject> rooms;
 
 	public List<GameObject> Column;
+	public List<GameObject> WeaponsList;
 
 	public float waitTime;
 	private bool spawnedBoss;
@@ -29,6 +30,8 @@ public class RoomTemplates : MonoBehaviour {
     public GameObject Cam;
 
 	public GameObject column;
+	public GameObject WoodenChest;
+	public Vector3 CentrePos;
 
 
 	void Start(){
@@ -58,6 +61,7 @@ public class RoomTemplates : MonoBehaviour {
 			isSpawnWall = false;
 			
             Instantiate(Clear, Cam.transform, worldPositionStays:false);
+			Instantiate(WoodenChest, gameObject.transform.position, WoodenChest.transform.rotation);
 			foreach(GameObject col in Column){
 				Destroy(col);
 			}

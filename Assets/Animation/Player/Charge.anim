@@ -24,9 +24,9 @@ AnimationClip:
       value: {fileID: 341392303, guid: 04c12cd8f55e1f647a4f1ea8981d61b7, type: 3}
     - time: 0.1
       value: {fileID: -1031150172, guid: 04c12cd8f55e1f647a4f1ea8981d61b7, type: 3}
-    - time: 0.23333333
+    - time: 0.21666667
       value: {fileID: -1438809218, guid: 04c12cd8f55e1f647a4f1ea8981d61b7, type: 3}
-    - time: 0.33333334
+    - time: 0.31666666
       value: {fileID: 794197638, guid: 04c12cd8f55e1f647a4f1ea8981d61b7, type: 3}
     - time: 0.43333334
       value: {fileID: 456571361, guid: 04c12cd8f55e1f647a4f1ea8981d61b7, type: 3}
