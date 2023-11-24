@@ -17,6 +17,7 @@ public class CloseRoom : MonoBehaviour
   public RoomTemplates roomTemplates;
   private int x, y ;
   public int MonsterNum;
+  public bool IsSpawnEnemies = true;
   private bool isSpawn = false;
   void Start(){
 		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();	
@@ -45,7 +46,6 @@ public class CloseRoom : MonoBehaviour
       x = Random.Range(-50, 50);
       y = Random.Range(-50, 50);
       spawners[i].transform.position  = spawnerPoint.position + new Vector3(x, y, 0);  
-      
     }
 
     // hoạt ảnh
@@ -56,11 +56,13 @@ public class CloseRoom : MonoBehaviour
   }
 
   void SpawnEnemies(){
-    foreach (GameObject pos in spawners){
-
-      Instantiate(Enemy[Random.Range(0, 2)], pos.transform.position, Quaternion.identity);
+    if(IsSpawnEnemies==true){
+        foreach (GameObject pos in spawners){
+          Instantiate(Enemy[Random.Range(0, 2)], pos.transform.position, Quaternion.identity);
+        }
     }
     Invoke(nameof(SpawnWall),0.01f);
+    
   }
 
   void SpawnWall(){

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Rotate_Weapon : MonoBehaviour
 {
+    public bool IsFlip;
 
     // Update is called once per frame
     void Update(){
@@ -20,10 +21,13 @@ public class Rotate_Weapon : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
         transform.rotation = rotation;
 
-        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270) 
+        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270) {
             transform.localScale = new Vector3(1, -1, 0);
-        else 
+        }
+           
+        else {
             transform.localScale = new Vector3(1, 1, 0);
 
+        }
     }
 }

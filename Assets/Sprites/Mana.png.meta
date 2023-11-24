@@ -126,12 +126,12 @@ TextureImporter:
       name: Mana_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 322
-        width: 1382
-        height: 421
+        x: 0
+        y: 0
+        width: 1567
+        height: 817
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Mana_1
       rect:
         serializedVersion: 2
-        x: 439
+        x: 377
         y: 65
-        width: 996
-        height: 121
+        width: 1120
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

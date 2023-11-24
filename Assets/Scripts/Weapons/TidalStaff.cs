@@ -18,6 +18,7 @@ public class TidalStaff : MonoBehaviour
     void Start()
     {
         weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
+        weaponHolder.Rotationable = false;  
         weaponHolder.ShowManaCost(ManaCost);
         Player= GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>();

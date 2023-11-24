@@ -76,13 +76,21 @@ public class Player : MonoBehaviour
 
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
-         if (moveInput.x != 0 && !InUltiTime)
-            if (moveInput.x < 0){  
+        //xác định qóc quay của chuột đối vs người chơi
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 lookDir = mousePos - transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+
+        //Đổi hướng nhân vật
+        if ( !InUltiTime)
+            if ((rotation.eulerAngles.z > 90 && rotation.eulerAngles.z < 270 && WeaponPos.GetComponent<WeaponHolder>().Rotationable)
+                    || (moveInput.x <0 && WeaponPos.GetComponent<WeaponHolder>().Rotationable ==false)){  
                 CharacterSR.transform.localScale = new Vector3(-1, 1, 0);
                 if(WeaponPos.GetComponent<WeaponHolder>().Rotationable) 
                     WeaponPos.transform.localScale = new Vector3(-1, 1, 0);
             }
-            else{             
+            else if(moveInput.x != 0 || WeaponPos.GetComponent<WeaponHolder>().Rotationable){             
                 CharacterSR.transform.localScale = new Vector3(1, 1, 0);
                 if(WeaponPos.GetComponent<WeaponHolder>().Rotationable)
                     WeaponPos.transform.localScale = new Vector3(1, 1, 0);  
@@ -132,8 +140,6 @@ public class Player : MonoBehaviour
     void Skill(){
 
         if(!InUltiTime) {
-            
-
             if(SkillCDTmp >0){
                 SkillCDTmp -= Time.deltaTime;
             } else {

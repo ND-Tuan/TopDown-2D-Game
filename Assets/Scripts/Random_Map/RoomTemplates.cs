@@ -23,7 +23,7 @@ public class RoomTemplates : MonoBehaviour {
 	private bool spawnedBoss;
 	public GameObject boss;
     public int rd;
-
+	public int Level;
 	public int countEnemy =0;
     public bool isSpawnWall = false;
     public GameObject Clear;
@@ -32,10 +32,13 @@ public class RoomTemplates : MonoBehaviour {
 	public GameObject column;
 	public GameObject WoodenChest;
 	public Vector3 CentrePos;
+	
 
 
 	void Start(){
 		Invoke(nameof(Scan), 1f);
+		GameObject.FindGameObjectWithTag("PlayerPos").transform.position = new Vector3(0,0,0);
+		Cam = GameObject.FindGameObjectWithTag("MainCamera");
 		
 	}
 
@@ -44,7 +47,15 @@ public class RoomTemplates : MonoBehaviour {
 		RemoveWall();
 
 		if(waitTime <= 0 && spawnedBoss == false){
-			Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
+			if(Level==3){
+				Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
+				rooms[rooms.Count-1].GetComponent<AddRoom>().CancerSpawneEnemies();
+			} else {
+				rooms[rooms.Count-1].GetComponent<AddRoom>().ChangeToFunctionRoom();
+				GameObject Tmp = Instantiate(Interior[3], rooms[rooms.Count-1].transform.position, Quaternion.identity);
+				Tmp.GetComponentInChildren<PortalController>().Level = Level+1;
+			}
+			
 			spawnedBoss = true;
 		} else {
 			waitTime -= Time.deltaTime;

@@ -126,12 +126,12 @@ TextureImporter:
       name: Health_0
       rect:
         serializedVersion: 2
-        x: 177
-        y: 323
-        width: 1383
-        height: 423
+        x: 0
+        y: 324
+        width: 1801
+        height: 497
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Health_1
       rect:
         serializedVersion: 2
-        x: 431
+        x: 408
         y: 66
-        width: 993
-        height: 118
+        width: 1060
+        height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,27 +160,6 @@ TextureImporter:
       bones: []
       spriteID: 21461a1f80546564eb614bbb2a6cc5df
       internalID: 532466518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Health_2
-      rect:
-        serializedVersion: 2
-        x: 1674
-        y: 635
-        width: 127
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e6d14086137ad043b1bba28512364a8
-      internalID: -807505536
       vertices: []
       indices: 
       edges: []
@@ -198,7 +177,6 @@ TextureImporter:
     nameFileIdTable:
       Health_0: 605061929
       Health_1: 532466518
-      Health_2: -807505536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

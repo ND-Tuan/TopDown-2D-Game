@@ -40,6 +40,7 @@ public class WeaponHolder : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F) && !NoWeaponMoment){
             Destroy(CurWeapon);
+            Rotationable = true;
             if(CurSlot==0){
                 CurWeapon =  Instantiate(templates.WeaponsList[Weapons[1]], gameObject.transform, worldPositionStays:false);
                 CurSlot =1;
@@ -49,7 +50,7 @@ public class WeaponHolder : MonoBehaviour
             }
             WeaponIcon.sprite =CurWeapon.GetComponent<SpriteRenderer>().sprite;
             WeaponIcon.SetNativeSize();
-            if(GetComponentInChildren<Rotate_Weapon>() == null) Rotationable = false;
+            
         }
 
         ManaBar.value = CurMana;
@@ -62,6 +63,9 @@ public class WeaponHolder : MonoBehaviour
         } else{
             ManaCost.color= Color.white;
             IsEnoughMana = true;
+        }
+        if(Rotationable == false){
+            gameObject.transform.localScale = new Vector3(1, 1, 0);  
         }
         
     }
