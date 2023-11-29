@@ -15,6 +15,7 @@ public class AutoMoveToPlayer : MonoBehaviour
 
     // Threshold distance for triggering movement
     public float proximityThreshold = 5f;
+    public bool isCoin = false;
 
     void Start(){
         player= GameObject.FindGameObjectWithTag("Player");
@@ -34,7 +35,11 @@ public class AutoMoveToPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
-            weaponHolder.AddMana(1);
+            if(isCoin)
+                player.GetComponentInParent<Player>().ChangeCoinAmount(1);
+            else
+                weaponHolder.AddMana(1);
+                
             Destroy(gameObject);
         }
     }

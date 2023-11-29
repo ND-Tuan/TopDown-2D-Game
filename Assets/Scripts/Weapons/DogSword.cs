@@ -34,7 +34,7 @@ public class DogSword : MonoBehaviour
     {
         timeBtwAttack -= Time.deltaTime;
        
-        if(Input.GetMouseButton(0) && timeBtwAttack <=0 && weaponHolder.IsEnoughMana){
+        if(Input.GetMouseButton(0) && timeBtwAttack <=0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
             Attack();
             weaponHolder.SubtractMana(ManaCost);
 

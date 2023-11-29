@@ -6,10 +6,12 @@ using UnityEngine;
 public class Chest : MonoBehaviour
 {
     public GameObject ManaOrb;
+    public GameObject Coin;
     public GameObject DropWeapon;
     public GameObject[] Poison;
     public Transform DropPos;
     public int ManaNum;
+    public int CoinAmount;
     public int WeaponID;
     private Animator animator;
     private bool isDrop= false;
@@ -30,6 +32,11 @@ public class Chest : MonoBehaviour
     void Drop(){
         for(int i=0; i<ManaNum; i++){
             GameObject Tmp = Instantiate(ManaOrb, DropPos.position, Quaternion.identity);
+            Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
+        }
+
+        for(int i=0; i<CoinAmount; i++){
+            GameObject Tmp = Instantiate(Coin, DropPos.position, Quaternion.identity);
             Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
         }
 

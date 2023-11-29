@@ -22,7 +22,7 @@ public class Magic_Staff : MonoBehaviour
     void Update()
     {
         timeBtwFire -= Time.deltaTime;
-        if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana){
+        if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
 
             Fire();
              weaponHolder.SubtractMana(ManaCost);

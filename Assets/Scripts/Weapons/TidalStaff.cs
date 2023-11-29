@@ -28,7 +28,7 @@ public class TidalStaff : MonoBehaviour
     void Update()
     {
         CDTmp -= Time.deltaTime;
-        if(Input.GetMouseButton(0) && CDTmp <0 && weaponHolder.IsEnoughMana){
+        if(Input.GetMouseButton(0) && CDTmp <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
             Invoke(nameof(Attack), 0.1f);
             animator.SetBool("Attack", true);
             Invoke(nameof(delay), 0.5f);

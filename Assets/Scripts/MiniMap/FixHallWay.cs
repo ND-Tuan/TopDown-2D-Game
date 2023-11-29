@@ -15,8 +15,6 @@ public class FixHallWay : MonoBehaviour
         
     }
 
-
-
     void SelfDes(){
         if(fixRoom.NotNeedFix == false) 
             Destroy(gameObject);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Laser_Staff : MonoBehaviour
     public GameObject laser;
     public Transform firePos;
     public float TimeBtwFire = 0.2f;
+    public int Dmg;
     private float timeBtwFire;
     public int ManaCost;
     public WeaponHolder weaponHolder;
@@ -22,7 +24,7 @@ public class Laser_Staff : MonoBehaviour
     void Update()
     {
         timeBtwFire -= Time.deltaTime;
-        if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana){
+        if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
 
             Fire();
             weaponHolder.SubtractMana(ManaCost);
@@ -33,8 +35,8 @@ public class Laser_Staff : MonoBehaviour
         timeBtwFire = TimeBtwFire;
 
         GameObject BulletTmp = Instantiate(laser, firePos.transform, worldPositionStays:false);
+        BulletTmp.GetComponent<BulletControll>().Dmg = Dmg;
 
-        BulletTmp.GetComponent<LaserControll>().IsEnemyBullet = false;      
         BulletTmp.transform.localScale = new Vector3(0.7f, 0.7f, 0);
         
     }

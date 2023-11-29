@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
+  Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   DropWeapon: {fileID: 6644701821795760330, guid: 8e32f3dcd1b23bc44ac4a21404fea445,
     type: 3}
   Poison:
@@ -212,4 +213,5 @@ MonoBehaviour:
   - {fileID: 5401732085024753869, guid: 45a56af2a92f6f947869ede1b8d07e4a, type: 3}
   DropPos: {fileID: 5305816411340632979}
   ManaNum: 5
+  CoinAmount: 10
   WeaponID: 3

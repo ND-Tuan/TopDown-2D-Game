@@ -10,15 +10,13 @@ public class RoomTemplates : MonoBehaviour {
 	public GameObject[] rightRooms;
 	public GameObject[] closeRooms;
 	public GameObject[] Interior;
+	public GameObject[] SPRoom;
 	public GameObject Player;
-
 	public GameObject entryRoom;
-
 	public List<GameObject> rooms;
-
 	public List<GameObject> Column;
 	public List<GameObject> WeaponsList;
-
+	public GameObject[] Poison;
 	public float waitTime;
 	private bool spawnedBoss;
 	public GameObject boss;
@@ -28,18 +26,14 @@ public class RoomTemplates : MonoBehaviour {
     public bool isSpawnWall = false;
     public GameObject Clear;
     public GameObject Cam;
-
 	public GameObject column;
 	public GameObject WoodenChest;
 	public Vector3 CentrePos;
 	
-
-
 	void Start(){
 		Invoke(nameof(Scan), 1f);
 		GameObject.FindGameObjectWithTag("PlayerPos").transform.position = new Vector3(0,0,0);
 		Cam = GameObject.FindGameObjectWithTag("MainCamera");
-		
 	}
 
 	void Update(){
@@ -52,16 +46,19 @@ public class RoomTemplates : MonoBehaviour {
 				rooms[rooms.Count-1].GetComponent<AddRoom>().CancerSpawneEnemies();
 			} else {
 				rooms[rooms.Count-1].GetComponent<AddRoom>().ChangeToFunctionRoom();
-				GameObject Tmp = Instantiate(Interior[3], rooms[rooms.Count-1].transform.position, Quaternion.identity);
+				GameObject Tmp = Instantiate(SPRoom[0], rooms[rooms.Count-1].transform.position, Quaternion.identity);
 				Tmp.GetComponentInChildren<PortalController>().Level = Level+1;
 			}
+
+			int rand = Random.Range(1, rooms.Count-1);
+			rooms[rand].GetComponent<AddRoom>().ChangeToFunctionRoom();
+			Instantiate(SPRoom[Random.Range(1,3)], rooms[rand].transform.position, Quaternion.identity);
 			
 			spawnedBoss = true;
 		} else {
 			waitTime -= Time.deltaTime;
 		}
 	}
-
 	
 	void Scan(){
 		AstarPath.active.Scan();
@@ -82,8 +79,6 @@ public class RoomTemplates : MonoBehaviour {
 
 	void DeSpawnWall(){
       isSpawnWall = true;
-	  
-      
   	}
 
 

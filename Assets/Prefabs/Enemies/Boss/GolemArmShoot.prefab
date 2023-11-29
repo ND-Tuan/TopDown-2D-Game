@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 374690313, guid: 4cfcfc5be31bcf544a2a227c2700debe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -162,6 +162,7 @@ MonoBehaviour:
   Death: {fileID: 0}
   Main: {fileID: 4876966598996606143}
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
+  Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 579136522214762401}
@@ -455,7 +456,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1589216430, guid: 043848a26caa9614caca37a549c6b8e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -575,14 +576,14 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 879634360, guid: cea9fe8de1d0aff4d9d5bcbe5b0a1746, type: 3}
   m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.16}
+  m_Size: {x: 5.3333335, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -241,6 +241,7 @@ MonoBehaviour:
   Death: {fileID: 3600803312479096435, guid: 3f00e02cc7f96f44ca6be211843edc5c, type: 3}
   Main: {fileID: 0}
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
+  Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 1895160925159688788}
@@ -346,7 +347,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.16}
+  m_Size: {x: 5.3333335, y: 2.6666667}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -15,8 +15,9 @@ public class Poison : MonoBehaviour
         player= GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
     }
     
-    void OnTriggerStay2D(Collider2D other){
-        if(other.CompareTag("Player") && Input.GetKeyDown(KeyCode.R)){
+    void Update(){
+        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5){
             if(PoisonType != 1){
                 weaponHolder.AddMana(MnAmount);
             }

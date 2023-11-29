@@ -20,6 +20,7 @@ public class EnemyControll : MonoBehaviour
     public GameObject Death;
     public GameObject Main;
     public GameObject ManaOrb;
+    public GameObject Coin;
     public GameObject[] EnemySub;
     public RoomTemplates roomTemplates;
     public SpriteRenderer  InterFace;
@@ -51,10 +52,21 @@ public class EnemyControll : MonoBehaviour
             int rand = Random.Range(1,4);
             if(!NotBoss) rand = 50;
 
+            //Rơi hạt mana khi chết
             for(int i=0; i<rand; i++){
                 GameObject Tmp = Instantiate(ManaOrb, gameObject.transform.position, Quaternion.identity);
                 Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
             }
+
+            //Rơi vàng khi chết
+            if(!isSummonObject){
+                if(!NotBoss) rand = Random.Range(1,4);
+                for(int i=0; i<rand; i++){
+                    GameObject Tmp = Instantiate(Coin, gameObject.transform.position, Quaternion.identity);
+                    Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
+                }
+            }
+            
            
             if(!isSummonObject) roomTemplates.countEnemy --;
             Destroy(gameObject);

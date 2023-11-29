@@ -12,7 +12,7 @@ public class SpawnRoom : MonoBehaviour
     public bool has3Direction;
 
     private RoomTemplates roomTemplates;
-    private int maxRooms=4;
+    private int maxRooms=5;
     public bool isSpawn = false;
 
     // Start is called before the first frame update

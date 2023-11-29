@@ -10,7 +10,6 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Rigidbody2D rb;
     public Vector3 moveInput;
     public  Animator animator;
     public float dashBoost = 2f;
@@ -40,6 +39,8 @@ public class Player : MonoBehaviour
     public bool InUltiTime = false;
     private GameObject TmpKameHa;
     private bool appear = false;
+    public int CurCoin =0;
+    public Text Coin;
 
 
     void Start()
@@ -48,8 +49,7 @@ public class Player : MonoBehaviour
         WeaponPos =GameObject.FindGameObjectWithTag("WeaponPos");
         
         PlayerCurHP = PlayerMaxHP;
-        Invoke(nameof(Appear), 0.5f);
-        
+        Invoke(nameof(Appear), 0.5f); 
     }
 
     void Update(){
@@ -58,21 +58,23 @@ public class Player : MonoBehaviour
         HpBar.maxValue = PlayerMaxHP;
         HpBar.value = PlayerCurHP;
         text.text = PlayerCurHP + "/" + PlayerMaxHP;
+        Coin.text = CurCoin.ToString();
 
         if(PlayerCurHP <=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        if(appear){
+        if(appear && Time.timeScale >0){
             Move();
             Dash();
             Skill();
         }
-        
-
     }
 
     void Move(){
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
-        transform.position += moveSpeed * Time.deltaTime * moveInput; 
+        
+        if(moveInput.x!=0 && moveInput.y!=0) moveInput.Normalize(); //Chuẩn hóa vector khi nv di chuyển trên đường chéo
+
+        transform.position += moveSpeed * Time.deltaTime * moveInput;
 
         animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
@@ -187,8 +189,7 @@ public class Player : MonoBehaviour
             immune = true;
             CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
             Invoke(nameof(Nomal), 0.1f);
-        }
-        
+        } 
     }
 
     void Appear(){
@@ -206,6 +207,12 @@ public class Player : MonoBehaviour
         }
         if(PlayerCurHP>PlayerMaxHP) PlayerCurHP=PlayerMaxHP;
     }
+
+    public void ChangeCoinAmount(int Amount){
+        CurCoin += Amount;
+    }
+
+    
      
 
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1472946465962278222}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.61, y: 0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 1352376073
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: ef59136bfd6df854fbe97046bc430908, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01a55892bd93eb040870f006a9bcfaba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,11 +103,11 @@ MonoBehaviour:
   muzzle: {fileID: 0}
   firePos:
   - {fileID: 8881445181239884992}
-  TimeBtwFire: 0.3
+  TimeBtwFire: 0.25
   BulletForce: 80
   weaponHolder: {fileID: 0}
   ManaCost: 1
-  Damage: 5
+  Damage: 8
 --- !u!114 &2469606759634245976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e377a554f34daa46b176334b8242c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFlip: 0
 --- !u!1 &8135366124223588419
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,8 +17,9 @@ public class WeaponDrop : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().spriteSortPoint= SpriteSortPoint.Center;
     }
 
-    void  OnTriggerStay2D (Collider2D other){
-        if(other.CompareTag("Player") && Input.GetKeyDown(KeyCode.R)){
+    void  Update(){
+        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5){
             weaponHolder.DropWeapon(WeaponId);
             Destroy(gameObject);
         }

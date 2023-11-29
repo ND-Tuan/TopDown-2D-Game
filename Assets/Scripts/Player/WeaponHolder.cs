@@ -32,13 +32,12 @@ public class WeaponHolder : MonoBehaviour
         Invoke(nameof(SpawnWeapon), 0.5f);
         ManaBar.maxValue = MaxMana;
         CurMana = MaxMana;
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F) && !NoWeaponMoment){
+        if(Input.GetKeyDown(KeyCode.F) && !NoWeaponMoment && Time.timeScale >0){
             Destroy(CurWeapon);
             Rotationable = true;
             if(CurSlot==0){

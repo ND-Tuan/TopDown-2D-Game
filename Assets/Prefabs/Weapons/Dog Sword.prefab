@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2881170172883442640}
   - component: {fileID: 3610589666878516691}
   - component: {fileID: 2504800785095033703}
+  - component: {fileID: -5493161596058709354}
   m_Layer: 0
   m_Name: Dog Sword
   m_TagString: Untagged
@@ -219,6 +220,19 @@ MonoBehaviour:
   ManaCost: 2
   animator: {fileID: 0}
   BulletForce: 50
+--- !u!114 &-5493161596058709354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610146752956796287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e377a554f34daa46b176334b8242c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsFlip: 0
 --- !u!1 &8077144306512439569
 GameObject:
   m_ObjectHideFlags: 0
