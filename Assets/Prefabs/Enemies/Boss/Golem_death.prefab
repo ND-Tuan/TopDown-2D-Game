@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3830932855298553361}
   - component: {fileID: 6927346193676918632}
   - component: {fileID: 8224694039305771532}
+  - component: {fileID: -1971982585725968736}
   m_Layer: 0
   m_Name: Golem_death
   m_TagString: Untagged
@@ -120,3 +121,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 10
+--- !u!114 &-1971982585725968736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707871668063329619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36916a08d05195f4da88686051c17d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portal: {fileID: 9217435473520978517, guid: f72824f8c1ffa6d4bbae73a400f4526c, type: 3}
