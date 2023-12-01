@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8121047617139703606}
   - component: {fileID: 8040263877894824431}
-  - component: {fileID: 4035294654687423074}
   - component: {fileID: 8819448687207299305}
   - component: {fileID: -5674124281401941844}
   - component: {fileID: -8165129088191115504}
+  - component: {fileID: 940395318343309237}
   m_Layer: 0
   m_Name: Tidal Dragon
   m_TagString: bullet
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 950984337
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1535448745, guid: 0d5bd1872234c32489487c704dd7b1df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.90588236}
@@ -88,27 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4035294654687423074
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9162841772737661867}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 366387c1afe8fa64d9ed9f17dec0f914, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!58 &8819448687207299305
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,4 +149,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd930585e5f52e4086c98044c55b923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTime: 0.84
+  LifeTime: 1
+--- !u!95 &940395318343309237
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9162841772737661867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0da61a5639bcef9419fe117d07ff5f2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

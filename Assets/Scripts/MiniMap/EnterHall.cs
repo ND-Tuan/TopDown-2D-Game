@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnterHall : MonoBehaviour
 {
     void Start(){
-        //gameObject.GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 0, 0);
+        gameObject.GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 0, 0);
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1043204331914980718}
   - component: {fileID: 2879905807986635387}
   - component: {fileID: 3468835951079380764}
-  - component: {fileID: 2594940778956081522}
   - component: {fileID: 6947035375090950395}
+  - component: {fileID: 5973918294789973215}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1660085750, guid: 30775269e76107b47a0e86715f386908, type: 3}
+  m_Sprite: {fileID: 1884623388, guid: afc17459f6e05634383f210d610f5f07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,8 +108,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!58 &2594940778956081522
-CircleCollider2D:
+--- !u!114 &6947035375090950395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217435473520978517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9574183ee20aea54ba9716bbb713888f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+--- !u!70 &5973918294789973215
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,19 +153,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7221832, y: 0.62167025}
-  serializedVersion: 2
-  m_Radius: 7.1758084
---- !u!114 &6947035375090950395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9217435473520978517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9574183ee20aea54ba9716bbb713888f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level: 0
+  m_Offset: {x: 0.14171934, y: 1.0419483}
+  m_Size: {x: 11.129645, y: 18.920567}
+  m_Direction: 0

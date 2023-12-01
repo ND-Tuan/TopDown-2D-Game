@@ -18,7 +18,7 @@ public class RoomTemplates : MonoBehaviour {
 	public List<GameObject> WeaponsList;
 	public GameObject[] Poison;
 	public float waitTime;
-	private bool spawnedBoss;
+	public bool spawnedBoss;
 	public GameObject boss;
     public int rd;
 	public int Level;

@@ -27,14 +27,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8442866475738651822}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.47840813, w: 0.87813765}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9064163659295858436}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -57.163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
 --- !u!212 &4483580438200965730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 00f8ce5dbfa33544a96588b154671717, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,10 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TidalDragon: {fileID: 9162841772737661867, guid: eb32828b402f7934f8b5f5067f3ebe36,
     type: 3}
-  CD: 1.1
+  CD: 1
   Dmg: 20
   ManaCost: 3
-  inter: {fileID: 1115642863842817291}
 --- !u!1001 &1341245115330973608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,12 +166,12 @@ PrefabInstance:
     - target: {fileID: 8023003863077507244, guid: 2be792551bec28648bd32cf2e4448474,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.918353
       objectReference: {fileID: 0}
     - target: {fileID: 8023003863077507244, guid: 2be792551bec28648bd32cf2e4448474,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.96
+      value: 0.48383188
       objectReference: {fileID: 0}
     - target: {fileID: 8023003863077507244, guid: 2be792551bec28648bd32cf2e4448474,
         type: 3}

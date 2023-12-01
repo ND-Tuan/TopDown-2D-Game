@@ -7,10 +7,11 @@ MonoImporter:
   - HealthBar: {instanceID: 0}
   - Health: {instanceID: 0}
   - Shield: {instanceID: 0}
-  - DmgPopup: {fileID: 8893591739435079843, guid: fe4f7c6f2f2622d40926ccc23667d890,
-      type: 3}
+  - DmgPopup: {instanceID: 0}
   - Death: {instanceID: 0}
   - Main: {instanceID: 0}
+  - ManaOrb: {instanceID: 0}
+  - Coin: {instanceID: 0}
   - roomTemplates: {instanceID: 0}
   - InterFace: {instanceID: 0}
   executionOrder: 0

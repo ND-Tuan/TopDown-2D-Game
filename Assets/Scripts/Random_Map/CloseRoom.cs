@@ -58,7 +58,7 @@ public class CloseRoom : MonoBehaviour
   void SpawnEnemies(){
     if(IsSpawnEnemies==true){
         foreach (GameObject pos in spawners){
-          Instantiate(Enemy[Random.Range(0, 2)], pos.transform.position, Quaternion.identity);
+          Instantiate(Enemy[Random.Range(0, Enemy.Length)], pos.transform.position, Quaternion.identity);
         }
     }
     Invoke(nameof(SpawnWall),0.01f);

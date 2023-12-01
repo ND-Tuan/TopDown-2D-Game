@@ -12,6 +12,7 @@ public class MeleeAttack : MonoBehaviour
     public Transform pos;
     public float CD;
     public float Range;
+    public float Scale;
     
     // Start is called before the first frame update
     void Start()
@@ -35,8 +36,6 @@ public class MeleeAttack : MonoBehaviour
             Invoke(nameof(delay), 0.41f);
             Invoke(nameof(delayro), 1.5f);
             Invoke(nameof(InsSmoke), 0.25f);
-            
-
         }
     }
 
@@ -47,8 +46,8 @@ public class MeleeAttack : MonoBehaviour
     }
 
     void InsSmoke(){
-        Instantiate(Smoke, pos.transform.position, Smoke.transform.rotation);
-        
+        GameObject tmp = Instantiate(Smoke, pos.transform.position, Smoke.transform.rotation);
+        tmp.transform.localScale = new Vector3 ((float)Scale, (float)Scale, 0);
     }
 
     void delayro(){

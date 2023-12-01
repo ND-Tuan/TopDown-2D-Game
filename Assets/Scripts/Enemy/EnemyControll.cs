@@ -46,7 +46,10 @@ public class EnemyControll : MonoBehaviour
 
         if( isDead) {
 
-            if(Death !=null) Instantiate(Death, transform.position, Death.transform.rotation);
+            if(Death !=null){
+                Instantiate(Death, transform.position, Death.transform.rotation);
+                
+            } 
             HealthBar.transform.localScale = new Vector3(0, 0, 0);
 
             int rand = Random.Range(1,4);
