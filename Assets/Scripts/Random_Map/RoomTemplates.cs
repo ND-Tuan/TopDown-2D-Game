@@ -67,7 +67,6 @@ public class RoomTemplates : MonoBehaviour {
 	void RemoveWall(){
 		if(isSpawnWall && countEnemy == 0){
 			isSpawnWall = false;
-			
             Instantiate(Clear, Cam.transform, worldPositionStays:false);
 			Instantiate(WoodenChest, gameObject.transform.position, WoodenChest.transform.rotation);
 			foreach(GameObject col in Column){

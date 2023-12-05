@@ -47,9 +47,6 @@ public class DogSword : MonoBehaviour
         Invoke(nameof(InsSlash),0.2f);
         Invoke(nameof(delay), 0.43f);
         count++;
-
-        
-        
     }
 
     void InsSlash(){

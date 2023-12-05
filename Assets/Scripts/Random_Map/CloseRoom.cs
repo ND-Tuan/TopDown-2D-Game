@@ -17,17 +17,29 @@ public class CloseRoom : MonoBehaviour
   public RoomTemplates roomTemplates;
   private int x, y ;
   public int MonsterNum;
+  public int Waves = 2;
   public bool IsSpawnEnemies = true;
   private bool isSpawn = false;
   void Start(){
 		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();	
   }
 
+  void Update(){
+    if(roomTemplates.countEnemy == 1 && Waves > 0 &&  IsSpawnEnemies && isSpawn){
+        TakeRandomLocate();
+        foreach (GameObject pos in spawners){
+          Instantiate(Enemy[Random.Range(0, Enemy.Length)], pos.transform.position, Quaternion.identity);
+        }
+        Waves -= 1;
+    }
+    if(Waves<=0){
+      Destroy(check);
+    }
+  }
 
   void OnTriggerEnter2D(Collider2D other){
 
-      if(other.CompareTag("Player") && isSpawn == false){
-        
+      if(other.CompareTag("Player") && isSpawn == false && roomTemplates.isSpawnWall == false){
         isSpawn = true;
         foreach (GameObject pos in closePos){
           if(pos != null)
@@ -37,6 +49,7 @@ public class CloseRoom : MonoBehaviour
         
         TakeRandomLocate();
         Invoke(nameof(SpawnEnemies), 0.67f);
+        Waves -= 1;
       }   
 	}
 
@@ -49,9 +62,11 @@ public class CloseRoom : MonoBehaviour
     }
 
     // hoạt ảnh
-    foreach (GameObject pos in spawners){
-      Instantiate(warning, pos.transform.position, Quaternion.identity);
-      Instantiate(appear, pos.transform.position, Quaternion.identity);
+    if(IsSpawnEnemies==true){
+      foreach (GameObject pos in spawners){
+        Instantiate(warning, pos.transform.position, Quaternion.identity);
+        Instantiate(appear, pos.transform.position, Quaternion.identity);
+      }
     }
   }
 
@@ -61,13 +76,13 @@ public class CloseRoom : MonoBehaviour
           Instantiate(Enemy[Random.Range(0, Enemy.Length)], pos.transform.position, Quaternion.identity);
         }
     }
-    Invoke(nameof(SpawnWall),0.01f);
-    
+    if(roomTemplates.isSpawnWall == false){
+      Invoke(nameof(SpawnWall),0.01f);
+    }
   }
 
   void SpawnWall(){
       roomTemplates.isSpawnWall = true;
       roomTemplates.transform.position = spawners[0].transform.position;
-      Destroy(check);
   }
 }

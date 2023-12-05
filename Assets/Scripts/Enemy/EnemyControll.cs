@@ -78,7 +78,7 @@ public class EnemyControll : MonoBehaviour
 
     }
 
-    public void TakeDmg(int Dmg){
+    public void TakeDmg(int Dmg, bool IsCrit){
 
         if(EnemyCurShield <=0) {
             EnemyCurHp -= Dmg;
@@ -88,7 +88,9 @@ public class EnemyControll : MonoBehaviour
 
         GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
         instance.GetComponent<TextMesh>().text = Dmg.ToString();
-        instance.transform.position += new Vector3(Random.Range(-3, 3), 3, 0);
+        if(IsCrit){
+            instance.GetComponent<TextMesh>().color = new Color(1, 0.8719501f, 0, 1);
+        }
 
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
         Invoke(nameof(Nomal), 0.1f);

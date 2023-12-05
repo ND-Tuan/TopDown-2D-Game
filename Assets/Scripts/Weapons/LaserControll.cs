@@ -28,7 +28,7 @@ public class LaserControll : MonoBehaviour
             if(DmgToEnemy){
                 foreach(EnemyControll e in enemyControll){
                     if(e!=null){
-                        e.TakeDmg(Damage);
+                        e.TakeDmg(Damage, false);
                     } 
                 }
             }

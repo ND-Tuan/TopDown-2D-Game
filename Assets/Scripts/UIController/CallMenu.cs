@@ -12,11 +12,21 @@ public class CallMenu : MonoBehaviour
     public GameObject Ending;
     public GameObject EndingPanel;
     public GameObject ResultMenu;
+    public GameObject PauseMenu;
+    public GameObject[] ObjectsDestroyToReset;
 
     void Update(){
         TotalTime += Time.deltaTime;
+        if(Input.GetKeyDown(KeyCode.P) && PauseMenu.activeSelf ==  false){
+            PauseGame();
+        }
     }
 
+    public void DestroyToReset(){
+        foreach(GameObject Object in ObjectsDestroyToReset){
+            Destroy(Object);
+        }
+    }
     
     public void DisplayShopMenu(bool display){
         BGPanel.SetActive(display);
@@ -31,7 +41,6 @@ public class CallMenu : MonoBehaviour
     public void SetItemForShop(int ID,int i, int price, GameObject SR, bool IsPoison){
         ShopMenuController shop = ShopMenu.GetComponent<ShopMenuController>();
 
-        
         shop.ItemsID[i] = ID;
         shop.ItemIcons[i].sprite =SR.GetComponent<SpriteRenderer>().sprite;
         shop.ItemIcons[i].SetNativeSize();
@@ -76,7 +85,21 @@ public class CallMenu : MonoBehaviour
             minutes += 1;
         }
         ResultMenuController resultMenuController = ResultMenu.GetComponent<ResultMenuController>();
-        resultMenuController.Time.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        resultMenuController.time.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
+    public void PauseGame(){
+        Time.timeScale = 0;
+        BGPanel.SetActive(true);
+        PauseMenu.SetActive(true);
+        PausedMenuControll pausedMenuControll = PauseMenu.GetComponent<PausedMenuControll>();
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
+        WeaponHolder  weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>(); 
+
+        pausedMenuControll.MaxHp.text = player.PlayerMaxHP.ToString();
+        pausedMenuControll.MaxMp.text = weaponHolder.MaxMana.ToString();
+        pausedMenuControll.CritRate.text = weaponHolder.CritRate+ "%";
+        pausedMenuControll.CritDmg.text = weaponHolder.CritDmg+ "%";
     }
     
 }

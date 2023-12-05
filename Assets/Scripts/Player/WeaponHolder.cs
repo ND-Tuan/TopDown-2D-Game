@@ -23,6 +23,8 @@ public class WeaponHolder : MonoBehaviour
     private bool NoWeaponMoment = false;
     private RoomTemplates templates;
     public bool Rotationable = true;
+    public float CritRate = 10f;
+    public float CritDmg = 20f;
 
 
     // Start is called before the first frame update
@@ -93,6 +95,16 @@ public class WeaponHolder : MonoBehaviour
         }
         if(CurMana>150) CurMana = 150;
         
+    }
+
+    public int CritChange (int Dmg){
+        int Rand = Random.Range(1,101);
+
+        if(Rand <= CritRate){
+            Dmg = Mathf.RoundToInt(Dmg + Dmg*(CritDmg/100));
+        }
+        
+        return Dmg;
     }
 
     public void RemoveWeapon(){

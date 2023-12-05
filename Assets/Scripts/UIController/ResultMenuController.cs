@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ResultMenuController : MonoBehaviour
 {
     private CallMenu callMenu;
     public Image[] WeaponIcon;
-    public Text Time;
+    public Text time;
     public Text date;
     void Start()
     {
@@ -21,6 +22,12 @@ public class ResultMenuController : MonoBehaviour
             WeaponIcon[i].sprite = roomTemplates.WeaponsList[weaponHolder.Weapons[i]].GetComponent<SpriteRenderer>().sprite;
             WeaponIcon[i].SetNativeSize();
         }
+    }
+
+    public void BackHome(){
+        Time.timeScale = 1;
+        callMenu.DestroyToReset();
+        SceneManager.LoadSceneAsync(0);
     }
 
     

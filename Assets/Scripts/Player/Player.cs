@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Vector3 moveInput;
+    private Vector3 moveInput;
     public  Animator animator;
     public float dashBoost = 2f;
     public static float dashTime;
@@ -41,8 +41,8 @@ public class Player : MonoBehaviour
     private bool appear = false;
     public int CurCoin =0;
     public Text Coin;
-
-
+    private bool InChargeTime = false;
+    
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
@@ -62,8 +62,12 @@ public class Player : MonoBehaviour
 
         if(PlayerCurHP <=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if(appear && Time.timeScale >0){
-            Move();
-            Dash();
+            if(!InChargeTime){
+                Move();
+                if(!InUltiTime){
+                    Dash();
+                }
+            }
             Skill();
         }
     }
@@ -156,6 +160,7 @@ public class Player : MonoBehaviour
             
             WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             animator.SetBool("Charge", true);
+            InChargeTime = true;
 
             if(Energy <1){
                 if (ChargeTime<=0) ChargeTime=0.000001f;
@@ -166,6 +171,7 @@ public class Player : MonoBehaviour
 
         } else{
             animator.SetBool("Charge", false);
+            InChargeTime = false;
             
             if(Energy==1 && !InUltiTime){
                 animator.SetBool("Blash", true);
