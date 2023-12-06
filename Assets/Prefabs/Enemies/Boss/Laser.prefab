@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2587963251453134225}
   - component: {fileID: 6442957679430520603}
   - component: {fileID: 2873760952857371794}
-  - component: {fileID: -6345585929982338751}
+  - component: {fileID: 1892913552720260564}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 100
   m_Sprite: {fileID: -745730805, guid: aab7f41a4b8f660498a94ced1b7c5318, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 2
---- !u!114 &-6345585929982338751
+--- !u!114 &1892913552720260564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,12 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4554254920819456860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1ff302f54bb7804fa2944b42f31d86c, type: 3}
+  m_Script: {fileID: 11500000, guid: 84b5536180cbfac469b8e08ca9d31bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnemyBullet: 1
-  IsGiveDmg: 0
-  CastTime: 0.75
-  Damage: 2
-  DelayDmgTime: 1
-  weaponHolder: {fileID: 0}
+  IsDestroy: 0

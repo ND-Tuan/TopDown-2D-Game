@@ -60,7 +60,10 @@ public class Player : MonoBehaviour
         text.text = PlayerCurHP + "/" + PlayerMaxHP;
         Coin.text = CurCoin.ToString();
 
-        if(PlayerCurHP <=0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(PlayerCurHP <=0) {
+            CallMenu callMenu = GameObject.FindGameObjectWithTag("Menu").GetComponent<CallMenu>();
+            callMenu.GameOver();
+        }
         if(appear && Time.timeScale >0){
             if(!InChargeTime){
                 Move();

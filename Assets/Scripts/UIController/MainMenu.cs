@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public void Play(){
         animator.SetBool("Open", true);
         PlayButton.SetActive(false);
-        Invoke(nameof(LoadScene), 1f);
+        Invoke(nameof(LoadScene), 0.8f);
     }
 
     void LoadScene(){

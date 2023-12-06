@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -13,6 +14,7 @@ public class CallMenu : MonoBehaviour
     public GameObject EndingPanel;
     public GameObject ResultMenu;
     public GameObject PauseMenu;
+    public GameObject GameOverPanel;
     public GameObject[] ObjectsDestroyToReset;
 
     void Update(){
@@ -23,8 +25,8 @@ public class CallMenu : MonoBehaviour
     }
 
     public void DestroyToReset(){
-        foreach(GameObject Object in ObjectsDestroyToReset){
-            Destroy(Object);
+        for(int i =1; i<4; i++){
+            Destroy(ObjectsDestroyToReset[i]);
         }
     }
     
@@ -72,20 +74,23 @@ public class CallMenu : MonoBehaviour
 
     public void DisplayResult(){
         ResultMenu.SetActive(true);
-        UpdateLevelTimer(TotalTime);
+        ResultMenuController resultMenuController = ResultMenu.GetComponent<ResultMenuController>();
+        resultMenuController.time.text = UpdateLevelTimer(TotalTime);
     }
 
-    void UpdateLevelTimer(float totalSeconds){
+    string UpdateLevelTimer(float totalSeconds){
         int minutes = Mathf.FloorToInt(totalSeconds / 60f);
         int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+       
     
         if (seconds == 60)
         {
             seconds = 0;
             minutes += 1;
         }
-        ResultMenuController resultMenuController = ResultMenu.GetComponent<ResultMenuController>();
-        resultMenuController.time.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        string Str =  minutes.ToString("00") + ":" + seconds.ToString("00");
+
+        return Str;
     }
 
     public void PauseGame(){
@@ -100,6 +105,18 @@ public class CallMenu : MonoBehaviour
         pausedMenuControll.MaxMp.text = weaponHolder.MaxMana.ToString();
         pausedMenuControll.CritRate.text = weaponHolder.CritRate+ "%";
         pausedMenuControll.CritDmg.text = weaponHolder.CritDmg+ "%";
+    }
+
+    public void GameOver(){
+        Time.timeScale = 0;
+        GameOverPanel.SetActive(true);
+        BGPanel.SetActive(true);
+
+        GameOverController gameOverController =  GameOverPanel.GetComponent<GameOverController>();
+        RoomTemplates roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+
+        gameOverController.time.text = UpdateLevelTimer(TotalTime);
+        gameOverController.Floor.text = "Floor "+ roomTemplates.Level;
     }
     
 }

@@ -21,12 +21,15 @@ public class MerchantController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<10){
-            callMenu.DisplayShopMenu(true);
-            for(int i=0; i<3; i++){
-                callMenu.SetItemForShop(ItemsList[i], i, Price[ItemsList[i]], roomTemplates.Poison[ItemsList[i]], true);
-            }
-        } 
+        if(GameObject.FindGameObjectWithTag("Player") != null){
+            float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+            if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<10){
+                callMenu.DisplayShopMenu(true);
+                for(int i=0; i<3; i++){
+                    callMenu.SetItemForShop(ItemsList[i], i, Price[ItemsList[i]], roomTemplates.Poison[ItemsList[i]], true);
+                }
+            } 
+        }
+        
     }
 }

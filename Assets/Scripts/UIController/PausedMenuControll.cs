@@ -34,10 +34,12 @@ public class PausedMenuControll : MonoBehaviour
         UnPause();
         callMenu.DestroyToReset();
         SceneManager.LoadSceneAsync(1);
+        Destroy(callMenu.ObjectsDestroyToReset[0],1);
     }
     public void Quit(){
         UnPause();
         callMenu.DestroyToReset();
         SceneManager.LoadSceneAsync(0);
+        Destroy(callMenu.ObjectsDestroyToReset[0],1);
     }
 }

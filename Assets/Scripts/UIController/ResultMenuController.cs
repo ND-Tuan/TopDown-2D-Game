@@ -28,6 +28,7 @@ public class ResultMenuController : MonoBehaviour
         Time.timeScale = 1;
         callMenu.DestroyToReset();
         SceneManager.LoadSceneAsync(0);
+        Destroy(callMenu.ObjectsDestroyToReset[0],1);
     }
 
     
