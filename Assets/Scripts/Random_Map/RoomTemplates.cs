@@ -53,6 +53,12 @@ public class RoomTemplates : MonoBehaviour {
 			int rand = Random.Range(1, rooms.Count-1);
 			rooms[rand].GetComponent<AddRoom>().ChangeToFunctionRoom();
 			Instantiate(SPRoom[Random.Range(1,3)], rooms[rand].transform.position, Quaternion.identity);
+
+			int rand2 = Random.Range(1, rooms.Count-1);
+			while(rand2 == rand) rand2 = Random.Range(1, rooms.Count-1);
+			rooms[rand2].GetComponent<AddRoom>().ChangeToFunctionRoom();
+			Instantiate(SPRoom[3], rooms[rand2].transform.position, Quaternion.identity);
+
 			
 			spawnedBoss = true;
 		} else {
@@ -73,6 +79,9 @@ public class RoomTemplates : MonoBehaviour {
 				Destroy(col);
 			}
 			Column.Clear();
+
+			Player player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
+			player.EXP ++;
         } 
 	}
 

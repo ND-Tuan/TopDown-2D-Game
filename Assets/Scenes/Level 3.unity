@@ -274,11 +274,13 @@ MonoBehaviour:
   - {fileID: 4546949085718704495, guid: ec2a0ba67d13ba848a103c8a926cf713, type: 3}
   - {fileID: 8782847373454412718, guid: db8432d2ca0acb54ba9f43fefd1da291, type: 3}
   - {fileID: 8290394229673606396, guid: d387ebf8f88ccb24bb0148f6d8500e82, type: 3}
+  - {fileID: 8845973375049889786, guid: ac86489fe7e30864fac36e22ced4a09e, type: 3}
   Player: {fileID: 0}
   entryRoom: {fileID: 1384366362914734, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
   rooms: []
   Column: []
   WeaponsList:
+  - {fileID: 5751659044465392840, guid: a55314117cefe2f45979374d40ac6e25, type: 3}
   - {fileID: 1472946465962278222, guid: 00d79c56db7c86241b741a7eaefefa79, type: 3}
   - {fileID: 5726429042972505960, guid: ca61be74ee4ec4f40a1a7e74001c32c1, type: 3}
   - {fileID: 4530987999880887356, guid: 1637f2b517c519e44864d38bdd944904, type: 3}
@@ -295,6 +297,7 @@ MonoBehaviour:
   - {fileID: 5914252321306497655, guid: e8c8c68b2e200144aac913bac4486f3c, type: 3}
   - {fileID: 5401732085024753869, guid: 45a56af2a92f6f947869ede1b8d07e4a, type: 3}
   waitTime: 2
+  spawnedBoss: 0
   boss: {fileID: 4120797787442529989, guid: ab891e59bcb19cc49bcdfa638c150204, type: 3}
   rd: 0
   Level: 3

@@ -4705,6 +4705,7 @@ MonoBehaviour:
   rooms: []
   Column: []
   WeaponsList:
+  - {fileID: 5751659044465392840, guid: a55314117cefe2f45979374d40ac6e25, type: 3}
   - {fileID: 1472946465962278222, guid: 00d79c56db7c86241b741a7eaefefa79, type: 3}
   - {fileID: 5726429042972505960, guid: ca61be74ee4ec4f40a1a7e74001c32c1, type: 3}
   - {fileID: 4530987999880887356, guid: 1637f2b517c519e44864d38bdd944904, type: 3}

@@ -55,6 +55,7 @@ public class WeaponHolder : MonoBehaviour
         }
 
         ManaBar.value = CurMana;
+        ManaBar.maxValue = MaxMana;
 
         ManaValue.text = CurMana + "/" + MaxMana;
 

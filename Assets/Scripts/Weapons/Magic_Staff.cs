@@ -13,10 +13,16 @@ public class Magic_Staff : MonoBehaviour
     public WeaponHolder weaponHolder;
     public int ManaCost;
     public int Damage ;
+    public Animator animator;
+    public bool Rotationable = true;
 
     void Start(){
         weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
         weaponHolder.ShowManaCost(ManaCost);
+        if(!Rotationable){
+            weaponHolder.Rotationable = false;
+        }
+        
     }
 
     void Update()
@@ -24,8 +30,11 @@ public class Magic_Staff : MonoBehaviour
         timeBtwFire -= Time.deltaTime;
         if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
 
+            if(animator != null){
+                animator.SetBool("Attack", true);
+            }
             Fire();
-             weaponHolder.SubtractMana(ManaCost);
+            weaponHolder.SubtractMana(ManaCost);
         }
     }
 
@@ -33,10 +42,14 @@ public class Magic_Staff : MonoBehaviour
         timeBtwFire = TimeBtwFire;
 
         foreach(Transform p in firePos){
-            GameObject BulletTmp = Instantiate(fireBall, p.transform.position, gameObject.transform.rotation);
+            GameObject BulletTmp = Instantiate(fireBall, p.transform.position, p.transform.rotation);
             BulletTmp.GetComponent<BulletControll>().Dmg = Damage;
             Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
-            rb.AddForce(transform.right * BulletForce, ForceMode2D.Impulse);
+            rb.AddForce(p.transform.right * BulletForce, ForceMode2D.Impulse);
         }
+    }
+
+    void EndAttack(){
+        animator.SetBool("Attack", false);
     }
 }

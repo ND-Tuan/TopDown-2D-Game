@@ -40,7 +40,9 @@ public class Player : MonoBehaviour
     private GameObject TmpKameHa;
     private bool appear = false;
     public int CurCoin =0;
+    public int EXP=0;
     public Text Coin;
+    public Text ExpText;
     private bool InChargeTime = false;
     
     void Start()
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
         HpBar.value = PlayerCurHP;
         text.text = PlayerCurHP + "/" + PlayerMaxHP;
         Coin.text = CurCoin.ToString();
+        ExpText.text = "EXP: " + EXP;
 
         if(PlayerCurHP <=0) {
             CallMenu callMenu = GameObject.FindGameObjectWithTag("Menu").GetComponent<CallMenu>();

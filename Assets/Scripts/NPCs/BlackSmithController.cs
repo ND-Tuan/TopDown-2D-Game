@@ -13,7 +13,7 @@ public class BlackSmithController : MonoBehaviour
     void Start(){
         callMenu = GameObject.FindGameObjectWithTag("Menu").GetComponent<CallMenu>();
         roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Price = new int[] {90,80,120,200,300};
+        Price = new int[] {90,90,80,120,200,300};
 
         int number;
         number = Random.Range(0,5);

@@ -9,6 +9,7 @@ public class CallMenu : MonoBehaviour
     public float TotalTime;
     public GameObject BGPanel;
     public GameObject ShopMenu;
+    public GameObject AscensionMenu;
     public GameObject ChangeScene;
     public GameObject Ending;
     public GameObject EndingPanel;
@@ -56,6 +57,12 @@ public class CallMenu : MonoBehaviour
             shop.WeaponShop.SetActive(true);
             shop.PoisonShop.SetActive(false);
         }
+    }
+
+    public void DisplayAscentionMenu(){
+        Time.timeScale =0;
+        BGPanel.SetActive(true);
+        AscensionMenu.SetActive(true);
     }
 
     public void DisplayChange(){

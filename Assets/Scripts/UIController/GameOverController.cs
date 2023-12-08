@@ -20,7 +20,6 @@ public class GameOverController : MonoBehaviour
         
         callMenu.DestroyToReset();
         SceneManager.LoadSceneAsync(0);
-        Time.timeScale = 1;
         Destroy(callMenu.ObjectsDestroyToReset[0],1);
     }
 }
