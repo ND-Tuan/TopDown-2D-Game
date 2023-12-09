@@ -14,6 +14,7 @@ public class GolemBehaviour : MonoBehaviour
     public float GolemArmForce;
     public EnemyAI enemyAI;
     public EnemyControll enemyControll;
+    public GameObject InterFace;
     private float Tmp;
     private bool CastShield= false;
     private bool TurnShield= false;
@@ -36,6 +37,8 @@ public class GolemBehaviour : MonoBehaviour
             animator.SetBool("Shield", true);
             Invoke(nameof(ActiveShield), 1.5f);
         }
+
+        
     }
 
     // Update is called once per frame

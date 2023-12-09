@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     public Vector3 playerPos;
     public float distanceToPlayer;
     private Vector2 Final;
+    public float freeze;
 
     private void Start(){
         InvokeRepeating(nameof(CalculatePath), 0f, 0.5f);
@@ -64,6 +65,12 @@ public class EnemyAI : MonoBehaviour
 
         while  (currentWP < path.vectorPath.Count){
 
+            while (freeze > 0)
+            {
+                freeze -= Time.deltaTime;
+                yield return null;
+            }
+
             Vector2 direction = ((Vector2)path.vectorPath[currentWP] - (Vector2)transform.position).normalized;
             Vector2 force = direction * moveSpeed * Time.deltaTime;
             transform.position += (Vector3)force;
@@ -74,12 +81,23 @@ public class EnemyAI : MonoBehaviour
             if (distance < nextWayPointDistance)
                 currentWP++;
 
-            if (force.x != 0 && !roaming)
-                if (force.x < 0)
-                    InterFace.transform.localScale = new Vector3(-1, 1, 0);
-                else
-                    InterFace.transform.localScale = new Vector3(1, 1, 0);
+            if (force.x != 0 )
+                if(!roaming){
+                    if (force.x < 0)
+                        InterFace.transform.localScale = new Vector3(-1, 1, 0);
+                    else
+                        InterFace.transform.localScale = new Vector3(1, 1, 0);
+                } else {
+                    Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+                    Vector2 lookDir = playerPos - transform.position;
+                    float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+                    Quaternion rotation = Quaternion.Euler(0, 0, angle);
 
+                    if ( rotation.eulerAngles.z > 90 &&  rotation.eulerAngles.z < 270) 
+                        InterFace.transform.localScale = new Vector3(-1, 1, 0);
+                    else 
+                        InterFace.transform.localScale = new Vector3(1, 1, 0);
+                }
             yield return null;
         }
 

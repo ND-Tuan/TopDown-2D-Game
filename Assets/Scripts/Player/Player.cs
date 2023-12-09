@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public Rigidbody2D Rg;
     private Vector3 moveInput;
     public  Animator animator;
     public float dashBoost = 2f;
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     public GameObject WeaponPos;
     public GameObject ArmPos;
     public GameObject KameHa;
+    public GameObject Attack;
     public float SkillDuration;
     public float SkillCD;
     public float ChargeTime;
@@ -44,6 +46,8 @@ public class Player : MonoBehaviour
     public Text Coin;
     public Text ExpText;
     private bool InChargeTime = false;
+    private bool ChangeToHand =  false;
+    private float HandCD =0;
     
     void Start()
     {
@@ -72,21 +76,36 @@ public class Player : MonoBehaviour
                 Move();
                 if(!InUltiTime){
                     Dash();
+                    HandAttack();
                 }
             }
             Skill();
         }
+
+        if(Input.GetKeyDown(KeyCode.E) && !InUltiTime){
+            if(ChangeToHand == false){
+                ChangeToHand = true;
+                WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
+            } else {
+                Attack.SetActive(false);
+                ChangeToHand = false;
+                WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+            }
+        }
     }
 
     void Move(){
+
+        Rg.velocity = moveSpeed * new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         
-        if(moveInput.x!=0 && moveInput.y!=0) moveInput.Normalize(); //Chuẩn hóa vector khi nv di chuyển trên đường chéo
+        if(moveInput.x!=0 && moveInput.y!=0) Rg.velocity.Normalize(); //Chuẩn hóa vector khi nv di chuyển trên đường chéo
 
-        transform.position += moveSpeed * Time.deltaTime * moveInput;
+        //transform.position += moveSpeed * Time.deltaTime * moveInput;
 
-        animator.SetFloat("Speed", moveInput.sqrMagnitude);
+        animator.SetFloat("Speed", Rg.velocity.sqrMagnitude);
 
         //xác định qóc quay của chuột đối vs người chơi
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -184,10 +203,22 @@ public class Player : MonoBehaviour
                 TmpKameHa = Instantiate(KameHa, ArmPos.gameObject.transform, worldPositionStays:false);
                 SkillCDTmp = SkillCD;
                 InUltiTime = true;
-            } else if(!InUltiTime) {
+            } else if(!InUltiTime && Input.GetMouseButtonUp(1) && !ChangeToHand) {
                 WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             }
         }
+    }
+
+    void HandAttack(){
+        HandCD -= Time.deltaTime;
+        if(Input.GetMouseButton(0) && ChangeToHand && HandCD <=0){
+            animator.SetBool("Attack", true);
+            Attack.SetActive(true);
+            Attack.GetComponent<HandAttack>().Attack1();
+            HandCD = 1.1f;
+        }
+
+        if(HandCD <= 0.1)  animator.SetBool("Attack", false);
     }
 
     void Nomal(){
@@ -223,8 +254,5 @@ public class Player : MonoBehaviour
     public void ChangeCoinAmount(int Amount){
         CurCoin += Amount;
     }
-
-    
-     
 
 }

@@ -46,6 +46,9 @@ public class Magic_Staff : MonoBehaviour
             BulletTmp.GetComponent<BulletControll>().Dmg = Damage;
             Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
             rb.AddForce(p.transform.right * BulletForce, ForceMode2D.Impulse);
+            if(animator != null){
+                Invoke(nameof(EndAttack), 0.5f);
+            }
         }
     }
 

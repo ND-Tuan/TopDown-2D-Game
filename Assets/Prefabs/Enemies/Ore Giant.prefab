@@ -123,7 +123,7 @@ MonoBehaviour:
   enemyAI: {fileID: 9086237720139738294}
   Smoke: {fileID: 8984900239566929913, guid: 8a8f69970be56f1458b613d16f681c82, type: 3}
   pos: {fileID: 2317909411160769231}
-  CD: 2
+  CD: 4
   Range: 12
   Scale: 2
 --- !u!1 &3484989339818272284
@@ -615,3 +615,4 @@ MonoBehaviour:
   target: {x: 0, y: 0}
   playerPos: {x: 0, y: 0, z: 0}
   distanceToPlayer: 0
+  freeze: 0

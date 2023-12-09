@@ -23,6 +23,7 @@ public class RangeAttack : MonoBehaviour
     {
         Player= GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
+        CDTmp = CD;
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class RangeAttack : MonoBehaviour
 
         RotationToPlayer();
 
-        if (distanceToPlayer <= Range && CDTmp <=0){
+        if (distanceToPlayer <= Range && CDTmp <=0 && enemyAI.freeze <=0){
             CDTmp = CD; 
             animator.SetBool("Attack", true);
             Invoke(nameof(InsBullet), 0.34f);
@@ -68,4 +69,5 @@ public class RangeAttack : MonoBehaviour
         else 
             InterFace.transform.localScale = new Vector3(1, 1, 0);
     }
+
 }

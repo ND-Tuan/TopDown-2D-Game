@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     private Animator animator;
     
     void Start(){
+        Time.timeScale =1;
         animator = BG.GetComponent<Animator>();
     }
     public void Play(){
@@ -23,5 +24,10 @@ public class MainMenu : MonoBehaviour
 
     void LoadScene(){
         SceneManager.LoadSceneAsync(1);
+    }
+
+    public void Quit(){
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }

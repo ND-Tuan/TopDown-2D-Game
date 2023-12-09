@@ -19,6 +19,7 @@ public class MeleeAttack : MonoBehaviour
     {
         Player= GameObject.FindGameObjectWithTag("Player");
         animator = gameObject.GetComponent<Animator>();
+        CDTmp = CD;
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class MeleeAttack : MonoBehaviour
 
         
 
-        if (distanceToPlayer <= Range && CDTmp <=0){
+        if (distanceToPlayer <= Range && CDTmp <=0 && enemyAI.freeze <=0){
             CDTmp = CD;
             animator.SetBool("Attack", true);
             Invoke(nameof(delay), 0.41f);

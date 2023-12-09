@@ -87,14 +87,14 @@ public class WeaponHolder : MonoBehaviour
     }
 
     public async void AddMana(int Amount){
-        if(CurMana<150) {
+        if(CurMana<MaxMana) {
             while(Amount >0){
                 CurMana++;
                 Amount--;
                 await Task.Delay(20);
             }
         }
-        if(CurMana>150) CurMana = 150;
+        if(CurMana>MaxMana) CurMana = MaxMana;
         
     }
 

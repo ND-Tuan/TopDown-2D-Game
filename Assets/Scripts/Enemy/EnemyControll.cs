@@ -95,6 +95,10 @@ public class EnemyControll : MonoBehaviour
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
         Invoke(nameof(Nomal), 0.1f);
 
+        if(NotBoss){
+            gameObject.GetComponent<EnemyAI>().freeze = 0.15f;
+        }
+
         if( EnemyCurHp <=0){
             
             isDead=true;
