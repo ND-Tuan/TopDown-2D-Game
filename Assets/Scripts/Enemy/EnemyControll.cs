@@ -22,8 +22,12 @@ public class EnemyControll : MonoBehaviour
     public GameObject ManaOrb;
     public GameObject Coin;
     public GameObject[] EnemySub;
+    public GameObject IceFreeze;
+    public GameObject Burning;
+    private float BurnTime;
     public RoomTemplates roomTemplates;
     public SpriteRenderer  InterFace;
+    public bool InmmuFreeze = false;
     private bool isDead =false;
     // Start is called before the first frame update
     void Start()
@@ -70,15 +74,16 @@ public class EnemyControll : MonoBehaviour
                 }
             }
             
-           
             if(!isSummonObject) roomTemplates.countEnemy --;
             Destroy(gameObject);
             Destroy(Main);
         }
 
+        BurnTime -=Time.deltaTime;
+
     }
 
-    public void TakeDmg(int Dmg, bool IsCrit){
+    public void TakeDmg(int Dmg, bool IsCrit, float freeze){
 
         if(EnemyCurShield <=0) {
             EnemyCurHp -= Dmg;
@@ -95,8 +100,9 @@ public class EnemyControll : MonoBehaviour
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
         Invoke(nameof(Nomal), 0.1f);
 
-        if(NotBoss){
-            gameObject.GetComponent<EnemyAI>().freeze = 0.15f;
+        if(NotBoss && !InmmuFreeze){
+            if(gameObject.GetComponent<EnemyAI>().freeze<= freeze)
+                gameObject.GetComponent<EnemyAI>().freeze =  freeze;
         }
 
         if( EnemyCurHp <=0){
@@ -106,6 +112,32 @@ public class EnemyControll : MonoBehaviour
         } 
         
     }
+
+    public void Freeze(float duration){
+        if(NotBoss){
+            GameObject Ice = Instantiate(IceFreeze, gameObject.transform, worldPositionStays:false);
+            Ice.transform.position += new Vector3(0, 2,0);
+            gameObject.GetComponent<EnemyAI>().freeze = duration;
+            InterFace.GetComponent<SpriteRenderer>().material.color = Color.blue;
+            Ice.GetComponent<EffectController>().Ending();
+            Destroy(Ice, duration);
+            Invoke(nameof(Nomal), duration);
+        }
+    }
+
+     public void Burn(float duration){
+        if(NotBoss && BurnTime<=0){
+            BurnTime = duration;
+            GameObject fire = Instantiate(Burning, gameObject.transform, worldPositionStays:false);
+            fire.transform.position += new Vector3(0, 5,0);
+            fire.GetComponent<EffectController>().Burning(this);
+            fire.GetComponent<EffectController>().Ending();
+            InterFace.GetComponent<SpriteRenderer>().material.color = new Color(1, 0.3f,0);
+            Destroy(fire, duration);
+            Invoke(nameof(Nomal), duration);
+        }
+    }
+
 
     void Nomal(){
         InterFace.GetComponent<SpriteRenderer>().material.color = Color.white;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dbd2bef1b36be4044bb207fdee3238cb
+guid: e733011aa833dec4b9311f375f59b079
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 2
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,127 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arm_projectile_glowing_0
+      name: Ice VFX 2 Active-export_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b08e13b789b6c1a4491e74fe7aa161cd
-      internalID: -939089004
+      spriteID: 576fc562218ae4a4c80bbb533747fd61
+      internalID: -1887580804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm_projectile_glowing_1
+      name: Ice VFX 2 Active-export_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        x: 320
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b94e50b043506c4d841b9c265e2b640
-      internalID: 253704234
+      spriteID: 9745ae5afef74cf4c94841cb67410b84
+      internalID: -139355216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm_projectile_glowing_2
+      name: Ice VFX 2 Active-export_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        x: 640
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705f4fd2607fcc3468a08959888e6087
-      internalID: 1584140603
+      spriteID: e9313fac31b739f49aa3b5976e683968
+      internalID: 141268286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm_projectile_glowing_3
+      name: Ice VFX 2 Active-export_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 100
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        x: 960
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ce2e043e3c23940ab8cf6318c1bdbc
-      internalID: -612755470
+      spriteID: aca624d677b37fd4d801a72f9e3f6365
+      internalID: 266202725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm_projectile_glowing_4
+      name: Ice VFX 2 Active-export_4
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        x: 1280
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 483b5ab65863ab14f81ad6b1e3f6f40c
-      internalID: -437606668
+      spriteID: 77c846fb4f07517459cd0a51edef3005
+      internalID: 225996016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arm_projectile_glowing_5
+      name: Ice VFX 2 Active-export_5
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
-      alignment: 9
-      pivot: {x: 0.74, y: 0.63}
+        x: 1600
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 303a13b913a515f419cc9b86c73f0cd3
-      internalID: -1033961665
+      spriteID: 550d638692791e242886b13b16fe3955
+      internalID: 1798060851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice VFX 2 Active-export_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d747ac7064c2a408367cfcdea96420
+      internalID: -329245604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice VFX 2 Active-export_7
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bf6f76bdd390b42a076820fc50010f
+      internalID: 607857697
       vertices: []
       indices: 
       edges: []
@@ -259,12 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      arm_projectile_glowing_0: -939089004
-      arm_projectile_glowing_1: 253704234
-      arm_projectile_glowing_2: 1584140603
-      arm_projectile_glowing_3: -612755470
-      arm_projectile_glowing_4: -437606668
-      arm_projectile_glowing_5: -1033961665
+      Ice VFX 2 Active-export_0: -1887580804
+      Ice VFX 2 Active-export_1: -139355216
+      Ice VFX 2 Active-export_2: 141268286
+      Ice VFX 2 Active-export_3: 266202725
+      Ice VFX 2 Active-export_4: 225996016
+      Ice VFX 2 Active-export_5: 1798060851
+      Ice VFX 2 Active-export_6: -329245604
+      Ice VFX 2 Active-export_7: 607857697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

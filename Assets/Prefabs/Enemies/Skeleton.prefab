@@ -158,8 +158,12 @@ MonoBehaviour:
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
+  IceFreeze: {fileID: 5959365243438242269, guid: bbcc897b3894e1641a6dade9dd32de4d,
+    type: 3}
+  Burning: {fileID: 4290889960147820177, guid: 7836e34a9e78b524daa970a69f605ff5, type: 3}
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 7804118628558541211}
+  InmmuFreeze: 0
 --- !u!114 &4447972570406337816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +188,7 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   distanceToPlayer: 0
   freeze: 0
+  UpdateRate: 0.5
 --- !u!1 &2502571550772626485
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +262,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -522294133, guid: 74a3bc7f93c588349aa8487538c36af3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -481,7 +486,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 1507171983, guid: 8537cf82a43083e4180160a8471528e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

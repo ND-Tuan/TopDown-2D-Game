@@ -588,6 +588,7 @@ MonoBehaviour:
   - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   - {fileID: 7868120285748648478, guid: 89470dd4e3fdb2e46b9f9dbddc0436bd, type: 3}
   - {fileID: 1380624089359192014, guid: b374cb775d0c53942a8cccbf9d1f51ae, type: 3}
+  - {fileID: 45970085738386600, guid: b8c696175847f4e4f83fc0347752add3, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -610,6 +611,7 @@ MonoBehaviour:
   appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
+  Waves: 2
   IsSpawnEnemies: 1
 --- !u!1 &3070902166187215422
 GameObject:
@@ -1154,6 +1156,7 @@ MonoBehaviour:
   - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   - {fileID: 7868120285748648478, guid: 89470dd4e3fdb2e46b9f9dbddc0436bd, type: 3}
   - {fileID: 1380624089359192014, guid: b374cb775d0c53942a8cccbf9d1f51ae, type: 3}
+  - {fileID: 45970085738386600, guid: b8c696175847f4e4f83fc0347752add3, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1176,6 +1179,7 @@ MonoBehaviour:
   appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
+  Waves: 2
   IsSpawnEnemies: 1
 --- !u!1 &5311997089028214351
 GameObject:
@@ -1273,6 +1277,7 @@ MonoBehaviour:
   - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   - {fileID: 7868120285748648478, guid: 89470dd4e3fdb2e46b9f9dbddc0436bd, type: 3}
   - {fileID: 1380624089359192014, guid: b374cb775d0c53942a8cccbf9d1f51ae, type: 3}
+  - {fileID: 45970085738386600, guid: b8c696175847f4e4f83fc0347752add3, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1295,6 +1300,7 @@ MonoBehaviour:
   appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
+  Waves: 2
   IsSpawnEnemies: 1
 --- !u!1 &6538152147727977464
 GameObject:
@@ -1545,6 +1551,7 @@ MonoBehaviour:
   - {fileID: 7315067904420624595, guid: 0265462e34350254d90d042ada55bd4a, type: 3}
   - {fileID: 7868120285748648478, guid: 89470dd4e3fdb2e46b9f9dbddc0436bd, type: 3}
   - {fileID: 1380624089359192014, guid: b374cb775d0c53942a8cccbf9d1f51ae, type: 3}
+  - {fileID: 45970085738386600, guid: b8c696175847f4e4f83fc0347752add3, type: 3}
   closePos:
   - {fileID: 4577430997356853715}
   - {fileID: 465029061499419775}
@@ -1567,6 +1574,7 @@ MonoBehaviour:
   appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 6
+  Waves: 2
   IsSpawnEnemies: 1
 --- !u!1 &8878694876546954735
 GameObject:

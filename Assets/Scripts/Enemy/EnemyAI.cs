@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.TextCore.Text;
+using UnityEngine.PlayerLoop;
 
 
 public class EnemyAI : MonoBehaviour
@@ -25,9 +26,10 @@ public class EnemyAI : MonoBehaviour
     public float distanceToPlayer;
     private Vector2 Final;
     public float freeze;
+    public float UpdateRate = 0.5f;
 
     private void Start(){
-        InvokeRepeating(nameof(CalculatePath), 0f, 0.5f);
+        InvokeRepeating(nameof(CalculatePath), 0f, UpdateRate);
         reachPlayer = true;
 
         animator = GetComponentInChildren<Animator>();

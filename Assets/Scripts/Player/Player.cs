@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public Rigidbody2D Rg;
-    private Vector3 moveInput;
+    public Vector3 moveInput;
     public  Animator animator;
     public float dashBoost = 2f;
     public static float dashTime;
@@ -96,12 +96,11 @@ public class Player : MonoBehaviour
 
     void Move(){
 
-        Rg.velocity = moveSpeed * new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         
-        if(moveInput.x!=0 && moveInput.y!=0) Rg.velocity.Normalize(); //Chuẩn hóa vector khi nv di chuyển trên đường chéo
+        if(moveInput.x!=0 && moveInput.y!=0) moveInput.Normalize(); //Chuẩn hóa vector khi nv di chuyển trên đường chéo
+         Rg.velocity = moveSpeed * moveInput;
 
         //transform.position += moveSpeed * Time.deltaTime * moveInput;
 
@@ -226,9 +225,9 @@ public class Player : MonoBehaviour
        immune = false;
     }
 
-    public void TakeDmg(){
+    public void TakeDmg(int Dmg){
         if(immune ==  false){
-            PlayerCurHP--;
+            PlayerCurHP-= Dmg;
             immune = true;
             CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
             Invoke(nameof(Nomal), 0.1f);

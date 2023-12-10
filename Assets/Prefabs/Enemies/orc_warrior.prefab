@@ -190,7 +190,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 365051554, guid: 961e139514034d8448203bfb57f5b2c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156a128616804d446985f01d589e0c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAI: {fileID: 8940638557867758505}
+  enemyAI: {fileID: 0}
   Smoke: {fileID: 8984900239566929913, guid: 8a8f69970be56f1458b613d16f681c82, type: 3}
   pos: {fileID: 5451693946094344720}
   CD: 5
@@ -315,7 +315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1936436211, guid: 443bb1a50b374ca4aaea58bcb5445dbb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -506,8 +506,12 @@ MonoBehaviour:
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
+  IceFreeze: {fileID: 5959365243438242269, guid: bbcc897b3894e1641a6dade9dd32de4d,
+    type: 3}
+  Burning: {fileID: 4290889960147820177, guid: 7836e34a9e78b524daa970a69f605ff5, type: 3}
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 5068101878564543344}
+  InmmuFreeze: 0
 --- !u!114 &8940638557867758505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +536,7 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   distanceToPlayer: 0
   freeze: 0
+  UpdateRate: 0.5
 --- !u!1 &8706504135314867526
 GameObject:
   m_ObjectHideFlags: 0

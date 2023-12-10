@@ -17,11 +17,12 @@ public class CloseRoom : MonoBehaviour
   public RoomTemplates roomTemplates;
   private int x, y ;
   public int MonsterNum;
-  public int Waves = 2;
+  public int Waves = 1;
   public bool IsSpawnEnemies = true;
   private bool isSpawn = false;
   void Start(){
-		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();	
+		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+    Waves = 	roomTemplates.Level;
   }
 
   void Update(){
@@ -49,7 +50,7 @@ public class CloseRoom : MonoBehaviour
         
         TakeRandomLocate();
         Invoke(nameof(SpawnEnemies), 0.67f);
-        Waves -= 1;
+        
       }   
 	}
 
@@ -84,5 +85,6 @@ public class CloseRoom : MonoBehaviour
   void SpawnWall(){
       roomTemplates.isSpawnWall = true;
       roomTemplates.transform.position = spawners[0].transform.position;
+      Waves -= 1;
   }
 }

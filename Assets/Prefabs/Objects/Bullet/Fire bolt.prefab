@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8528494651701413130}
   - component: {fileID: 1460069938055020011}
   - component: {fileID: 1382655786640989326}
+  - component: {fileID: -3444612828086546823}
   m_Layer: 0
   m_Name: Fire bolt
   m_TagString: Untagged
@@ -214,3 +215,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 10
+--- !u!114 &-3444612828086546823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230591013123229348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49ae43a80955e9459497022582d4ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectTriggerRate: 30
+  EffectType: 1
+  Duration: 3
+  EndDuration: 0

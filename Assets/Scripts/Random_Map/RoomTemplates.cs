@@ -40,14 +40,14 @@ public class RoomTemplates : MonoBehaviour {
 		rd =  Random.Range(0,2);
 		RemoveWall();
 
-		if(waitTime <= 0 && spawnedBoss == false){
+		if(waitTime <= 0 && spawnedBoss == false && Level !=4){
+			
+			rooms[rooms.Count-1].GetComponent<AddRoom>().ChangeToFunctionRoom();
+			GameObject Tmp = Instantiate(SPRoom[0], rooms[rooms.Count-1].transform.position, Quaternion.identity);
+			Tmp.GetComponentInChildren<PortalController>().Level = Level+1;
+
 			if(Level==3){
-				Instantiate(boss, rooms[rooms.Count-1].transform.position, Quaternion.identity);
-				rooms[rooms.Count-1].GetComponent<AddRoom>().CancerSpawneEnemies();
-			} else {
-				rooms[rooms.Count-1].GetComponent<AddRoom>().ChangeToFunctionRoom();
-				GameObject Tmp = Instantiate(SPRoom[0], rooms[rooms.Count-1].transform.position, Quaternion.identity);
-				Tmp.GetComponentInChildren<PortalController>().Level = Level+1;
+				GameObject.FindGameObjectWithTag("Portal").GetComponent<SpriteRenderer>().color = Color.red;
 			}
 
 			int rand = Random.Range(1, rooms.Count-1);

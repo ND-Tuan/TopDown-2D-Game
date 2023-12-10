@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1982797627448865240}
   - component: {fileID: 3502807976834339045}
   - component: {fileID: 4981860011391948906}
+  - component: {fileID: -6019868573573464434}
   m_Layer: 8
   m_Name: IcePike 1
   m_TagString: bullet
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1704273253
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: eda2bf44719d1de41a8c5efdd24adcd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -214,3 +215,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dmg: 0
   DesByTrigger: 0
+--- !u!114 &-6019868573573464434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477512198463270652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49ae43a80955e9459497022582d4ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectTriggerRate: 30
+  EffectType: 0
+  Duration: 3
+  EndDuration: 0

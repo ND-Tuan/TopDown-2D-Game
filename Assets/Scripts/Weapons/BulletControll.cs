@@ -17,7 +17,7 @@ public class BulletControll : MonoBehaviour
                 if(DmgOutput > Dmg){
                     IsCrit = true;
                 }
-                other.GetComponent<EnemyControll>().TakeDmg(DmgOutput, IsCrit);
+                other.GetComponent<EnemyControll>().TakeDmg(DmgOutput, IsCrit, 0.15f);
                 IsCrit = false;
             }
         }

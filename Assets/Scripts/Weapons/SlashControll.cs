@@ -16,7 +16,7 @@ public class SlashControll : MonoBehaviour
             if(DmgOutput > Dmg){
                IsCrit = true;
             }
-            other.GetComponent<EnemyControll>().TakeDmg(DmgOutput, IsCrit);
+            other.GetComponent<EnemyControll>().TakeDmg(DmgOutput, IsCrit, 0.15f);
             IsCrit = false;
         }
         if(other.CompareTag("EnemyBullet")) Destroy(other.gameObject);

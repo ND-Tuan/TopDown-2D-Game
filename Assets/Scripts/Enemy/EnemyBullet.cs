@@ -9,7 +9,7 @@ public class EnemyBullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
 
         if(other.CompareTag("Player")){
-            other.GetComponentInParent<Player>().TakeDmg();
+            other.GetComponentInParent<Player>().TakeDmg(1);
         } 
         if((other.CompareTag("Player") || other.CompareTag("Wall")) && IsDestroy ) 
             Destroy(gameObject);

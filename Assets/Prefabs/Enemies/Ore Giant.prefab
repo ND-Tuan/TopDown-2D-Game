@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 1501119589, guid: 961e139514034d8448203bfb57f5b2c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -158,7 +158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3055298053519154605}
-  m_Father: {fileID: 7602281622340196183}
+  m_Father: {fileID: 8736954201182473823}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3766399823919225502
 Animator:
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1654405129
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1239693847, guid: 03e3d4ff05eb7eb41ba7247d2d0659d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -348,6 +348,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &7222771702266622204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8736954201182473823}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8736954201182473823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222771702266622204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 937193849472838396}
+  m_Father: {fileID: 7602281622340196183}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7664273657601259481
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +406,7 @@ Transform:
   m_GameObject: {fileID: 7664273657601259481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 10.7, z: 0}
+  m_LocalPosition: {x: 0.28, y: 7.32, z: 0}
   m_LocalScale: {x: 1.5, y: 0.79999995, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -464,11 +496,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6310219228060791664}
-  - {fileID: 937193849472838396}
+  - {fileID: 8736954201182473823}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4714007859928992911
@@ -590,8 +622,12 @@ MonoBehaviour:
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
+  IceFreeze: {fileID: 5959365243438242269, guid: bbcc897b3894e1641a6dade9dd32de4d,
+    type: 3}
+  Burning: {fileID: 4290889960147820177, guid: 7836e34a9e78b524daa970a69f605ff5, type: 3}
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 2809285965839479158}
+  InmmuFreeze: 0
 --- !u!114 &9086237720139738294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,3 +652,4 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   distanceToPlayer: 0
   freeze: 0
+  UpdateRate: 0.5

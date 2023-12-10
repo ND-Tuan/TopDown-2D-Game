@@ -23,12 +23,12 @@ public class LaserControll : MonoBehaviour
 
         if(DelayDmgTimeCal <=0 && IsGiveDmg){
             if(DmgToPlayer){
-                player.TakeDmg();           
+                player.TakeDmg(1);           
             }
             if(DmgToEnemy){
                 foreach(EnemyControll e in enemyControll){
                     if(e!=null){
-                        e.TakeDmg(Damage, false);
+                        e.TakeDmg(Damage, false, 0.15f);
                     } 
                 }
             }

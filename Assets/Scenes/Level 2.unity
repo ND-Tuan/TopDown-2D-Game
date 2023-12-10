@@ -324,7 +324,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7aa1a0389616d547a34e34827992b7c, type: 3}
---- !u!1 &1324494205
+--- !u!850595691 &1611261239
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 6
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 0
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_LightmapCompression: 3
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 512
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentImportanceSampling: 0
+  m_PVRFilteringMode: 2
+  m_PVRDenoiserTypeDirect: 0
+  m_PVRDenoiserTypeIndirect: 0
+  m_PVRDenoiserTypeAO: 0
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_PVRTiledBaking: 0
+  m_NumRaysToShootPerTexel: -1
+  m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!1 &2080495794
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,8 +396,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1324494207}
-  - component: {fileID: 1324494206}
+  - component: {fileID: 2080495796}
+  - component: {fileID: 2080495795}
   m_Layer: 0
   m_Name: A*
   m_TagString: Untagged
@@ -341,13 +405,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1324494206
+--- !u!114 &2080495795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324494205}
+  m_GameObject: {fileID: 2080495794}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
@@ -355,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAA4Iey7eUwibgIAACcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtymzAU/RWP1k0GiB+hu9ZxnC6SeOp2smEjSxejsZAYScR2Mv736gowhK4sn3Nf5+iKTyKUrYA5bdZG8GfNgXyfEDyTb5OefIIT3Wu1FR/QxbwJ7goMoiHmN3VCezzGNKtLcEawH2ovMTjyYK1Erk254ntYauush3MqLXjKaIfZykOfE3LyPzcpppz9KVng6cOf0mhy8UcGyoEZhMbx7ezufj5dLNqUaZrcpot4ft8mNnm1YpKWFXAU0acnUdS1imdRE6q8xDZqhh21lMK28xF3roL+bVWAATSAC+rlhplQfQFiXzgsPcx9zXMLrvXC0PODMN61pij5qRsrS2oPzWjvVNbYZj4NEzU1n/+jb+JA50aXT13bOAhyhWCH3/TMqHUDq4fww9e5a3Wk8kB3Et4KUC96bXStuCedqTG1tpA89H+vypYFsEOPN6OOwLrqHe/s7u4VNVyC+NNSinKH1O20AbZSB7fDOoDx9/LLDxyWxbYlPIpT/LXwh+6HW9USj8JY56lWpcLxdro2GEpWwTNUU7ulNgoC3A5dgaLSnTe+jBvf4IgbtB0xjxTfT9u85bpnMUoJcB8fRSNqo4/Xy7KFPj6DLV5rJ4UaFkPmxRu11Eo1G2ZHLOZta5NTBr3YfS34190iScwiCvMopTlNkun8ZsbvIGJsRncpZ3m6I2H5hPJCqdw0k7b++GtTfXHlF637rkzWhlZh27mhx7X4KPXAc6FyvWUGQL02Fa6Dg/FN/KPkKy68Q1twTqhw4eQzI1KzA/DsWigLSlcnZ2jWV8lIJd61QyQjy/AhyQjC12XeGHgXcMTmXbELufwDUEsDBBQAAAgIAAA4IeytO4zmbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkWGyQWKqmYFlYlqikZGJma5pinGqQXKyaWKSZUpymmWSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAA4Iey7eUwibgIAACcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAA4IeytO4zmbQAAAHgAAAAJACQAAAAAAAAAAAAAALsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcwMAAAAA
+    dataString: UEsDBBQAAAgIAAA4IeyaUpeDcQIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjm48OvbWEkB6SMKGZXHwR0hprkCWPJAdIhv/elSxjl3JB3rdv9+3T2l9EKFsDc9qsjeBPmgP5MSL+TL6NevARTnSv1VZ8QpfzLrgrfRINOa/UCY3x1NOsrsAZwX6qvfTJCQYbJQptqhXfw1JbZzFcUGkBIaOdZysMfY3ICf/GC0854yn77k+feFokowseGSgHpk+d3mWLdDaZTrPVOJlF1ixJ7hL8zdNIbrmNYpJWNXA/SF9igumROEFSSFU4ZsxKPci0lMJGkcSd62DCti7BgHeBC4ozB2E+vQSxL53XP+S+FIUFF1MMPd8Lg9a1Rckv3fpZUXtotX1Q2fg282mQ1NZ8+g8epwEujK4eu7ZpmMiVgh1e6ZlR6wZ+D8P3ve40OHSk8kB3Et5LUM96bXSjOILONJ7aWMju+8frZMsS2KGPt1Jvgk3dW9753V2un+EShj8tpah2HrqbtoGt1MHtsBNg8GJ+o+CwMTaWwKhX8WbhD90PVysCD8JYh1CcUnl5O90Yn0pWwTM/TeOW2igI4Si6BkWlO2+wjLu9wRts0PYGeaD+JYrNI9a9GzeUEO7zk+QG2ujj9bJsqY9PYMuXxkmhoBftgWf0aamVahds6ElH2zamoGxA2zeC/7taJEtZQmGeLGhBs2w6H8/4BBLGZnS34KxY7EjYPaFwTio3rdBoD96a6osr3LPu2zJaG1qHZeeGHtfis9IDy4Uq9JYZAPXSVrgKB4NN8KXkKy7QoC04J1S4b/KVE6nZAXh+LZSHSVcnZ2jeV8lJLT6085GcLMPHJCc+fN3ljYEPAUffvCt2IZe/UEsDBBQAAAgIAAA4IeytO4zmbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkWGyQWKqmYFlYlqikZGJma5pinGqQXKyaWKSZUpymmWSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAA4IeyaUpeDcQIAACsFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAA4IeytO4zmbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -428,89 +492,25 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
---- !u!4 &1324494207
+--- !u!4 &2080495796
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324494205}
+  m_GameObject: {fileID: 2080495794}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 215, y: 218, z: -0.6248274}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!850595691 &1611261239
-LightingSettings:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Settings.lighting
-  serializedVersion: 6
-  m_GIWorkflowMode: 1
-  m_EnableBakedLightmaps: 0
-  m_EnableRealtimeLightmaps: 0
-  m_RealtimeEnvironmentLighting: 1
-  m_BounceScale: 1
-  m_AlbedoBoost: 1
-  m_IndirectOutputScale: 1
-  m_UsingShadowmask: 1
-  m_BakeBackend: 0
-  m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
-  m_Padding: 2
-  m_LightmapCompression: 3
-  m_AO: 0
-  m_AOMaxDistance: 1
-  m_CompAOExponent: 1
-  m_CompAOExponentDirect: 0
-  m_ExtractAO: 0
-  m_MixedBakeMode: 2
-  m_LightmapsBakeMode: 1
-  m_FilterMode: 1
-  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
-  m_ExportTrainingData: 0
-  m_TrainingDataDestination: TrainingData
-  m_RealtimeResolution: 2
-  m_ForceWhiteAlbedo: 0
-  m_ForceUpdates: 0
-  m_FinalGather: 0
-  m_FinalGatherRayCount: 256
-  m_FinalGatherFiltering: 1
-  m_PVRCulling: 1
-  m_PVRSampling: 1
-  m_PVRDirectSampleCount: 32
-  m_PVRSampleCount: 512
-  m_PVREnvironmentSampleCount: 512
-  m_PVREnvironmentReferencePointCount: 2048
-  m_LightProbeSampleCountMultiplier: 4
-  m_PVRBounces: 2
-  m_PVRMinBounces: 2
-  m_PVREnvironmentImportanceSampling: 0
-  m_PVRFilteringMode: 2
-  m_PVRDenoiserTypeDirect: 0
-  m_PVRDenoiserTypeIndirect: 0
-  m_PVRDenoiserTypeAO: 0
-  m_PVRFilterTypeDirect: 0
-  m_PVRFilterTypeIndirect: 0
-  m_PVRFilterTypeAO: 0
-  m_PVRFilteringGaussRadiusDirect: 1
-  m_PVRFilteringGaussRadiusIndirect: 5
-  m_PVRFilteringGaussRadiusAO: 2
-  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-  m_PVRFilteringAtrousPositionSigmaIndirect: 2
-  m_PVRFilteringAtrousPositionSigmaAO: 1
-  m_PVRTiledBaking: 0
-  m_NumRaysToShootPerTexel: -1
-  m_RespectSceneVisibilityWhenBakingGI: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1324494207}
   - {fileID: 605680548}
   - {fileID: 190941119}
+  - {fileID: 2080495796}

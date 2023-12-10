@@ -6,30 +6,31 @@ public class GolemArm : MonoBehaviour
 {
     public float sec;
     public GameObject Arm;
+    private ArmBloom armBloom;
 
     // Start is called before the first frame update
     void Start(){
 
         Invoke(nameof(Stay), sec);
-        Invoke(nameof(SelfDes), sec);
+        Destroy(gameObject, sec);
     }
 
     void OnTriggerEnter2D(Collider2D other){
 
         if(other.CompareTag("Wall")){
             Stay();
-            SelfDes();
+             Destroy(gameObject);
         }
     }
 
-     void SelfDes(){
-
-        Destroy(gameObject);
-    }
-
     void Stay(){
-        GameObject GolemArm = Instantiate(Arm, transform.position, transform.rotation);
+        GameObject GolemArm = Instantiate(Arm, transform.position, Arm.transform.rotation);
         if(transform.localScale == new Vector3(1,-1, 0))
-            GolemArm.transform.localScale = new Vector3(1,-1, 0);
+            armBloom = GolemArm.GetComponentInChildren<ArmBloom>();
+
+            if(armBloom !=null){
+                armBloom.gameObject.transform.rotation = Quaternion.Euler(0, 0, -140);
+                armBloom.gameObject.transform.localScale = new Vector3(1,-1, 0);
+            } 
     }
 }

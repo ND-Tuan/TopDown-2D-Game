@@ -13,7 +13,7 @@ public class SpawnPotal : MonoBehaviour
 
     void spawnPotal(){
         RoomTemplates roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        GameObject Tmp = Instantiate(Portal, roomTemplates.rooms[roomTemplates.rooms.Count-1].transform.position, Quaternion.identity);
+        GameObject Tmp = Instantiate(Portal, new Vector3(160,0,0), Quaternion.identity);
 		Tmp.GetComponentInChildren<PortalController>().Level = roomTemplates.Level+1;
     }
 
