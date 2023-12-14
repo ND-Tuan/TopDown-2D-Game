@@ -29,7 +29,7 @@ public class GolemArm : MonoBehaviour
             armBloom = GolemArm.GetComponentInChildren<ArmBloom>();
 
             if(armBloom !=null){
-                armBloom.gameObject.transform.rotation = Quaternion.Euler(0, 0, -140);
+                armBloom.gameObject.transform.rotation = Quaternion.Euler(0, 0, -130);
                 armBloom.gameObject.transform.localScale = new Vector3(1,-1, 0);
             } 
     }

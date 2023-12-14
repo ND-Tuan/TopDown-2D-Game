@@ -105,7 +105,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1704273253
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0b3c35ef20c3bb04094aa6dc71823654, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -147,5 +147,5 @@ MonoBehaviour:
   firePos: {fileID: 5254740723531401037}
   TimeBtwFire: 2
   Dmg: 5
-  ManaCost: 2
+  ManaCost: 1
   weaponHolder: {fileID: 0}

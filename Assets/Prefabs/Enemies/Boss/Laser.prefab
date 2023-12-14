@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2587963251453134225}
   - component: {fileID: 6442957679430520603}
   - component: {fileID: 2873760952857371794}
-  - component: {fileID: 1892913552720260564}
+  - component: {fileID: 784385766605752107}
   m_Layer: 0
   m_Name: Laser
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: -745730805, guid: aab7f41a4b8f660498a94ced1b7c5318, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 2
---- !u!114 &1892913552720260564
+--- !u!114 &784385766605752107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4554254920819456860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b5536180cbfac469b8e08ca9d31bca, type: 3}
+  m_Script: {fileID: 11500000, guid: 062bb6cc6fa2fb44c9bd1b21262edcb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDestroy: 0
+  Dmg: 2
+  IsDestroyPlayerBullet: 1

@@ -19,10 +19,9 @@ public class Magic_Staff : MonoBehaviour
     void Start(){
         weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
         weaponHolder.ShowManaCost(ManaCost);
-        if(!Rotationable){
-            weaponHolder.Rotationable = false;
-        }
         
+        weaponHolder.Rotationable = Rotationable;
+    
     }
 
     void Update()

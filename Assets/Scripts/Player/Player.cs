@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 using UnityEngine.SceneManagement;
@@ -48,12 +49,14 @@ public class Player : MonoBehaviour
     private bool InChargeTime = false;
     private bool ChangeToHand =  false;
     private float HandCD =0;
+    public GameObject VRCam;
+    private CinemachineVirtualCamera virtualCamera;
     
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         WeaponPos =GameObject.FindGameObjectWithTag("WeaponPos");
-        
+        virtualCamera =  VRCam.GetComponent<CinemachineVirtualCamera>();
         PlayerCurHP = PlayerMaxHP;
         Invoke(nameof(Appear), 0.5f); 
     }
@@ -79,11 +82,12 @@ public class Player : MonoBehaviour
                     HandAttack();
                 }
             }
-            Skill();
+            SkillAsync();
         }
 
         if(Input.GetKeyDown(KeyCode.E) && !InUltiTime){
             if(ChangeToHand == false){
+                WeaponPos.GetComponent<WeaponHolder>().Rotationable = false;
                 ChangeToHand = true;
                 WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             } else {
@@ -137,7 +141,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && dashTime <= 0 && DashCDTmp==0)
         {
-           
+            WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             DashCDTmp = DashCD;
             animator.SetBool("Roll", true);
             
@@ -150,7 +154,8 @@ public class Player : MonoBehaviour
 
         if (dashTime <= 0 && once)
         {
-            //WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+            if(!ChangeToHand)
+                WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             animator.SetBool("Roll", false);
             
             immune = false;
@@ -167,7 +172,7 @@ public class Player : MonoBehaviour
         DashIcon.fillAmount = 1-DashCDTmp/DashCD;
     }
 
-    void Skill(){
+    async void SkillAsync(){
 
         if(!InUltiTime) {
             if(SkillCDTmp >0){
@@ -179,9 +184,10 @@ public class Player : MonoBehaviour
 
         UltiIconCD.fillAmount = 1 - SkillCDTmp/SkillCD;
         UltiIconEnergy.fillAmount = Energy;
+        
 
         if(Input.GetMouseButton(1) && SkillCDTmp==0){
-            
+            Rg.velocity = new Vector3(0,0,0);
             WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             animator.SetBool("Charge", true);
             InChargeTime = true;
@@ -189,21 +195,33 @@ public class Player : MonoBehaviour
             if(Energy <1){
                 if (ChargeTime<=0) ChargeTime=0.000001f;
                 Energy += Time.deltaTime/ChargeTime;
+                virtualCamera.m_Lens.OrthographicSize += 30*Time.deltaTime/ChargeTime;
+
             } else {
                 Energy = 1;
+                virtualCamera.m_Lens.OrthographicSize = 80;
             }
 
         } else{
             animator.SetBool("Charge", false);
             InChargeTime = false;
+
+            CinemachineVirtualCamera virtualCamera =  VRCam.GetComponent<CinemachineVirtualCamera>();
             
             if(Energy==1 && !InUltiTime){
                 animator.SetBool("Blash", true);
                 TmpKameHa = Instantiate(KameHa, ArmPos.gameObject.transform, worldPositionStays:false);
                 SkillCDTmp = SkillCD;
                 InUltiTime = true;
-            } else if(!InUltiTime && Input.GetMouseButtonUp(1) && !ChangeToHand) {
-                WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+            } else if(!InUltiTime   && dashTime <= 0) {
+                if(!ChangeToHand)
+                    WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
+                    
+                while(virtualCamera.m_Lens.OrthographicSize > 50){
+                   virtualCamera.m_Lens.OrthographicSize --;
+                   await Task.Delay(200);
+                }
+                virtualCamera.m_Lens.OrthographicSize = 50;
             }
         }
     }
@@ -211,6 +229,7 @@ public class Player : MonoBehaviour
     void HandAttack(){
         HandCD -= Time.deltaTime;
         if(Input.GetMouseButton(0) && ChangeToHand && HandCD <=0){
+            
             animator.SetBool("Attack", true);
             Attack.SetActive(true);
             Attack.GetComponent<HandAttack>().Attack1();
@@ -228,6 +247,7 @@ public class Player : MonoBehaviour
     public void TakeDmg(int Dmg){
         if(immune ==  false){
             PlayerCurHP-= Dmg;
+            if (PlayerCurHP <0) PlayerCurHP = 0;
             immune = true;
             CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
             Invoke(nameof(Nomal), 0.1f);

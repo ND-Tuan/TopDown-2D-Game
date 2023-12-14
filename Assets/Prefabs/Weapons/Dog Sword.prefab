@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3934850749716235858}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.29115325, w: 0.9566765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2881170172883442640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -33.854}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4808387761438777832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1704273253
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7d711c424b39a3e4f8d715c3f72dbbb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,17 +207,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
+  SlashColor: {r: 1, g: 0.5226415, b: 0.5226415, a: 1}
   SlashPos: {fileID: 8077144306512439569}
-  WolfEffect: {fileID: 3099693305059924707, guid: edd4c56fc85cf01428f0210897136e76,
+  AirSlashEffect: {fileID: 3099693305059924707, guid: edd4c56fc85cf01428f0210897136e76,
     type: 3}
+  CoutToAirSlash: 3
   scale: 0
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
   SlashDmg: 12
+  AirSlasdDmg: 20
+  RotateSameToWeapon: 0
   WeaponPos: {fileID: 0}
   weaponHolder: {fileID: 0}
-  ManaCost: 2
+  ManaCost: 3
   animator: {fileID: 0}
   BulletForce: 50
 --- !u!114 &-5493161596058709354

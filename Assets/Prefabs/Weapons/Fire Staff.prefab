@@ -784,7 +784,7 @@ MonoBehaviour:
   TimeBtwFire: 0.5
   BulletForce: 30
   weaponHolder: {fileID: 0}
-  ManaCost: 1
+  ManaCost: 2
   Damage: 6
   animator: {fileID: 3863135907175712692}
   Rotationable: 0

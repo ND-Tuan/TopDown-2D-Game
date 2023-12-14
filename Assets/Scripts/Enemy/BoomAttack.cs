@@ -22,23 +22,21 @@ public class BoomAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
+        if(Player !=null){
+            float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (distanceToPlayer <= Range && !Boom){
-            enemyAI.gameObject.transform.position = Player.transform.position;
-            enemyAI.moveSpeed+=40;
-            Boom = true;
-            //enemyAI.freeze = 0.6f;
-            animator.SetBool("Boom", true);
-            Invoke(nameof(InsSmoke), 1.5f);
-        }
-
-        if(GetComponentInParent<EnemyControll>().EnemyCurHp<=0){
-            InsSmoke();
+            if (distanceToPlayer <= Range && !Boom){
+                enemyAI.gameObject.transform.position = Player.transform.position;
+                enemyAI.moveSpeed+=40;
+                Boom = true;
+                //enemyAI.freeze = 0.6f;
+                animator.SetBool("Boom", true);
+                Invoke(nameof(KaBoooommm), 1.5f);
+            }
         }
     }
 
-    void InsSmoke(){
+    public void KaBoooommm(){
         GameObject tmp = Instantiate(Explosion, transform.position, Explosion.transform.rotation);
         tmp.GetComponent<DmgToPlayer>().Dmg = Dmg;
         GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().countEnemy--;

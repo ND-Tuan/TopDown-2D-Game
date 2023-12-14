@@ -106,7 +106,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: -223856595, guid: abaa7f6d7cedc0a46bd3da90dcc506a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.7419977, y: -1.915642}
+  m_Offset: {x: -2.7046175, y: -2.0390992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -183,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.516005, y: 7.73686}
+  m_Size: {x: 15.1518345, y: 11.824674}
   m_EdgeRadius: 0
 --- !u!114 &6056484220267736083
 MonoBehaviour:
@@ -212,6 +212,6 @@ MonoBehaviour:
   - {fileID: 5914252321306497655, guid: e8c8c68b2e200144aac913bac4486f3c, type: 3}
   - {fileID: 5401732085024753869, guid: 45a56af2a92f6f947869ede1b8d07e4a, type: 3}
   DropPos: {fileID: 5305816411340632979}
-  ManaNum: 5
+  ManaNum: 10
   CoinAmount: 10
   WeaponID: 3

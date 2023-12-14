@@ -56,7 +56,7 @@ public class EnemyControll : MonoBehaviour
             } 
             HealthBar.transform.localScale = new Vector3(0, 0, 0);
 
-            int rand = Random.Range(1,4);
+            int rand = Random.Range(2,6);
             if(!NotBoss) rand = 50;
 
             //Rơi hạt mana khi chết
@@ -67,11 +67,18 @@ public class EnemyControll : MonoBehaviour
 
             //Rơi vàng khi chết
             if(!isSummonObject){
-                if(!NotBoss) rand = Random.Range(1,4);
+                if(!NotBoss) rand = Random.Range(2,6);
                 for(int i=0; i<rand; i++){
                     GameObject Tmp = Instantiate(Coin, gameObject.transform.position, Quaternion.identity);
                     Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
                 }
+            }
+
+            // Nghệ thuật là sự bùng nổ :))
+            BoomAttack boomAttack = gameObject.GetComponentInChildren<BoomAttack>();
+            if(boomAttack!=null){
+                roomTemplates.countEnemy ++;
+                boomAttack.KaBoooommm();
             }
             
             if(!isSummonObject) roomTemplates.countEnemy --;
@@ -84,32 +91,32 @@ public class EnemyControll : MonoBehaviour
     }
 
     public void TakeDmg(int Dmg, bool IsCrit, float freeze){
+        if(!Immune)
+            if(EnemyCurShield <=0) {
+                EnemyCurHp -= Dmg;
+            } else {
+                EnemyCurShield -= Dmg;
+            }
 
-        if(EnemyCurShield <=0) {
-            EnemyCurHp -= Dmg;
-        } else {
-            EnemyCurShield -= Dmg;
-        }
+            GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
+            instance.GetComponent<TextMesh>().text = Dmg.ToString();
+            if(IsCrit){
+                instance.GetComponent<TextMesh>().color = new Color(1, 0.8719501f, 0, 1);
+            }
 
-        GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
-        instance.GetComponent<TextMesh>().text = Dmg.ToString();
-        if(IsCrit){
-            instance.GetComponent<TextMesh>().color = new Color(1, 0.8719501f, 0, 1);
-        }
+            InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
+            Invoke(nameof(Nomal), 0.1f);
 
-        InterFace.GetComponent<SpriteRenderer>().material.color = Color.red;
-        Invoke(nameof(Nomal), 0.1f);
+            if(NotBoss && !InmmuFreeze){
+                if(gameObject.GetComponent<EnemyAI>().freeze<= freeze)
+                    gameObject.GetComponent<EnemyAI>().freeze =  freeze;
+            }
 
-        if(NotBoss && !InmmuFreeze){
-            if(gameObject.GetComponent<EnemyAI>().freeze<= freeze)
-                gameObject.GetComponent<EnemyAI>().freeze =  freeze;
-        }
-
-        if( EnemyCurHp <=0){
+            if( EnemyCurHp <=0){
+                
+                isDead=true;
             
-            isDead=true;
-           
-        } 
+            } 
         
     }
 

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190483958916155519}
   - component: {fileID: 7616536480717637508}
+  - component: {fileID: 1999606216422479330}
   m_Layer: 0
   m_Name: 'WolfEffect '
   m_TagString: Untagged
@@ -46,6 +47,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 3
+--- !u!114 &1999606216422479330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3099693305059924707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46afb76732bfe7e4da90e1bfe59b3a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dmg: 0
+  DesByTrigger: 0
 --- !u!1 &3561273838525755794
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +74,6 @@ GameObject:
   - component: {fileID: 6486450462819240144}
   - component: {fileID: 573588184845433333}
   - component: {fileID: 4281400573975436374}
-  - component: {fileID: 6369027406362281488}
   m_Layer: 0
   m_Name: WolfEffect
   m_TagString: Untagged
@@ -121,7 +135,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1704273253
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 4e5d64932fec58d42b11627ba297a997, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
@@ -217,16 +231,3 @@ CircleCollider2D:
   m_Offset: {x: -2.6428385, y: 2.5281858}
   serializedVersion: 2
   m_Radius: 11.206498
---- !u!114 &6369027406362281488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3561273838525755794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da5ca62b4626a6245a364c3060e39ca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dmg: 20

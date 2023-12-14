@@ -25,9 +25,10 @@ public class MeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
+        if(Player != null && enemyAI!= null){
+            float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        CDTmp -= Time.deltaTime;
+            CDTmp -= Time.deltaTime;
 
         
 
@@ -38,6 +39,8 @@ public class MeleeAttack : MonoBehaviour
             Invoke(nameof(delayro), 1.5f);
             Invoke(nameof(InsSmoke), 0.25f);
         }
+        }
+        
     }
 
     void delay(){

@@ -30,6 +30,7 @@ public class Chest : MonoBehaviour
     }
 
     void Drop(){
+        WeaponHolder  weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
         for(int i=0; i<ManaNum; i++){
             GameObject Tmp = Instantiate(ManaOrb, DropPos.position, Quaternion.identity);
             Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
@@ -40,13 +41,31 @@ public class Chest : MonoBehaviour
             Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
         }
 
-        if (Random.Range(0,10)==1){
-            WeaponID = Random.Range(0,5);
+        if (Random.Range(0,10)<=2){
+            int Rand = Random.Range(1,11);
+            if(Rand>=1 && Rand<=6){
+                WeaponID = Random.Range(0,5);
+            } else if(Rand>=7 && Rand<=9){
+                WeaponID = Random.Range(5,9);
+            } else{
+                 WeaponID = Random.Range(9,11);
+            }
+
+            while(WeaponID ==  weaponHolder.Weapons[0] || WeaponID ==  weaponHolder.Weapons[1]){
+                if(Rand>=1 && Rand<=6){
+                    WeaponID = Random.Range(0,5);
+                } else if(Rand>=7 && Rand<=9){
+                    WeaponID = Random.Range(5,9);
+                } else{
+                    WeaponID = Random.Range(9,11);
+                }
+            }
+            
             GameObject TmpW = Instantiate(DropWeapon, DropPos.position, Quaternion.identity);
             TmpW.GetComponent<WeaponDrop>().WeaponId = WeaponID;
         }
 
-        if(Random.Range(0,10)==1){
+        if(Random.Range(0,10)<=2){
             int Rand = Random.Range(1,11);
             if(Rand>=1 && Rand<=6){
                 Instantiate(Poison[Random.Range(0,3)], DropPos.position, Quaternion.identity);

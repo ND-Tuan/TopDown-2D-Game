@@ -24,13 +24,16 @@ public class AutoMoveToPlayer : MonoBehaviour
 
     void Update()
     {
-        // Check if the player is close enough
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer <= proximityThreshold)
+        if(player !=null){
+            // Check if the player is close enough
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+             if (distanceToPlayer <= proximityThreshold)
         {
             // Move the sprite towards the player
             Invoke(nameof(Delay), 0.5f);
         }
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other){

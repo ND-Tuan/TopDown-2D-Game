@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     public Animator animator;
     public Rigidbody2D rb;
+    public float EndTime = 0.5f;
 
     // Start is called before the first frame update
 
@@ -18,7 +19,7 @@ public class Bullet : MonoBehaviour
         if(other.CompareTag("Wall") || other.CompareTag("Enemy")){
             animator.SetBool("Hit", true);
             rb.velocity = new Vector3(0,0,0);
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, EndTime);
         }
         
     }

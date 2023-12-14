@@ -319,7 +319,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7aa1a0389616d547a34e34827992b7c, type: 3}
---- !u!1 &1033590040
+--- !u!1 &1397464921
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,8 +327,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1033590042}
-  - component: {fileID: 1033590041}
+  - component: {fileID: 1397464923}
+  - component: {fileID: 1397464922}
   m_Layer: 0
   m_Name: Room Templates
   m_TagString: Rooms
@@ -336,13 +336,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1033590041
+--- !u!114 &1397464922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033590040}
+  m_GameObject: {fileID: 1397464921}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f96d823d3abbe648b54f8d5bb3f9e75, type: 3}
@@ -399,10 +399,15 @@ MonoBehaviour:
   rooms: []
   Column: []
   WeaponsList:
-  - {fileID: 5751659044465392840, guid: a55314117cefe2f45979374d40ac6e25, type: 3}
-  - {fileID: 1472946465962278222, guid: 00d79c56db7c86241b741a7eaefefa79, type: 3}
+  - {fileID: 4555980312107215153, guid: 24118524e5a3c5547ac215188dc6a752, type: 3}
+  - {fileID: 2114237212940693460, guid: 3c5ecc3f76b7bf44a9c92f143923d2a0, type: 3}
+  - {fileID: 4370679256613714382, guid: e686ebe0281d4ae46a956439679adfd2, type: 3}
+  - {fileID: 3146153692373995520, guid: 13fb75fdd99b41043a43a5d1cc604c20, type: 3}
+  - {fileID: 3303174167128138847, guid: ce2d935f71d0fe449ab845db87558e9a, type: 3}
   - {fileID: 5726429042972505960, guid: ca61be74ee4ec4f40a1a7e74001c32c1, type: 3}
   - {fileID: 4530987999880887356, guid: 1637f2b517c519e44864d38bdd944904, type: 3}
+  - {fileID: 5751659044465392840, guid: a55314117cefe2f45979374d40ac6e25, type: 3}
+  - {fileID: 1472946465962278222, guid: 00d79c56db7c86241b741a7eaefefa79, type: 3}
   - {fileID: 4610146752956796287, guid: 5adc85ffd57aa814d998cc14859f565c, type: 3}
   - {fileID: 8442866475738651822, guid: 4cf0896c0bf62494ba985c25460a1d02, type: 3}
   Poison:
@@ -428,13 +433,13 @@ MonoBehaviour:
   WoodenChest: {fileID: 5135204742100255724, guid: 62160127bebb34c4fa1b846bc74fc95b,
     type: 3}
   CentrePos: {x: 0, y: 0, z: 0}
---- !u!4 &1033590042
+--- !u!4 &1397464923
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033590040}
+  m_GameObject: {fileID: 1397464921}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -511,6 +516,6 @@ LightingSettings:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1033590042}
   - {fileID: 605680548}
   - {fileID: 112695756}
+  - {fileID: 1397464923}

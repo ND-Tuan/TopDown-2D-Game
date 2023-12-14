@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8023003863077507244}
   - component: {fileID: 926994627750527502}
   - component: {fileID: 232872237378876395}
+  - component: {fileID: 9209830148612705096}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
@@ -4840,3 +4841,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!210 &9209830148612705096
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426698438037168575}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

@@ -33,7 +33,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 432770345830166285}
-  - {fileID: 1955881543548765550}
   - {fileID: 9172925888678802472}
   m_Father: {fileID: 2541366519528647868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 2106077982, guid: 49a665c5c0bc7fb48ac8ca44bdc882c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44fa56018de53d04ebf6eedbacb09bfb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -311,6 +310,7 @@ Transform:
   - {fileID: 4280903231725740366}
   - {fileID: 4201863451189393576}
   - {fileID: 2671208468326403635}
+  - {fileID: 1955881543548765550}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &9185253008901000700
@@ -399,6 +399,7 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   distanceToPlayer: 0
   freeze: 0
+  UpdateRate: 0.5
 --- !u!114 &8397565324398963373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,6 +447,8 @@ MonoBehaviour:
   Laser: {fileID: 4554254920819456860, guid: 53b47f74a77cab84eab920ba84abd086, type: 3}
   Attack3Pos: {fileID: 2272384969751263454}
   GolemArm: {fileID: 867322144631589674, guid: 6aab500646cd8f54bb8b7f19dc7ed4d2, type: 3}
+  SpinArm: {fileID: 3177120577721494002, guid: 7afc84d17729520439ff1dc3b8b633dc, type: 3}
+  SpinDuration: 5
   GolemArmForce: 50
   enemyAI: {fileID: 7960995014545243716}
   enemyControll: {fileID: 6161809708429758204}
@@ -479,8 +482,11 @@ MonoBehaviour:
   ManaOrb: {fileID: 8521707630884297282, guid: 604ccb9a5b9a0fc438b4e0bd7a4444ed, type: 3}
   Coin: {fileID: 5125426183327085148, guid: 811eaadc090629f45931d272ccb91410, type: 3}
   EnemySub: []
+  IceFreeze: {fileID: 0}
+  Burning: {fileID: 0}
   roomTemplates: {fileID: 0}
   InterFace: {fileID: 3710564650221416878}
+  InmmuFreeze: 0
 --- !u!1 &4364639314026187097
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,11 +713,11 @@ Transform:
   m_GameObject: {fileID: 6744084847638786992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.14, y: 8.57, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.02, y: 8.57, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4201863451189393576}
+  m_Father: {fileID: 2541366519528647868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5938236398842999876
 SpriteRenderer:
@@ -752,7 +758,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}

@@ -11,6 +11,8 @@ public class GolemBehaviour : MonoBehaviour
     public GameObject Laser;
     public GameObject Attack3Pos;
     public GameObject GolemArm;
+    public GameObject SpinArm;
+    public float SpinDuration;
     public float GolemArmForce;
     public EnemyAI enemyAI;
     public EnemyControll enemyControll;
@@ -18,6 +20,8 @@ public class GolemBehaviour : MonoBehaviour
     private float Tmp;
     private bool CastShield= false;
     private bool TurnShield= false;
+    private bool SpinTime = false;
+    private float distanceToPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -38,18 +42,37 @@ public class GolemBehaviour : MonoBehaviour
             Invoke(nameof(ActiveShield), 1.5f);
         }
 
+        if(SpinTime){
+            distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+
+            if(distanceToPlayer<20){
+                enemyAI.roaming = true;
+                enemyAI.update = false;
+            } else {
+                enemyAI.roaming = false;
+                enemyAI.update = true;
+            }
+        }
+
         
     }
 
     // Update is called once per frame
     public void Active(){
-        InvokeRepeating(nameof(StartAttack), 2f, 2f);
+        InvokeRepeating(nameof(StartAttack), 2f, 4f);
     }
-    
 
     void StartAttack(){
-        if(!CastShield){
+        if(!CastShield && !SpinTime){
             int Rand = Random.Range(0,3);
+            if(enemyControll.EnemyCurHp <= enemyControll.EnemyMaxHp/2){
+                Rand = Random.Range(0,4);
+                distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+                if(distanceToPlayer<30 && Random.Range(0,2)==1){
+                    Rand = 3;
+                }
+            } 
+
             if(Rand == 0 ){
                 animator.SetBool("Attack1", true);
                 Invoke(nameof(ActiveAttack1), 0.75f);
@@ -61,6 +84,10 @@ public class GolemBehaviour : MonoBehaviour
                 animator.SetBool("Attack3", true);
                 Invoke(nameof(ActiveAttack3), 1f);
                 enemyAI.moveSpeed = 0;
+            } else {
+                animator.SetBool("Attack4", true);
+                SpinTime = true;
+                Invoke(nameof(ActiveAttack4), 0.83f);
             }
         }
     }
@@ -71,22 +98,21 @@ public class GolemBehaviour : MonoBehaviour
     }
 
     void ActiveAttack2(){
+        Vector3 playerPos =GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector2 lookDir = playerPos - Attack2Pos.transform.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle+60);
+
+        Attack2Pos.transform.rotation = rotation;
+
         Instantiate(Laser, Attack2Pos.transform, worldPositionStays:false);
         Invoke(nameof(ReSpeed), 2f);
     }
 
      void ActiveAttack3(){
 
-        // //Quay hướng bắn về phía người chơi
-        // Vector3 playerPos = FindObjectOfType<Player>().transform.position;
-        // Vector2 lookDir = playerPos - Attack3Pos.transform.position;
-        // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+       
 
-        // Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        // Attack3Pos.transform.rotation = rotation;
-
-        
-        
         if(enemyAI.InterFace.transform.localScale == new Vector3(-1, 1, 0)) {
             Quaternion rotation = Quaternion.Euler(0, 0, 180);
             Attack3Pos.transform.rotation = rotation;
@@ -106,8 +132,31 @@ public class GolemBehaviour : MonoBehaviour
 
         animator.SetBool("Attack3", false);
         ReSpeed();
-
      }
+
+
+    void ActiveAttack4(){
+        GameObject Spin = Instantiate(SpinArm, gameObject.transform, worldPositionStays:false);
+        enemyAI.moveSpeed = 40;
+        Destroy(Spin, SpinDuration+ 0.17f);
+        Invoke(nameof(EndSpin),SpinDuration);
+
+    }
+
+    void EndSpin(){
+        animator.SetBool("EndAttack4", true);
+        ReSpeed();
+        Invoke(nameof(EndAttack4),0.84f);
+    }
+
+   void EndAttack4(){
+        animator.SetBool("EndAttack4", false);
+        animator.SetBool("Attack4", false);
+        enemyAI.roaming = true;
+        enemyAI.update = false;
+        SpinTime = false;
+    }
+
 
     void ActiveShield(){
         enemyControll.EnemyCurShield = enemyControll.EnemyMaxShield;
@@ -115,12 +164,13 @@ public class GolemBehaviour : MonoBehaviour
         enemyControll.Shield.transform.localScale = new Vector3((float)1.2, (float)1.6, 0);
         animator.SetBool("Shield", false);
         CastShield= false;
-        ReSpeed();
+        animator.SetBool("Attack4", true);
+        SpinTime = true;
+        Invoke(nameof(ActiveAttack4), 0.83f);
     }
 
     void ReSpeed(){
         enemyAI.moveSpeed = Tmp;
         animator.SetBool("Attack2", false);
-        
     }
 }
