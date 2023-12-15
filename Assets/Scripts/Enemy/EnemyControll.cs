@@ -83,7 +83,6 @@ public class EnemyControll : MonoBehaviour
             
             if(!isSummonObject) roomTemplates.countEnemy --;
             Destroy(gameObject);
-            Destroy(Main);
         }
 
         BurnTime -=Time.deltaTime;

@@ -247,6 +247,7 @@ public class Player : MonoBehaviour
     public void TakeDmg(int Dmg){
         if(immune ==  false){
             PlayerCurHP-= Dmg;
+            //ScreenShake(5, 200);
             if (PlayerCurHP <0) PlayerCurHP = 0;
             immune = true;
             CharacterSR.GetComponent<SpriteRenderer>().material.color = Color.red;
@@ -272,6 +273,14 @@ public class Player : MonoBehaviour
 
     public void ChangeCoinAmount(int Amount){
         CurCoin += Amount;
+    }
+
+    public async void ScreenShake(float Instensity, int time){
+        CinemachineBasicMultiChannelPerlin multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        multiChannelPerlin.m_AmplitudeGain = Instensity;
+        await Task.Delay(time);
+        multiChannelPerlin.m_AmplitudeGain = 0;
+
     }
 
 }

@@ -31,6 +31,7 @@ public class BoomAttack : MonoBehaviour
                 Boom = true;
                 //enemyAI.freeze = 0.6f;
                 animator.SetBool("Boom", true);
+                GetComponent<AudioSource>().mute = false;
                 Invoke(nameof(KaBoooommm), 1.5f);
             }
         }
@@ -39,6 +40,10 @@ public class BoomAttack : MonoBehaviour
     public void KaBoooommm(){
         GameObject tmp = Instantiate(Explosion, transform.position, Explosion.transform.rotation);
         tmp.GetComponent<DmgToPlayer>().Dmg = Dmg;
+
+        if(Player.GetComponentInParent<Player>() !=null){
+            Player.GetComponentInParent<Player>().ScreenShake(20,300);
+        }
         GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>().countEnemy--;
         Destroy(enemyAI.gameObject);
     }

@@ -36,7 +36,7 @@ public class MeleeAttack : MonoBehaviour
             CDTmp = CD;
             animator.SetBool("Attack", true);
             Invoke(nameof(delay), 0.41f);
-            Invoke(nameof(delayro), 1.5f);
+            Invoke(nameof(delayro), 4f);
             Invoke(nameof(InsSmoke), 0.25f);
         }
         }

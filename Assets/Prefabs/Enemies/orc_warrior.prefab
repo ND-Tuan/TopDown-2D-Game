@@ -236,10 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156a128616804d446985f01d589e0c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAI: {fileID: 0}
+  enemyAI: {fileID: 8940638557867758505}
   Smoke: {fileID: 8984900239566929913, guid: 8a8f69970be56f1458b613d16f681c82, type: 3}
   pos: {fileID: 5451693946094344720}
-  CD: 5
+  CD: 4
   Range: 9
   Scale: 1
 --- !u!1 &6358594978929097741

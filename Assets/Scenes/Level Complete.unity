@@ -5411,7 +5411,7 @@ MonoBehaviour:
   spawnedBoss: 0
   boss: {fileID: 4120797787442529989, guid: ab891e59bcb19cc49bcdfa638c150204, type: 3}
   rd: 0
-  Level: 1
+  Level: 4
   countEnemy: 0
   isSpawnWall: 0
   Clear: {fileID: 3015988892120406813, guid: b8970f6b766938b46b1cecbaceaf9d6a, type: 3}

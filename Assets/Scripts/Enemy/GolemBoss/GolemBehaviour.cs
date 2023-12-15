@@ -43,15 +43,18 @@ public class GolemBehaviour : MonoBehaviour
         }
 
         if(SpinTime){
-            distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+            if(GameObject.FindGameObjectWithTag("Player")!= null){
+                distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
 
-            if(distanceToPlayer<20){
-                enemyAI.roaming = true;
-                enemyAI.update = false;
-            } else {
-                enemyAI.roaming = false;
-                enemyAI.update = true;
+                if(distanceToPlayer<20){
+                    enemyAI.roaming = true;
+                    enemyAI.update = false;
+                } else {
+                    enemyAI.roaming = false;
+                    enemyAI.update = true;
+                }
             }
+            
         }
 
         

@@ -19243,6 +19243,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3139535846921959173, guid: ab891e59bcb19cc49bcdfa638c150204,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4120797787442529989, guid: ab891e59bcb19cc49bcdfa638c150204,
         type: 3}
       propertyPath: m_Name
@@ -35254,8 +35259,8 @@ MonoBehaviour:
   appear: {fileID: 3522096305118227828, guid: 98e393228e19ecf4895b7b6747a254db, type: 3}
   roomTemplates: {fileID: 0}
   MonsterNum: 0
-  Waves: 2
-  IsSpawnEnemies: 1
+  Waves: 0
+  IsSpawnEnemies: 0
 --- !u!1 &6339497093194472801
 GameObject:
   m_ObjectHideFlags: 0
