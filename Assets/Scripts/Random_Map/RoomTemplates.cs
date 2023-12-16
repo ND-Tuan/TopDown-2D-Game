@@ -34,6 +34,7 @@ public class RoomTemplates : MonoBehaviour {
 		Invoke(nameof(Scan), 1f);
 		GameObject.FindGameObjectWithTag("PlayerPos").transform.position = new Vector3(0,0,0);
 		Cam = GameObject.FindGameObjectWithTag("MainCamera");
+		 
 	}
 
 	void Update(){

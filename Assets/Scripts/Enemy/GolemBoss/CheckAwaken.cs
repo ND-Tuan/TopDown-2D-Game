@@ -42,6 +42,8 @@ public class CheckAwaken : MonoBehaviour
         animator.SetBool("Awaken", false);
         enemyAI = GetComponentInParent<EnemyAI>();
         seeker = GetComponentInParent<Seeker>();
+
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().mute = true;
         GetComponentInParent<AudioSource>().mute = false;
 
         enemyAI.seeker = seeker;

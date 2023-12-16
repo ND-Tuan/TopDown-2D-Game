@@ -9,6 +9,7 @@ public class Poison : MonoBehaviour
     public int MnAmount;
     private Player player;
     private WeaponHolder weaponHolder;
+    private bool used= false;
 
     void Start(){
         weaponHolder = GameObject.FindGameObjectWithTag("WeaponPos").GetComponent<WeaponHolder>();
@@ -17,14 +18,17 @@ public class Poison : MonoBehaviour
     
     void Update(){
         float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5){
+        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5 && !used){
+            GetComponent<AudioSource>().Play();
             if(PoisonType != 1){
                 weaponHolder.AddMana(MnAmount);
             }
             if(PoisonType != 2){
                 player.AddHp(HpAmount);
             }
-            Destroy(gameObject);
+            used = true;
+            GetComponent<SpriteRenderer>().material.color = new Color(0,0,0,0);
+            Destroy(gameObject,0.7f);
         }
     }
 }

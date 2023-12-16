@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3892205145372640965}
   - component: {fileID: 4808387761438777832}
-  - component: {fileID: 8614894973266762731}
+  - component: {fileID: 1441513516716223419}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3934850749716235858}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.052335896, w: 0.9986295}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2881170172883442640}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6}
 --- !u!212 &4808387761438777832
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &8614894973266762731
+--- !u!95 &1441513516716223419
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -206,8 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cbab57be3b7e845981bb6d98be124a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Image: {fileID: 3934850749716235858}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
-  SlashColor: {r: 1, g: 0.5226415, b: 0.5226415, a: 1}
+  SlashColor: {r: 1, g: 0.3433962, b: 0.3433962, a: 1}
   SlashPos: {fileID: 8077144306512439569}
   AirSlashEffect: {fileID: 3099693305059924707, guid: edd4c56fc85cf01428f0210897136e76,
     type: 3}

@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cbab57be3b7e845981bb6d98be124a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Image: {fileID: 4471077324185954124}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
   SlashColor: {r: 1, g: 0.86969364, b: 0.7490566, a: 1}
   SlashPos: {fileID: 4928199440078038888}
@@ -140,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7166506047094592300}
   - component: {fileID: 7799052968704968086}
-  - component: {fileID: 6914163843287951808}
+  - component: {fileID: 5523702211895255197}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -215,7 +216,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6914163843287951808
+--- !u!95 &5523702211895255197
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     private float HandCD =0;
     public GameObject VRCam;
     private CinemachineVirtualCamera virtualCamera;
+    public GameObject DmgPopup;
     
     void Start()
     {
@@ -92,6 +93,7 @@ public class Player : MonoBehaviour
                 WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             } else {
                 Attack.SetActive(false);
+                animator.SetBool("Attack", false);
                 ChangeToHand = false;
                 WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
             }
@@ -261,6 +263,9 @@ public class Player : MonoBehaviour
     }
 
     public async void AddHp(int Amount){
+        GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
+        instance.GetComponent<TextMesh>().text ="+" +Amount;
+        instance.GetComponent<TextMesh>().color = new Color(1, 0.8719501f, 0, 1);
         if(PlayerCurHP<PlayerMaxHP) {
             while(Amount >0){
                 PlayerCurHP++;

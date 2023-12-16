@@ -26,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282770444601754137}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.052335896, w: 0.9986295}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4580266473792081053}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6}
 --- !u!212 &248055523069449234
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6877820528007065835}
   - {fileID: 7760858746315297578}
@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65cbab57be3b7e845981bb6d98be124a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Image: {fileID: 1282770444601754137}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
   SlashColor: {r: 1, g: 1, b: 1, a: 1}
   SlashPos: {fileID: 2422874587680217084}
@@ -244,7 +245,7 @@ MonoBehaviour:
   CoutToAirSlash: 0
   scale: 0
   duration: 0
-  TimeBtwAttack: 0.6
+  TimeBtwAttack: 0.5
   timeBtwAttack: 0
   SlashDmg: 4
   AirSlasdDmg: 0

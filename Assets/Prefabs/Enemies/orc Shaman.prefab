@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roaming: 1
-  moveSpeed: 20
+  moveSpeed: 25
   animator: {fileID: 0}
   InterFace: {fileID: 1895160925159688788}
   seeker: {fileID: 3631407521792052086}
@@ -798,7 +798,7 @@ MonoBehaviour:
   enemyAI: {fileID: 115247879332256107}
   CD: 5
   Range: 70
-  BulletForce: 20
+  BulletForce: 40
   Player: {fileID: 0}
 --- !u!1 &9213796610574949275
 GameObject:

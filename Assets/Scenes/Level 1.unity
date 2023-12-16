@@ -218,16 +218,16 @@ MonoBehaviour:
   Exp: {fileID: 113261598}
   BuffsList:
   - {fileID: -463488788, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: -129427598, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: 1530207896, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   - {fileID: -704614006, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: 1333713119, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: 1601013229, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   - {fileID: 1497523522, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: -587253422, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
-  - {fileID: -1530360601, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   - {fileID: -723251079, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: -129427598, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: 1333713119, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: -587253422, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   - {fileID: 2114353616, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: 1530207896, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: 1601013229, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
+  - {fileID: -1530360601, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   - {fileID: -292634072, guid: 1020ee9a71f37564f9ddc53a754408d9, type: 3}
   AnimationPanel: {fileID: 1267208214}
   Panel: {fileID: 17056823}
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ad8a1b88dffa849b6ae72fec31b8b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapons: 0100000009000000
+  Weapons: 0100000002000000
   defWe: {fileID: 4610146752956796287, guid: 5adc85ffd57aa814d998cc14859f565c, type: 3}
   CurWeapon: {fileID: 0}
   CurSlot: 0
@@ -2519,8 +2519,8 @@ MonoBehaviour:
   IsEnoughMana: 0
   ManaCost: {fileID: 1746130977}
   Rotationable: 1
-  CritRate: 10
-  CritDmg: 20
+  CritRate: 25
+  CritDmg: 30
 --- !u!1001 &605680548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31671583a14ed0e4599a22bb17f54c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 30
+  moveSpeed: 35
   Rg: {fileID: 813336501}
   moveInput: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
@@ -3338,8 +3338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8aea787d8ce9f4f87425347e147ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &813336504
-BoxCollider2D:
+--- !u!70 &813336504
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3370,19 +3370,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7444227}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.424345, y: 9.039766}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.61135817}
+  m_Size: {x: 4.4899197, y: 8.658071}
+  m_Direction: 0
 --- !u!1 &828151290
 GameObject:
   m_ObjectHideFlags: 0
@@ -5696,7 +5686,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 40a078a00282b6743ac3dc8d2f58f71e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e7ce24cc6b66abe4698c9bffcd96ffb2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -8535,79 +8525,6 @@ RectTransform:
   m_AnchoredPosition: {x: 274.3, y: -99.8}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &2046206954
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -34.203056
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.06028
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2541366519528647868, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3139535846921959173, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4120797787442529989, guid: ab891e59bcb19cc49bcdfa638c150204,
-        type: 3}
-      propertyPath: m_Name
-      value: Golem Boss
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab891e59bcb19cc49bcdfa638c150204, type: 3}
 --- !u!1 &2052929616
 GameObject:
   m_ObjectHideFlags: 0
@@ -9502,4 +9419,3 @@ SceneRoots:
   - {fileID: 1324494207}
   - {fileID: 605680548}
   - {fileID: 813336500}
-  - {fileID: 2046206954}

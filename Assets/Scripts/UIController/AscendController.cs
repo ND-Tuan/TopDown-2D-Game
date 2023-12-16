@@ -59,16 +59,16 @@ public class AscendController : MonoBehaviour
     }
 
     void ApplyBuff(){
-        if(BuffID >=0 && BuffID<=2){
-            player.PlayerMaxHP = player.PlayerMaxHP + 1 + BuffID;
-            player.AddHp(1 + BuffID);
-        } else if(BuffID >=3 && BuffID<=5){
-            weaponHolder.MaxMana += 5*(BuffID - 2);
-            weaponHolder.AddMana(5*(BuffID - 2));
-        } else if(BuffID >=6 && BuffID<=8){
-            weaponHolder.CritRate = weaponHolder.CritRate + 2*(BuffID-5) + 1;
-        } else if(BuffID >=9 && BuffID<=11){
-            weaponHolder.CritDmg = weaponHolder.CritDmg + 2*(BuffID-8) + 1;
+        if(BuffID ==0 || BuffID==4 || BuffID == 8){
+            player.PlayerMaxHP = player.PlayerMaxHP + 1 + BuffID/4;
+            player.AddHp(1 + BuffID/4);
+        } else if(BuffID ==1 || BuffID==5 || BuffID == 9){
+            weaponHolder.MaxMana += 5*(BuffID - 1)/4;
+            weaponHolder.AddMana(5*(BuffID - 1)/4);
+        } else if(BuffID ==2 || BuffID==6 || BuffID == 10){
+            weaponHolder.CritRate = weaponHolder.CritRate + 2*(BuffID - 2)/4 + 1;
+        } else if(BuffID ==3 || BuffID==7 || BuffID == 11){
+            weaponHolder.CritDmg = weaponHolder.CritDmg + 2*(BuffID - 2)/4 + 1;
         }
     }
 

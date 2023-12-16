@@ -27,6 +27,9 @@ public class Magic_Staff : MonoBehaviour
     void Update()
     {
         timeBtwFire -= Time.deltaTime;
+
+        
+         weaponHolder.Rotationable = Rotationable;
         if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
 
             if(animator != null){
@@ -39,6 +42,7 @@ public class Magic_Staff : MonoBehaviour
 
      void Fire(){
         timeBtwFire = TimeBtwFire;
+        GetComponent<AudioSource>().Play();
 
         foreach(Transform p in firePos){
             GameObject BulletTmp = Instantiate(fireBall, p.transform.position, p.transform.rotation);

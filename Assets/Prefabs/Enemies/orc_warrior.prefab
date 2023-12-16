@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roaming: 0
-  moveSpeed: 20
+  moveSpeed: 25
   animator: {fileID: 0}
   InterFace: {fileID: 5068101878564543344}
   seeker: {fileID: 2873167791494339696}

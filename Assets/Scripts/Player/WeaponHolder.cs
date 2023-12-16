@@ -23,8 +23,8 @@ public class WeaponHolder : MonoBehaviour
     private bool NoWeaponMoment = false;
     private RoomTemplates templates;
     public bool Rotationable = true;
-    public float CritRate = 10f;
-    public float CritDmg = 20f;
+    public float CritRate = 25f;
+    public float CritDmg = 30f;
 
 
     // Start is called before the first frame update
@@ -109,13 +109,13 @@ public class WeaponHolder : MonoBehaviour
     }
 
     public void RemoveWeapon(){
-        Destroy(CurWeapon);
+        CurWeapon.SetActive(false);
         NoWeaponMoment  = true;
     }
 
     public void RestoreWeapon(){
         if(NoWeaponMoment){
-            CurWeapon =  Instantiate(templates.WeaponsList[Weapons[CurSlot]], gameObject.transform, worldPositionStays:false);
+            CurWeapon.SetActive(true);
             NoWeaponMoment = false;
         }
         

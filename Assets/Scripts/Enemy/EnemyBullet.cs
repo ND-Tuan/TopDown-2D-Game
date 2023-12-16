@@ -10,8 +10,9 @@ public class EnemyBullet : MonoBehaviour
 
         if(other.CompareTag("Player")){
             other.GetComponentInParent<Player>().TakeDmg(1);
+            if(other.GetComponentInParent<Player>().immune == false) Destroy(gameObject);
         } 
-        if((other.CompareTag("Player") || other.CompareTag("Wall")) && IsDestroy ) 
+        if(other.CompareTag("Wall") && IsDestroy ) 
             Destroy(gameObject);
     }
 }

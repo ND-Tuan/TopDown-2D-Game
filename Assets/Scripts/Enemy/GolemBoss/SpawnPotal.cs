@@ -8,6 +8,7 @@ public class SpawnPotal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>().mute = false;
         Invoke(nameof(spawnPotal), 1);
     }
 

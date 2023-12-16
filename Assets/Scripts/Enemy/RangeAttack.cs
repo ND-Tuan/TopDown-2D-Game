@@ -29,19 +29,21 @@ public class RangeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
+        if(Player != null){
+            float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
 
-        CDTmp -= Time.deltaTime;
+            CDTmp -= Time.deltaTime;
 
-        RotationToPlayer();
+            RotationToPlayer();
 
-        if (distanceToPlayer <= Range && CDTmp <=0 && enemyAI.freeze <=0){
-            CDTmp = CD; 
-            animator.SetBool("Attack", true);
-            Invoke(nameof(InsBullet), 0.34f);
-            Invoke(nameof(delay), 0.5f);
-
+            if (distanceToPlayer <= Range && CDTmp <=0 && enemyAI.freeze <=0){
+                CDTmp = CD; 
+                animator.SetBool("Attack", true);
+                Invoke(nameof(InsBullet), 0.34f);
+                Invoke(nameof(delay), 0.5f);
+            }
         }
+        
     }
 
     void delay(){
