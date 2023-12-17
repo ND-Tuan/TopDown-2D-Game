@@ -265,7 +265,7 @@ public class Player : MonoBehaviour
     public async void AddHp(int Amount){
         GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
         instance.GetComponent<TextMesh>().text ="+" +Amount;
-        instance.GetComponent<TextMesh>().color = new Color(1, 0.8719501f, 0, 1);
+        instance.GetComponent<TextMesh>().color = new Color(1, 0.2584905f, 0.2584905f, 1);
         if(PlayerCurHP<PlayerMaxHP) {
             while(Amount >0){
                 PlayerCurHP++;

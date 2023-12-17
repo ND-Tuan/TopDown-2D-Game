@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Play(){
         animator.SetBool("Open", true);
+        BG.GetComponent<AudioSource>().Play();
         PlayButton.SetActive(false);
         Invoke(nameof(LoadScene), 0.8f);
     }

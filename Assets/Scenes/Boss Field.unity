@@ -19253,6 +19253,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 6089761850706002720, guid: ab891e59bcb19cc49bcdfa638c150204,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089761850706002720, guid: ab891e59bcb19cc49bcdfa638c150204,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 130
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

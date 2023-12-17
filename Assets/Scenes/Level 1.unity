@@ -3281,6 +3281,8 @@ MonoBehaviour:
   Coin: {fileID: 1999015915}
   ExpText: {fileID: 448588717}
   VRCam: {fileID: 1817457230}
+  DmgPopup: {fileID: 5948436537560328241, guid: 69ba8659b623960439d436fa2e254ddb,
+    type: 3}
 --- !u!4 &813336500
 Transform:
   m_ObjectHideFlags: 0

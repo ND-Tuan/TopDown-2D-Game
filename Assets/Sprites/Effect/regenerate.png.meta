@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 787d1d932475ccd45871c2bf48d4ff72
+guid: 439207089879ea54ab7f4684e7d0b158
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,85 +123,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run-export_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 690
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51977fd63bb7cdc40a73b85c527439a6
-      internalID: 416675447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 460
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a9818d79e48ee948b154450c4c76fa7
-      internalID: 1643219997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 229
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 523779b1c05fc204399e96c688cd144c
-      internalID: 1867868506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_3
+      name: regenerate_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffed9d57036b7f849812304402ac9d37
-      internalID: -770008138
+      spriteID: a5cf96553ce2bac46bc1e425cafbb336
+      internalID: 1911478019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297c6f3f7609c9b4eba2dd5ab7883532
+      internalID: 1821130064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7fffd25aa23064a92521a549ded91d
+      internalID: 2129244201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cc7c10fe480f6438131f44fae7e19f
+      internalID: 2096934340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da9ea5da5e5937f46b8c2d74483fe6f3
+      internalID: -745304570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc859426dc61a244a6dba0dc6e8189d
+      internalID: 1774768166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regenerate_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640
+        height: 556
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e2fd8ea167057418cfa715c5254431
+      internalID: 1208382806
       vertices: []
       indices: 
       edges: []
@@ -217,10 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run-export_0: 416675447
-      run-export_1: 1643219997
-      run-export_2: 1867868506
-      run-export_3: -770008138
+      regenerate_0: 1911478019
+      regenerate_1: 1821130064
+      regenerate_2: 2129244201
+      regenerate_3: 2096934340
+      regenerate_4: -745304570
+      regenerate_5: 1774768166
+      regenerate_6: 1208382806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

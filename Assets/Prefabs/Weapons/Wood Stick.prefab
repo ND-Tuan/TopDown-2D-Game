@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7166506047094592300}
@@ -102,11 +102,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 4471077324185954124}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
-  SlashColor: {r: 1, g: 0.86969364, b: 0.7490566, a: 1}
+  SlashColor: {r: 1, g: 1, b: 1, a: 1}
   SlashPos: {fileID: 4928199440078038888}
   AirSlashEffect: {fileID: 0}
   CoutToAirSlash: 0
-  scale: 0
+  scale: 1.5
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 4928199440078038888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

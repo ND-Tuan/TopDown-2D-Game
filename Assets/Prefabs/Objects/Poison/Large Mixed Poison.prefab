@@ -101,9 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8caff4ec364e5864e80110a8201ee277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HpEffect: {fileID: 3012465366292465339, guid: 98edb2aca4b6b6e44b2df3d8610e1fb2,
+    type: 3}
+  MpEffect: {fileID: 2572830807687831320, guid: 1edd6cfbc57ea5b48b09c18fe6a55cb9,
+    type: 3}
   PoisonType: 0
   HpAmount: 6
-  MnAmount: 18
+  MpAmount: 0
 --- !u!50 &4943216549407807014
 Rigidbody2D:
   serializedVersion: 4

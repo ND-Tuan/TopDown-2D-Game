@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 2422874587680217084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,15 +239,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 1282770444601754137}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
-  SlashColor: {r: 1, g: 1, b: 1, a: 1}
+  Stab: {fileID: 3571100397906443811, guid: 4fe6e5f82a0680041b8ec5054a72349d, type: 3}
+  SlashColor: {r: 0.7924528, g: 0.7804913, b: 0.7804913, a: 1}
   SlashPos: {fileID: 2422874587680217084}
   AirSlashEffect: {fileID: 0}
   CoutToAirSlash: 0
-  scale: 0
+  CoutToAttack2: 3
+  scale: 1
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
   SlashDmg: 4
+  StabDmg: 6
   AirSlasdDmg: 0
   RotateSameToWeapon: 0
   WeaponPos: {fileID: 0}

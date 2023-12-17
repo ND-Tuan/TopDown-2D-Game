@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 787d1d932475ccd45871c2bf48d4ff72
+guid: 23e5264f1f14ecf4c947ccb49522078d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,85 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run-export_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 690
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51977fd63bb7cdc40a73b85c527439a6
-      internalID: 416675447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 460
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a9818d79e48ee948b154450c4c76fa7
-      internalID: 1643219997
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 229
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 523779b1c05fc204399e96c688cd144c
-      internalID: 1867868506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run-export_3
+      name: Stab_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1205
-        height: 230
-      alignment: 9
-      pivot: {x: 0.338843, y: 0.4347826}
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffed9d57036b7f849812304402ac9d37
-      internalID: -770008138
+      spriteID: b338208be9c5a5f419e26a4086a76c04
+      internalID: -1774344668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stab_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2a34b655994154b9a43c240186e686
+      internalID: 1524495244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stab_2
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bc5070e4dffd44f80181e68af385d0
+      internalID: 1148255527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stab_3
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03b8f1c02a190843989af4af37b7ab3
+      internalID: -1917765829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stab_4
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f9e40a5097364cb72b3018b424b5b
+      internalID: -1141652259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stab_5
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 1280
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a42f3041324f54da279d342b21c7eb
+      internalID: -889168258
       vertices: []
       indices: 
       edges: []
@@ -217,10 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      run-export_0: 416675447
-      run-export_1: 1643219997
-      run-export_2: 1867868506
-      run-export_3: -770008138
+      Stab_0: -1774344668
+      Stab_1: 1524495244
+      Stab_2: 1148255527
+      Stab_3: -1917765829
+      Stab_4: -1141652259
+      Stab_5: -889168258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

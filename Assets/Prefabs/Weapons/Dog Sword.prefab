@@ -208,16 +208,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 3934850749716235858}
   Slash: {fileID: 5347990650160802892, guid: 022502296f2a5184a897adfa67e33c6a, type: 3}
+  Stab: {fileID: 0}
   SlashColor: {r: 1, g: 0.3433962, b: 0.3433962, a: 1}
   SlashPos: {fileID: 8077144306512439569}
   AirSlashEffect: {fileID: 3099693305059924707, guid: edd4c56fc85cf01428f0210897136e76,
     type: 3}
   CoutToAirSlash: 3
-  scale: 0
+  CoutToAttack2: 0
+  scale: 1
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
   SlashDmg: 12
+  StabDmg: 0
   AirSlasdDmg: 20
   RotateSameToWeapon: 0
   WeaponPos: {fileID: 0}
