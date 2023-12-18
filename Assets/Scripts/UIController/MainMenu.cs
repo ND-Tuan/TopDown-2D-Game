@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     void Start(){
         Time.timeScale =1;
         animator = BG.GetComponent<Animator>();
+        Cursor.visible = false; 
     }
     public void Play(){
         animator.SetBool("Open", true);
