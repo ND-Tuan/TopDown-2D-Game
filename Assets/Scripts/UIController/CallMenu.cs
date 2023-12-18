@@ -17,6 +17,8 @@ public class CallMenu : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject GameOverPanel;
     public GameObject[] ObjectsDestroyToReset;
+    public GameObject ChangeScencePanel;
+    public GameObject MiniCam;
 
     void Update(){
         TotalTime += Time.deltaTime;
@@ -126,4 +128,16 @@ public class CallMenu : MonoBehaviour
         gameOverController.Floor.text = "Floor "+ roomTemplates.Level;
     }
     
+    //Hiệu ứng chuyển cảnh khi vào cổng
+    public void ChangeSceneEffect(){
+        ChangeScencePanel.SetActive(true);
+        MiniCam.SetActive(false);
+        Invoke(nameof(EndChangeScene), 1.5f);
+        GetComponent<AudioSource>().Play();
+    }
+
+    void EndChangeScene(){
+        ChangeScencePanel.SetActive(false);
+        MiniCam.SetActive(true);
+    }
 }

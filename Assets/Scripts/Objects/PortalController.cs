@@ -9,8 +9,13 @@ public class PortalController : MonoBehaviour
     public int Level;
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
-            SceneManager.LoadSceneAsync(Level);
+            GameObject.FindGameObjectWithTag("Menu").GetComponent<CallMenu>().ChangeSceneEffect();
+            Invoke(nameof(Function), 0.77f);
         }
+    }
+
+    void Function(){
+        SceneManager.LoadSceneAsync(Level);
     }
 
 

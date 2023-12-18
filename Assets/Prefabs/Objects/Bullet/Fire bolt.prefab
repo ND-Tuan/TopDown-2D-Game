@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49ae43a80955e9459497022582d4ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectTriggerRate: 30
+  EffectTriggerRate: 50
   EffectType: 1
   Duration: 3
   EndDuration: 0

@@ -60,7 +60,6 @@ public class Player : MonoBehaviour
         virtualCamera =  VRCam.GetComponent<CinemachineVirtualCamera>();
         PlayerCurHP = PlayerMaxHP;
         Invoke(nameof(Appear), 0.5f); 
-        Cursor.visible = false; 
     }
 
     void Update(){

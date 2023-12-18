@@ -41,24 +41,30 @@ public class Chest : MonoBehaviour
             Tmp.transform.position+= new Vector3(Random.Range(-2,3), Random.Range(-2,3), 0);
         }
 
-        if (Random.Range(0,10)<=2){
+        if (Random.Range(0,10)<=4){
             int Rand = Random.Range(1,11);
             if(Rand>=1 && Rand<=6){
-                WeaponID = Random.Range(0,5);
-            } else if(Rand>=7 && Rand<=9){
+                //WeaponID = Random.Range(0,5);
                 WeaponID = Random.Range(5,9);
+            } else if(Rand>=7 && Rand<=9){
+                //WeaponID = Random.Range(5,9);
+                WeaponID = Random.Range(9,11);
             } else{
-                 WeaponID = Random.Range(9,11);
+                 //WeaponID = Random.Range(9,11);
+                 WeaponID = Random.Range(0,5);
             }
 
             while(WeaponID ==  weaponHolder.Weapons[0] || WeaponID ==  weaponHolder.Weapons[1]){
                 if(Rand>=1 && Rand<=6){
-                    WeaponID = Random.Range(0,5);
-                } else if(Rand>=7 && Rand<=9){
+                    //WeaponID = Random.Range(0,5);
                     WeaponID = Random.Range(5,9);
-                } else{
+                } else if(Rand>=7 && Rand<=9){
+                    //WeaponID = Random.Range(5,9);
                     WeaponID = Random.Range(9,11);
-                }
+                } else{
+                    //WeaponID = Random.Range(9,11);
+                    WeaponID = Random.Range(0,5);
+            }
             }
             
             GameObject TmpW = Instantiate(DropWeapon, DropPos.position, Quaternion.identity);

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1352376073
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 00f8ce5dbfa33544a96588b154671717, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,7 +123,7 @@ MonoBehaviour:
   TidalDragon: {fileID: 9162841772737661867, guid: eb32828b402f7934f8b5f5067f3ebe36,
     type: 3}
   CD: 1
-  Dmg: 20
+  Dmg: 30
   ManaCost: 3
 --- !u!1001 &1341245115330973608
 PrefabInstance:

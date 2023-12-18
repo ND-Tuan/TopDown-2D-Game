@@ -219,7 +219,7 @@ MonoBehaviour:
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
-  SlashDmg: 12
+  SlashDmg: 20
   StabDmg: 0
   AirSlasdDmg: 20
   RotateSameToWeapon: 0
