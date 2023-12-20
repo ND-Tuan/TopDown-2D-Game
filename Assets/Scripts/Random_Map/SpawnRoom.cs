@@ -22,6 +22,7 @@ public class SpawnRoom : MonoBehaviour
         Destroy(gameObject, 4f);
 		roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();	
 		Invoke(nameof(Spawn), 0.1f);
+        maxRooms = 5+roomTemplates.Level-1;
     }
 
     void Spawn(){

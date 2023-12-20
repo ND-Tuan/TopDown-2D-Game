@@ -41,6 +41,8 @@ public class RangeAttack : MonoBehaviour
                 animator.SetBool("Attack", true);
                 Invoke(nameof(InsBullet), 0.34f);
                 Invoke(nameof(delay), 0.5f);
+
+                
             }
         }
         
@@ -51,7 +53,7 @@ public class RangeAttack : MonoBehaviour
     }
 
     void InsBullet(){
-        
+        GetComponent<AudioSource>().Play();
         foreach(GameObject p in FirePos){
             GameObject Tmp = Instantiate(Bullet, p.transform.position, p.transform.rotation);
             Rigidbody2D rb = Tmp.GetComponent<Rigidbody2D>();

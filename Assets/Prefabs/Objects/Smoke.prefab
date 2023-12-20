@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 230953676694506917}
   m_Layer: 0
   m_Name: Smoke
-  m_TagString: Untagged
+  m_TagString: DmgGiver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1704273253
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1632347442, guid: be3f97b9e9d7be2439138c49cde78d37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062bb6cc6fa2fb44c9bd1b21262edcb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dmg: 1
+  IsDestroyPlayerBullet: 0
 --- !u!114 &230953676694506917
 MonoBehaviour:
   m_ObjectHideFlags: 0

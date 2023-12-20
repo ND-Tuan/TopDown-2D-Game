@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7549299075920880250}
   - component: {fileID: 1167794618173903059}
   - component: {fileID: 7509703840500928829}
+  - component: {fileID: 6516029491426336240}
   m_Layer: 7
   m_Name: Golem Arm
-  m_TagString: EnemyBullet
+  m_TagString: DmgGiver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,3 +164,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sec: 1
   Arm: {fileID: 4876966598996606143, guid: ee585ac2fcfa2984588e26e310b13a88, type: 3}
+--- !u!114 &6516029491426336240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867322144631589674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062bb6cc6fa2fb44c9bd1b21262edcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dmg: 1
+  IsDestroyPlayerBullet: 0

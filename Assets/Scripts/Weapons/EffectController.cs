@@ -24,7 +24,7 @@ public class EffectController : MonoBehaviour
         while(!end){
             if(enemyControll!= null)
                 enemyControll.TakeDmg(1, false, 0);
-                await Task.Delay(300);
+                await Task.Delay(600);
         }
     }
 

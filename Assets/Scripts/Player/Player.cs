@@ -278,6 +278,7 @@ public class Player : MonoBehaviour
 
     public void ChangeCoinAmount(int Amount){
         CurCoin += Amount;
+        GetComponent<AudioSource>().Play();
     }
 
     public async void ScreenShake(float Instensity, int time){

@@ -87,7 +87,7 @@ public class CallMenu : MonoBehaviour
         resultMenuController.time.text = UpdateLevelTimer(TotalTime);
     }
 
-    string UpdateLevelTimer(float totalSeconds){
+    public string UpdateLevelTimer(float totalSeconds){
         int minutes = Mathf.FloorToInt(totalSeconds / 60f);
         int seconds = Mathf.RoundToInt(totalSeconds % 60f);
        
@@ -118,14 +118,13 @@ public class CallMenu : MonoBehaviour
 
     public void GameOver(){
         Time.timeScale = 0;
+        MiniCam.SetActive(false);
         GameOverPanel.SetActive(true);
         BGPanel.SetActive(true);
 
-        GameOverController gameOverController =  GameOverPanel.GetComponent<GameOverController>();
-        RoomTemplates roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
 
-        gameOverController.time.text = UpdateLevelTimer(TotalTime);
-        gameOverController.Floor.text = "Floor "+ roomTemplates.Level;
+        GameOverController gameOverController =  GameOverPanel.GetComponent<GameOverController>();
+        gameOverController.DeadAnimaton.GetComponent<RectTransform>().position = GameObject.FindGameObjectWithTag("Player").transform.position;
     }
     
     //Hiệu ứng chuyển cảnh khi vào cổng

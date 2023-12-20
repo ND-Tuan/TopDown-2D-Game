@@ -146,6 +146,6 @@ MonoBehaviour:
   laser: {fileID: 5986434559488101365, guid: 20e48ea174db2904881ddb609017fcb3, type: 3}
   firePos: {fileID: 5254740723531401037}
   TimeBtwFire: 2
-  Dmg: 10
+  Dmg: 5
   ManaCost: 1
   weaponHolder: {fileID: 0}

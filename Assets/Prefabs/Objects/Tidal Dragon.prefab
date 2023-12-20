@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 940395318343309237}
   m_Layer: 0
   m_Name: Tidal Dragon
-  m_TagString: bullet
+  m_TagString: DmgGiver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

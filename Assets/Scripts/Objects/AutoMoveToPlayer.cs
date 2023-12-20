@@ -38,11 +38,13 @@ public class AutoMoveToPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
-            if(isCoin)
+            if(isCoin){
                 player.GetComponentInParent<Player>().ChangeCoinAmount(1);
-            else
+                player.GetComponentInParent<AudioSource>().Play();
+            }else{
                 weaponHolder.AddMana(1);
-                
+                weaponHolder.gameObject.GetComponentInParent<AudioSource>().Play();
+            }
             Destroy(gameObject);
         }
     }

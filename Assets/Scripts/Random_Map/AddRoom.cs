@@ -17,9 +17,8 @@ public class AddRoom : MonoBehaviour {
 
 		SpawnerTmp = Instantiate(Spawner,transform.position, Quaternion.identity);
 
-		int Rand =  Random.Range(0, 10);
-		if(Rand == 0 || Rand == 1 || Rand ==2)
-			InteriorTmp = Instantiate(templates.Interior[Rand],transform.position, Quaternion.identity);
+		if(Random.Range(1,11)<=4)
+			InteriorTmp = Instantiate(templates.Interior[Random.Range(0,8)],transform.position, Quaternion.identity);
 	}
 
 	public void CancerSpawneEnemies(){

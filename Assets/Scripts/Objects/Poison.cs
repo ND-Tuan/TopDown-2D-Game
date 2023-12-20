@@ -19,24 +19,26 @@ public class Poison : MonoBehaviour
     }
     
     void Update(){
-        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5 && !used){
-            GetComponent<AudioSource>().Play();
-            if(PoisonType != 1){
-                weaponHolder.AddMana(MpAmount);
-                Instantiate(MpEffect, player.gameObject.transform, worldPositionStays:false);
+        if(player!=null){
+            float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+            if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5 && !used){
+                GetComponent<AudioSource>().Play();
+                if(PoisonType != 1){
+                    weaponHolder.AddMana(MpAmount);
+                    Instantiate(MpEffect, player.gameObject.transform, worldPositionStays:false);
 
-                GameObject instance = Instantiate(player.DmgPopup, gameObject.transform, worldPositionStays: false);
-                instance.GetComponent<TextMesh>().text ="+" +MpAmount;
-                instance.GetComponent<TextMesh>().color = new Color(0.2588235f, 0.5559593f, 1, 1);
+                    GameObject instance = Instantiate(player.DmgPopup, gameObject.transform, worldPositionStays: false);
+                    instance.GetComponent<TextMesh>().text ="+" +MpAmount;
+                    instance.GetComponent<TextMesh>().color = new Color(0.2588235f, 0.5559593f, 1, 1);
+                }
+                if(PoisonType != 2){
+                    player.AddHp(HpAmount);
+                    Instantiate(HpEffect, player.gameObject.transform, worldPositionStays:false);
+                }
+                used = true;
+                GetComponent<SpriteRenderer>().material.color = new Color(0,0,0,0);
+                Destroy(gameObject,0.7f);
             }
-            if(PoisonType != 2){
-                player.AddHp(HpAmount);
-                Instantiate(HpEffect, player.gameObject.transform, worldPositionStays:false);
-            }
-            used = true;
-            GetComponent<SpriteRenderer>().material.color = new Color(0,0,0,0);
-            Destroy(gameObject,0.7f);
         }
     }
 }

@@ -88,7 +88,7 @@ public class WeaponHolder : MonoBehaviour
 
     public async void AddMana(int Amount){
        
-
+        
         if(CurMana<MaxMana) {
             while(Amount >0){
                 CurMana++;

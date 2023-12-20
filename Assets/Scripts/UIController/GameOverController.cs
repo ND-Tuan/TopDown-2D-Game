@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameOverController : MonoBehaviour
 {
+    public GameObject DeadAnimaton;
+    public GameObject Infor;
     public Text time;
     public Text Floor;
     private CallMenu callMenu;
@@ -21,5 +23,12 @@ public class GameOverController : MonoBehaviour
         callMenu.DestroyToReset();
         SceneManager.LoadSceneAsync(0);
         Destroy(callMenu.ObjectsDestroyToReset[0],1);
+    }
+
+    void Active(){
+        Infor.SetActive(true);
+        RoomTemplates roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        time.text = callMenu.UpdateLevelTimer(callMenu.TotalTime);
+        Floor.text = "Floor "+ roomTemplates.Level;
     }
 }

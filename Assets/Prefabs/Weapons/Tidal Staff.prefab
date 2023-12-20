@@ -123,7 +123,7 @@ MonoBehaviour:
   TidalDragon: {fileID: 9162841772737661867, guid: eb32828b402f7934f8b5f5067f3ebe36,
     type: 3}
   CD: 1
-  Dmg: 30
+  Dmg: 20
   ManaCost: 3
 --- !u!1001 &1341245115330973608
 PrefabInstance:

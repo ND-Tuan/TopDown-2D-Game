@@ -40,7 +40,7 @@ public class AscendController : MonoBehaviour
         if(player.EXP >= 1){
             ApplyBuff();
             player.EXP--;
-            BuffID = Random.Range(0,12);
+            BuffID = RandomBuff();
             PreBuffID = BuffID;
             Buff.sprite = BuffsList[BuffID];
         }
@@ -48,9 +48,9 @@ public class AscendController : MonoBehaviour
 
     public void RerollBuff(){
         if(player.CurCoin >=20){
-            BuffID = Random.Range(0,12);
+            BuffID = RandomBuff();
             while(BuffID == PreBuffID){
-                BuffID = Random.Range(0,12);
+                BuffID = RandomBuff();
             }
             PreBuffID = BuffID;
             Buff.sprite = BuffsList[BuffID];
@@ -93,6 +93,17 @@ public class AscendController : MonoBehaviour
             AnimationPanel.SetActive(false);
             GameObject.FindGameObjectWithTag("Menu").GetComponent<CallMenu>().BGPanel.SetActive(false);
             Time.timeScale =1;
+        }
+    }
+
+    int RandomBuff(){
+        int Rand = Random.Range(1,11);
+        if(Rand>=1 && Rand<=6){
+            return Random.Range(0,4);
+        } else if(Rand>=7 && Rand<=9){
+            return Random.Range(4,8);
+        } else{
+            return Random.Range(8,12);
         }
     }
 }

@@ -18,10 +18,12 @@ public class WeaponDrop : MonoBehaviour
     }
 
     void  Update(){
-        float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
-        if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5){
-            weaponHolder.DropWeapon(WeaponId);
-            Destroy(gameObject);
+        if(GameObject.FindGameObjectWithTag("Player") != null){
+            float distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+            if(Input.GetKeyDown(KeyCode.R) && distanceToPlayer<5){
+                weaponHolder.DropWeapon(WeaponId);
+                Destroy(gameObject);
+            }
         }
     }
 

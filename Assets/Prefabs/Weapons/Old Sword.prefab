@@ -249,8 +249,8 @@ MonoBehaviour:
   duration: 0
   TimeBtwAttack: 0.5
   timeBtwAttack: 0
-  SlashDmg: 30
-  StabDmg: 50
+  SlashDmg: 4
+  StabDmg: 6
   AirSlasdDmg: 0
   RotateSameToWeapon: 0
   WeaponPos: {fileID: 0}
