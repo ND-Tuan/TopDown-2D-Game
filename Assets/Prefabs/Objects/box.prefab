@@ -233,3 +233,5 @@ MonoBehaviour:
   - {fileID: 7827746492604935825, guid: 89f32e88feb9fd1459efd01d42632cdb, type: 3}
   - {fileID: 2345728093312608243, guid: b887e01b686ce294ea76a1fb0e0be360, type: 3}
   - {fileID: 4808784552883201648, guid: 710699e46062e4045b06fdef78d27984, type: 3}
+  durable: 3
+  DropRate: 5

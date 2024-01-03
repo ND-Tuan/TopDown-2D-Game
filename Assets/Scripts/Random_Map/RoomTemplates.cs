@@ -53,7 +53,7 @@ public class RoomTemplates : MonoBehaviour {
 
 			int rand = Random.Range(1, rooms.Count-1);
 			rooms[rand].GetComponent<AddRoom>().ChangeToFunctionRoom();
-			Instantiate(SPRoom[Random.Range(1,3)], rooms[rand].transform.position, Quaternion.identity);
+			Instantiate(SPRoom[2], rooms[rand].transform.position, Quaternion.identity);
 
 			int rand2 = Random.Range(1, rooms.Count-1);
 			while(rand2 == rand) rand2 = Random.Range(1, rooms.Count-1);
