@@ -43,6 +43,7 @@ public class RoomTemplates : MonoBehaviour {
 
 		if(waitTime <= 0 && spawnedBoss == false && Level !=4){
 			
+			//Sinh phòng cổng
 			rooms[rooms.Count-1].GetComponent<AddRoom>().ChangeToFunctionRoom();
 			GameObject Tmp = Instantiate(SPRoom[0], rooms[rooms.Count-1].transform.position, Quaternion.identity);
 			Tmp.GetComponentInChildren<PortalController>().Level = Level+1;
@@ -51,10 +52,12 @@ public class RoomTemplates : MonoBehaviour {
 				GameObject.FindGameObjectWithTag("Portal").GetComponent<SpriteRenderer>().color = Color.red;
 			}
 
+			//sinh phòng thương nhân
 			int rand = Random.Range(1, rooms.Count-1);
 			rooms[rand].GetComponent<AddRoom>().ChangeToFunctionRoom();
-			Instantiate(SPRoom[2], rooms[rand].transform.position, Quaternion.identity);
+			Instantiate(SPRoom[Random.Range(1,3)], rooms[rand].transform.position, Quaternion.identity);
 
+			//sinh phòng cường hóa
 			int rand2 = Random.Range(1, rooms.Count-1);
 			while(rand2 == rand) rand2 = Random.Range(1, rooms.Count-1);
 			rooms[rand2].GetComponent<AddRoom>().ChangeToFunctionRoom();
@@ -71,6 +74,7 @@ public class RoomTemplates : MonoBehaviour {
 		AstarPath.active.Scan();
 	}
 
+	//Dọn tường chắn sau khi clear room
 	void RemoveWall(){
 		if(isSpawnWall && countEnemy == 0){
 			isSpawnWall = false;

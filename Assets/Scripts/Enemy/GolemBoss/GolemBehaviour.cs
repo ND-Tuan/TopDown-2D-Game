@@ -32,6 +32,8 @@ public class GolemBehaviour : MonoBehaviour
     }
 
     void Update(){
+
+        //Kích hoạt khiên khi máu dưới 50%
         if(enemyControll.EnemyCurHp <= enemyControll.EnemyMaxHp/2 && !TurnShield){
             enemyAI.moveSpeed = 0;
             CastShield= true;
@@ -50,14 +52,12 @@ public class GolemBehaviour : MonoBehaviour
                     enemyAI.roaming = true;
                     enemyAI.update = false;
                 } else {
+                    //chuyển sang chế độ đuổi theo người chơi
                     enemyAI.roaming = false;
                     enemyAI.update = true;
                 }
             }
-            
         }
-
-        
     }
 
     // Update is called once per frame
@@ -68,8 +68,12 @@ public class GolemBehaviour : MonoBehaviour
     void StartAttack(){
         if(!CastShield && !SpinTime){
             int Rand = Random.Range(0,3);
+
+            //Thêm quay tay vào cơ chế tấn công khi máu dưới 50%
             if(enemyControll.EnemyCurHp <= enemyControll.EnemyMaxHp/2){
                 Rand = Random.Range(0,4);
+
+                //Ưu tiên thực hiện quay tay khi người chơi tiếp cận tấn công tầm gần
                 distanceToPlayer = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
                 if(distanceToPlayer<30 && Random.Range(0,2)==1){
                     Rand = 3;
@@ -95,26 +99,27 @@ public class GolemBehaviour : MonoBehaviour
         }
     }
 
+    //Tỏa đạn
     void ActiveAttack1(){
         Instantiate(Attack1, Attack1Pos.transform.position, transform.rotation);
         animator.SetBool("Attack1", false);
     }
 
+    //Bắn laser
     void ActiveAttack2(){
+        //Xác định, ngắm tầm bắn về phía người chơi
         Vector3 playerPos =GameObject.FindGameObjectWithTag("Player").transform.position;
         Vector2 lookDir = playerPos - Attack2Pos.transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.Euler(0, 0, angle+60);
-
         Attack2Pos.transform.rotation = rotation;
 
         Instantiate(Laser, Attack2Pos.transform, worldPositionStays:false);
         Invoke(nameof(ReSpeed), 2f);
     }
 
+    //Tấn công triệu hồi Golem-Arm-Bloom
      void ActiveAttack3(){
-
-       
 
         if(enemyAI.InterFace.transform.localScale == new Vector3(-1, 1, 0)) {
             Quaternion rotation = Quaternion.Euler(0, 0, 180);
@@ -124,6 +129,7 @@ public class GolemBehaviour : MonoBehaviour
             Attack3Pos.transform.rotation = rotation;
         }
 
+        //tạo Golem-Arm-Bloom tại vị trí rơi
         GameObject BulletTmp = Instantiate(GolemArm, Attack3Pos.transform.position, Attack3Pos.transform.rotation);
         Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
         
@@ -137,7 +143,7 @@ public class GolemBehaviour : MonoBehaviour
         ReSpeed();
      }
 
-
+    //Tấn công quay tay
     void ActiveAttack4(){
         GameObject Spin = Instantiate(SpinArm, gameObject.transform, worldPositionStays:false);
         enemyAI.moveSpeed = 40;
@@ -152,6 +158,7 @@ public class GolemBehaviour : MonoBehaviour
         Invoke(nameof(EndAttack4),0.84f);
     }
 
+    
    void EndAttack4(){
         animator.SetBool("EndAttack4", false);
         animator.SetBool("Attack4", false);
@@ -160,7 +167,7 @@ public class GolemBehaviour : MonoBehaviour
         SpinTime = false;
     }
 
-
+    //Kích hoạt khiên
     void ActiveShield(){
         enemyControll.EnemyCurShield = enemyControll.EnemyMaxShield;
         enemyControll.Immune = false;

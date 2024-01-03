@@ -174,8 +174,10 @@ public class Player : MonoBehaviour
         DashIcon.fillAmount = 1-DashCDTmp/DashCD;
     }
 
+    //  Skill đặc biệt
     async void SkillAsync(){
 
+        //cooldown
         if(!InUltiTime) {
             if(SkillCDTmp >0){
                 SkillCDTmp -= Time.deltaTime;
@@ -184,20 +186,22 @@ public class Player : MonoBehaviour
             }   
         }
 
+        //xử lý hiển thị hồi/nạp của skill
         UltiIconCD.fillAmount = 1 - SkillCDTmp/SkillCD;
         UltiIconEnergy.fillAmount = Energy;
         
-
+        //
         if(Input.GetMouseButton(1) && SkillCDTmp==0){
             Rg.velocity = new Vector3(0,0,0);
             WeaponPos.GetComponent<WeaponHolder>().RemoveWeapon();
             animator.SetBool("Charge", true);
             InChargeTime = true;
 
+            //nạp năng lượng
             if(Energy <1){
                 if (ChargeTime<=0) ChargeTime=0.000001f;
                 Energy += Time.deltaTime/ChargeTime;
-                virtualCamera.m_Lens.OrthographicSize += 30*Time.deltaTime/ChargeTime;
+                virtualCamera.m_Lens.OrthographicSize += 30*Time.deltaTime/ChargeTime; //Mở rộng ống kính
 
             } else {
                 Energy = 1;
@@ -218,7 +222,8 @@ public class Player : MonoBehaviour
             } else if(!InUltiTime   && dashTime <= 0) {
                 if(!ChangeToHand)
                     WeaponPos.GetComponent<WeaponHolder>().RestoreWeapon();
-                    
+
+                //Mở rộng ống kính    
                 while(virtualCamera.m_Lens.OrthographicSize > 50){
                    virtualCamera.m_Lens.OrthographicSize --;
                    await Task.Delay(200);
@@ -228,6 +233,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Chế độ Đánh tay (Không vũ khí)
     void HandAttack(){
         HandCD -= Time.deltaTime;
         if(Input.GetMouseButton(0) && ChangeToHand && HandCD <=0){
@@ -246,6 +252,7 @@ public class Player : MonoBehaviour
        immune = false;
     }
 
+    //Nhận sát thương
     public void TakeDmg(int Dmg){
         if(immune ==  false){
             PlayerCurHP-= Dmg;
@@ -262,6 +269,7 @@ public class Player : MonoBehaviour
         appear = true;
     }
 
+    //Hồi máu
     public async void AddHp(int Amount){
         GameObject instance = Instantiate(DmgPopup, gameObject.transform, worldPositionStays: false);
         instance.GetComponent<TextMesh>().text ="+" +Amount;
@@ -281,6 +289,7 @@ public class Player : MonoBehaviour
         GetComponent<AudioSource>().Play();
     }
 
+    //Rung màn hình
     public async void ScreenShake(float Instensity, int time){
         CinemachineBasicMultiChannelPerlin multiChannelPerlin = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         multiChannelPerlin.m_AmplitudeGain = Instensity;

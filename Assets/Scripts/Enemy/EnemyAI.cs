@@ -106,17 +106,18 @@ public class EnemyAI : MonoBehaviour
         reachPlayer = true;
     }
 
+    //Tìm vị trí người chơi
     Vector3 FindTarget(){
 
-        
         playerPos = FindObjectOfType<Player>().transform.position;
         
         distanceToPlayer = Vector3.Distance(transform.position, playerPos);
 
         if (distanceToPlayer <= proximityThreshold){
+            
             if(roaming){
-
-                 Final = (Vector2)playerPos + (Random.Range(10f, 50f) *new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)).normalized);
+                //lấy ngẫu nhiên vị trí xung quanh player
+                Final = (Vector2)playerPos + (Random.Range(10f, 50f) *new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)).normalized);
                 while(Vector3.Distance(Final, playerPos) < 15){
                     Final = (Vector2)playerPos + (Random.Range(10f, 50f) *new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)).normalized);
                 }
