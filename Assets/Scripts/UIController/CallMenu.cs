@@ -71,7 +71,7 @@ public class CallMenu : MonoBehaviour
         shop.Price[i].text = price.ToString();
         shop.IsPoison = IsPoison;
 
-        // Hiển thị giao diện của cửa hàng Weapons hoặc Poison tùy thuộc vào loại vũ khí
+        // Hiển thị giao diện của cửa hàng Weapons hoặc Poison tùy thuộc vào loại NPC
         if (IsPoison)
         {
             shop.WeaponShop.SetActive(false);

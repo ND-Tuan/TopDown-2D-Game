@@ -71,16 +71,16 @@ public class ShopMenuController : MonoBehaviour
             RoomTemplates roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
             Player player = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<Player>();
 
-            // Nếu mục hàng là độc hại
+            // Nếu mục hàng là thuốc
             if (IsPoison)
             {
-                // Tạo đối tượng độc hại và di chuyển nó đến vị trí ngẫu nhiên
+                // Tạo đối tượng thuốc và di chuyển nó đến vị trí ngẫu nhiên
                 GameObject tmp = Instantiate(roomTemplates.Poison[ItemsID[CurChoose]], transform.position, Quaternion.identity);
                 tmp.transform.position += new Vector3(Random.Range(-5, 6), Random.Range(-2, 3) - 10, 0);
             }
             else
             {
-                // Nếu không phải là độc hại, tạo đối tượng WeaponDrop và di chuyển nó đến vị trí ngẫu nhiên
+                // Nếu không phải là thuốc, tạo đối tượng WeaponDrop và di chuyển nó đến vị trí ngẫu nhiên
                 GameObject TmpW = Instantiate(WeaponDrop, transform.position, Quaternion.identity);
                 TmpW.GetComponent<WeaponDrop>().WeaponId = ItemsID[CurChoose];
                 TmpW.transform.position += new Vector3(Random.Range(-5, 6), Random.Range(-2, 3) - 15, 0);
