@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnRoom : MonoBehaviour
 {
 
-    public int[] OpenDirection;
+    public int[] OpenDirection; //phòng mở hướng: 0-trái, 1-trên, 2-phải, 3-dưới
     public int rand;
     private int rd;
     public GameObject room;
@@ -28,7 +28,7 @@ public class SpawnRoom : MonoBehaviour
     void Spawn(){
         if(isSpawn == false && roomTemplates.rooms.Count< maxRooms){
             foreach(int i in OpenDirection){
-                if(i==0){
+                if(i==0){  
                     rand = Random.Range(2, roomTemplates.rightRooms.Length);
                     if((has3Direction && roomTemplates.rd ==0) || roomTemplates.rooms.Count > maxRooms) rand = 0;
                     Instantiate(roomTemplates.rightRooms[rand], transform.position, roomTemplates.rightRooms[rand].transform.rotation);
@@ -40,7 +40,7 @@ public class SpawnRoom : MonoBehaviour
                     Instantiate(roomTemplates.bottomRooms[rand], transform.position, roomTemplates.bottomRooms[rand].transform.rotation);
                 }
 
-                if(i==2){
+                if(i==2){ 
                     rand = Random.Range(2, roomTemplates.leftRooms.Length);
                     if((has3Direction && roomTemplates.rd == 1)|| roomTemplates.rooms.Count > maxRooms) rand = 0;
                     Instantiate(roomTemplates.leftRooms[rand], transform.position, roomTemplates.leftRooms[rand].transform.rotation);

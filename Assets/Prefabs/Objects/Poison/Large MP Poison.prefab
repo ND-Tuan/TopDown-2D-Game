@@ -266,7 +266,7 @@ MonoBehaviour:
     type: 3}
   PoisonType: 2
   HpAmount: 0
-  MpAmount: 0
+  MpAmount: 40
 --- !u!50 &3938844999842252952
 Rigidbody2D:
   serializedVersion: 4
