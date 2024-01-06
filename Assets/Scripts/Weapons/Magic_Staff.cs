@@ -26,29 +26,35 @@ public class Magic_Staff : MonoBehaviour
 
     void Update()
     {
+        //Đếm ngược
         timeBtwFire -= Time.deltaTime;
 
-        
-         weaponHolder.Rotationable = Rotationable;
+        weaponHolder.Rotationable = Rotationable;
         if(Input.GetMouseButton(0) && timeBtwFire <0 && weaponHolder.IsEnoughMana && Time.timeScale >0){
 
             if(animator != null){
                 animator.SetBool("Attack", true);
             }
             Fire();
-            weaponHolder.SubtractMana(ManaCost);
+            weaponHolder.SubtractMana(ManaCost); //trừ mana người chơi
         }
     }
 
      void Fire(){
         timeBtwFire = TimeBtwFire;
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().Play(); //chạy âm thanh vũ khí
 
         foreach(Transform p in firePos){
+            //sinh ra viên đạn tại vị trí bắn
             GameObject BulletTmp = Instantiate(fireBall, p.transform.position, p.transform.rotation);
+
+            //gắn giá trị sát thương cho đạn
             BulletTmp.GetComponent<BulletControll>().Dmg = Damage;
+
+            //gắn vector cho đạn
             Rigidbody2D rb = BulletTmp.GetComponent<Rigidbody2D>();
             rb.AddForce(p.transform.right * BulletForce, ForceMode2D.Impulse);
+            
             if(animator != null){
                 Invoke(nameof(EndAttack), 0.5f);
             }

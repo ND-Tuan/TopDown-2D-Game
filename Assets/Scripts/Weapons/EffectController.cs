@@ -20,6 +20,7 @@ public class EffectController : MonoBehaviour
         Invoke(nameof(End), i);
     }
 
+    //gây sát thương cháy cho kẻ thù
     public async void Burning(EnemyControll enemyControll){
         while(!end){
             if(enemyControll!= null)
